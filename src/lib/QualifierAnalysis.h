@@ -106,6 +106,7 @@ private:
     std::set<std::string> warningVars;
     std::set<std::string> relatedBC;
     std::unordered_map<int ,std::string> eToS = {{0, "FUNCTION_PTR"}, {1, "NORMAL_PTR"}, {2, "DATA"}, {3, "OTHER"}};
+    std::set<std::string> funcList;
     //statistics:
     std::set<NodeIndex> uninitArg;
     std::set<NodeIndex> uninitOutArg;
@@ -136,6 +137,8 @@ private:
     void addRelatedBC(llvm::Instruction*, NodeIndex , llvm::Function *Callee=NULL);
     void addTerminationBB(llvm::BasicBlock* bb);
     bool isTerminationBB(llvm::BasicBlock *bb) {return terminationBB.count(bb);}
+    void calculateFList();
+    bool isFListEmpty() (return (funcList.size() == 0);)
     //Used by qualifier inference
     void computeQualifier(llvm::Instruction *, std::vector<int> &, std::vector<int>&);
     void setGlobalQualies(std::vector<int> &);
@@ -191,6 +194,7 @@ public:
         nodeFactory.setGobjMap(&(Ctx->Gobjs));
         VisitIns.clear();
         warningSet.clear();
+        funcList.clear();
     }
     bool run();
     int getUninitArg(){return uninitArg.size();}

@@ -57,6 +57,8 @@ private:
 
     std::set<std::string> whiteList;
     std::set<std::string> blackList;
+    //If the node is a use, funcList records the functions all the way to where the warnings are.
+    std::set<std::string> funcList;
     AndersNode(AndersNodeType t, unsigned i, const llvm::Value* v = NULL, const unsigned off = 0, const bool _isUnionObj = false,
                const bool _isArgNode = false,  bool _isHeapNode = false, int _storeFlag = 0, bool _mayNull = false)
             : type(t), idx(i), mergeTarget(i), value(v), offset(off), isUnOrArrObj(_isUnionObj), isArgNode(_isArgNode), isHeapNode(_isHeapNode), storeFlag(_storeFlag), mayNull(_mayNull){}
@@ -82,6 +84,9 @@ public:
     void setBlackList(std::set<std::string> &list){blackList.insert(list.begin(), list.end());}
     std::set<std::string> getWhiteList(){return whiteList;}
     std::set<std::string> getBlackList(){return blackList;}
+
+    void addToFuncList(std::string fName){funcList.insert(fName);}
+    std::set<std::string> getFuncList() {return funcList;}
 
     void setName(std::string _name) {name = _name;}
     std::string getName() {return name;}
@@ -235,12 +240,19 @@ public:
     std::set<std::string> getBL(NodeIndex i) {
         return nodes.at(i).getBlackList();
     }
+
+    std::set<std::string> getFuncList(NodeIndex i){
+        return nodes.at(i).getFuncList();
+    }
+    void addToFuncList(std::string fname) {
+        nodes.at(i).addToFuncList(fname);
+    }
+
     bool listEmpty(NodeIndex i) {
         return nodes.at(i).listEmpty();
     }
 
     NodeIndex getOffsetObjectNode(NodeIndex n, int offset) const {
-        //llvm::errs()<<"inside getOffsetObjectNode:\n";
         if (!isObjectNode(n)) {
             llvm::errs() << "n :" << n << "\n";
             llvm::errs() << "offset :" << offset << "\n";

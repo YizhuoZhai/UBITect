@@ -96,7 +96,6 @@ void FuncAnalysis::qualiInference()
     //For BB that we did not see, we do consider the qualifier of them to join
     for (inst_iterator itr = inst_begin(*F), ite = inst_end(*F); itr != ite; ++itr)
     {
-        //inscount++;
         auto inst = itr.getInstructionIterator();
         if (isa<ReturnInst>(&*inst))
         {
@@ -108,7 +107,6 @@ void FuncAnalysis::qualiInference()
         nQualiUpdate[&*inst].resize(numNodes);
         nQualiUpdate[&*inst].assign(qualiReq.begin(), qualiReq.end());
     }
-    //OP<<"==stat: inscount = "<<inscount<<"\n";
     for (Function::iterator iter = F->begin(); iter != F->end(); iter++)
     {
         BasicBlock *BB = &*iter;
@@ -144,7 +142,6 @@ void FuncAnalysis::qualiInference()
         if (!(BB == &F->front()))
         {
             bool init = false;
-            //OP<<"BB : "<<BB->getName().str()<<"\n";
             for (auto pi = pred_begin(BB), pe = pred_end(BB); pi != pe; ++pi)
             {
                 BasicBlock *pred = *pi;
@@ -177,12 +174,7 @@ void FuncAnalysis::qualiInference()
             {
                 in.assign(nQualiArray[I->getPrevNode()].begin(), nQualiArray[I->getPrevNode()].end());
             }
-            //infcount++;
-            //clock_t sTime, eTime;
-            //sTime = clock();
             computeQualifier(I, in, out);
-            //eTime = clock();
-            //OP<<"time: "<<(double)(eTime - sTime) / CLOCKS_PER_SEC<<"\n";
             VisitIns.insert(I);
 #ifdef OUT
             for (unsigned i = 0; i < numNodes; i++)
@@ -191,9 +183,6 @@ void FuncAnalysis::qualiInference()
                     OP << "Node " << i << ": " << out[i] << "\n";
             }
 #endif
-            //if (numNodes > 835)
-            //    OP << "out[835] = " << out[835] << "\n";
-            //OP<<"numNodes = "<<nodeFactory.getNumNodes()<<"\n";
             if (I == &BB->back())
             {
                 if (nQualiArray.find(I) != nQualiArray.end())
@@ -204,9 +193,7 @@ void FuncAnalysis::qualiInference()
                 outQualiArray[BB].assign(out.begin(), out.end());
             }
             nQualiArray[I].assign(out.begin(), out.end());
-            //OP<<"quali for constant: "<<nQualiArray[I][4]<<"\n";
         }
-        ////OP<<"4\n";
         if (changed)
         {
             for (auto si = succ_begin(BB), se = succ_end(BB); si != se; ++si)
@@ -217,16 +204,12 @@ void FuncAnalysis::qualiInference()
             }
         }
     } //worklist.empty()
-    //OP<<"==stat: infcount = "<<infcount<<"\n";
     Instruction *endIns = &(F->back().back());
     //summarize the return
-    //OP<<"summarize the return:\n";
     bool init = false;
-    //OP<<"numNodes = "<<nodeFactory.getNumNodes()<<", sumNumNodes = "<<fSummary.sumNodeFactory.getNumNodes()<<"\n";
     //NodeIndex sumRetNode = fSummary.sumNodeFactory.createValueNodeFor(F);
     if (!F->getReturnType()->isVoidTy() && RI)
     {
-        //OP<<"qualifier at the end\n";
         std::set<const BasicBlock *> blacklist;
         std::set<const BasicBlock *> whitelist;
         std::set<NodeIndex> visit;
@@ -235,7 +218,6 @@ void FuncAnalysis::qualiInference()
         NodeIndex sumRetNode = fSummary.sumNodeFactory.getValueNodeFor(F);
         fSummary.updateVec.at(sumRetNode) = nQualiArray[RI][retNode];
 
-        //OP<<"retNode = "<<retNode<<", quali: "<<fSummary.updateVec.at(sumRetNode)<<"\n";
         //return value is related to arguments
         if (fSummary.updateVec.at(sumRetNode) == _UNKNOWN)
         {
@@ -282,27 +264,19 @@ void FuncAnalysis::qualiInference()
             blacklist.clear();
             whitelist.clear();
 
-            //OP << "calculate lists for sumRetNode:" << sumRetNode << ", retNode = "<<retNode<<": "<<nQualiArray[RI][retNode]<<"\n";
             calculateRelatedBB(retNode, RI, visit, blacklist, whitelist);
-            //errs() << "whitelist:\n";
             for (auto witem : whitelist)
             {
-                //errs() << witem->getName().str() << "\n";
                 fSummary.args[sumRetNode].addToWhiteList(witem->getName().str());
             }
-            //errs() << "\nblacklist:\n";
             for (auto bitem : blacklist)
             {
-                //errs() << bitem->getName().str() << "\n";
                 fSummary.args[sumRetNode].addToBlackList(bitem->getName().str());
             }
         }
 #endif
 
         int qualiSrc = _UNKNOWN;
-        //OP<<"retNode = "<<retNode<<"\n";
-        //OP << "sumNodes:\n";
-        //fSummary.summary();
         for (auto sumObj : fSummary.sumPtsGraph[sumRetNode])
         {
             //NodeIndex sumRetObjNode = fSummary.sumNodeFactory.getObjectNodeFor(F);
@@ -311,8 +285,6 @@ void FuncAnalysis::qualiInference()
             //OP<<"sumObjOffset = "<<sumObjOffset<<", sumObj = "<<sumObj<<"sumObjSize="<<sumObjSize<<"\n";
             for (auto obj : nPtsGraph[RI][retNode])
             {
-                //OP<<"obj = "<<obj<<"\n";
-
                 if (!init)
                 {
                     for (unsigned i = 0; i < sumObjSize; i++)
@@ -347,7 +319,6 @@ void FuncAnalysis::qualiInference()
                         //Tobe Fix: there should be a way to avoid this: function get_ringbuf
                         if (obj - sumObjOffset + i >= nodeFactory.getNumNodes())
                             break;
-                        //OP<<"obj - sumObjOffset + i = "<<obj - sumObjOffset + i<<"\n";
                         if (obj <= nodeFactory.getConstantIntNode())
                             qualiSrc = _ID;
                         else
@@ -370,9 +341,6 @@ void FuncAnalysis::qualiInference()
                 }
 
 #ifdef RET_LIST
-                //OP<<"sumObjSize = "<<sumObjSize<<", numNodes = "<<numNodes<<"\n";
-                //OP<<"sumObbjOffset = "<<sumObjOffset<<"\n";
-                //OP<<"sumObj = "<<sumObj<<", obj = "<<obj<<"\n";
                 for (unsigned i = 0; i < sumObjSize; i++)
                 {
                     visit.clear();
@@ -384,23 +352,15 @@ void FuncAnalysis::qualiInference()
                     if (nodeFactory.getObjectSize(obj) < sumObjSize)
                         continue;
 
-                    //if (obj - sumObjOffset + i >= nodeFactory.getNumNodes())
-                    //        break;
-                    //OP<<"sumObj - sumObjOffset + i = "<<sumObj - sumObjOffset + i<<", obj - sumObjOffset+ i = "<<obj - sumObjOffset+ i<<"\n";
-                    //OP<<"fSummary.updateVec.at("<<sumObj - sumObjOffset + i<<") = "<<fSummary.updateVec.at(sumObj - sumObjOffset + i)<<"\n";
                     if (fSummary.updateVec.at(sumObj - sumObjOffset + i) == _UD)
                     {
                         calculateRelatedBB(obj - sumObjOffset + i, RI, visit, blacklist, whitelist);
-                        //errs()<<"whitelist:\n";
                         for (auto witem : whitelist)
                         {
-                            //errs()<<witem->getName().str()<<"\n";
                             fSummary.args[sumObj - sumObjOffset + i].addToWhiteList(witem->getName().str());
                         }
-                        //errs()<<"\nblacklist:\n";
                         for (auto bitem : blacklist)
                         {
-                            //errs()<<bitem->getName().str()<<"\n";
                             fSummary.args[sumObj - sumObjOffset + i].addToBlackList(bitem->getName().str());
                         }
                     }
@@ -1772,22 +1732,22 @@ void FuncAnalysis::backPropagateReq(llvm::Instruction *currentIns, llvm::Value *
 void FuncAnalysis::summarizeFuncs(llvm::ReturnInst *RI)
 {
     OP << "inside summarize Funcs:\n";
-    //1.set the eequirement argument
+    //1.set the requirement argument
     Instruction *entry = &(F->front().front());
     Instruction *end = &(F->back().back());
     unsigned numNodes = nodeFactory.getNumNodes();
-    //OP<<"1\n";
-
+    std::string fName = F->getName().str();
     //copy the requirement of arg to the function summary
     for (auto &a : F->args())
     {
         Argument *arg = &a;
         NodeIndex argIndex = nodeFactory.getValueNodeFor(arg);
         NodeIndex sumArgIndex = fSummary.sumNodeFactory.getValueNodeFor(arg);
-        //OP<<"argIndex = "<<argIndex<<", sumArgIndex = "<<sumArgIndex<<"\n";
+
         if (qualiReq.at(argIndex) == _ID)
         {
             fSummary.reqVec.at(sumArgIndex) = _ID;
+            fSummary.args[sumArgIndex].addToFuncList(fName);
         }
         NodeIndex sumArgObjIndex = fSummary.sumNodeFactory.getObjectNodeFor(arg);
         if (sumArgObjIndex == AndersNodeFactory::InvalidIndex)
@@ -1800,12 +1760,11 @@ void FuncAnalysis::summarizeFuncs(llvm::ReturnInst *RI)
                 continue;
             for (unsigned i = 0; i < sumObjSize; i++)
             {
-                //OP<<"i = "<<i<<", obj - sumObjOffset + i ="<<obj - sumObjOffset +i<<"\n";
                 //copy the requirement
                 if (qualiReq.at(obj - sumObjOffset + i) == _ID)
                 {
-                    //OP<<"sumArgObjIndex - sumObjOffset + i = "<<sumArgObjIndex - sumObjOffset + i<<"\n";
                     fSummary.reqVec.at(sumArgObjIndex - sumObjOffset + i) = _ID;
+                    fSummary.args[sumArgIndex].addToFuncList(fName);
                 }
             }
         }
@@ -1826,11 +1785,8 @@ void FuncAnalysis::summarizeFuncs(llvm::ReturnInst *RI)
     std::set<const BasicBlock *> blacklist;
     std::set<const BasicBlock *> whitelist;
     std::set<NodeIndex> visit;
-    //OP<<"numNodes = "<<nodeFactory.getNumNodes()<<"\n";
+
     //2, summarize the update for argument
-    //OP<<"summarize the funcs:\n";
-    //OP<<"numNodes = "<<nodeFactory.getNumNodes()<<"\n";
-    //OP<<"sumNumNodes = "<<fSummary.sumNodeFactory.getNumNodes()<<"\n";
     for (auto &a : F->args())
     {
         Argument *arg = &a;
@@ -1840,7 +1796,6 @@ void FuncAnalysis::summarizeFuncs(llvm::ReturnInst *RI)
         if (sumArgObjIndex == AndersNodeFactory::InvalidIndex)
             continue;
         //Calculate update for args
-        //OP<<"calculate update for arg "<<sumArgIndex<<"\n";
         for (auto sumObj : fSummary.sumPtsGraph[sumArgIndex])
         {
             unsigned sumObjSize = fSummary.sumNodeFactory.getObjectSize(sumObj);
@@ -1861,38 +1816,19 @@ void FuncAnalysis::summarizeFuncs(llvm::ReturnInst *RI)
                     //OP<<"sumArgObjIndex + i = "<<sumArgObjIndex + i<<"\n";
                     fSummary.updateVec.at(sumArgObjIndex + i) = nQualiArray[RI].at(obj - sumObjOffset + i);
 
-                    /*if (nQualiArray[entry].at(obj - sumObjOffset + i) == _UNKNOWN)
-                    {
-                        fSummary.updateVec.at(sumArgObjIndex + i)= nQualiArray[RI].at(obj - sumObjOffset + i);
-                    }
-                    else if (nQualiArray[entry][obj - sumObjOffset + i] != nQualiArray[RI].at(obj - sumObjOffset + i))
-                    {
-                        fSummary.updateVec.at(sumArgObjIndex + i) = nQualiArray[RI].at(obj - sumObjOffset + i);
-                    }
-                    else
-                    {
-                        fSummary.updateVec.at(sumArgObjIndex + i) = _UNKNOWN;
-                    } */
-
-                    //errs()<<"sumArgObjIndex +i = "<<sumArgObjIndex + i<<"\n";
                     if (fSummary.updateVec.at(sumArgObjIndex + i) == _UNKNOWN)
                     {
                         blacklist.clear();
                         whitelist.clear();
                         visit.clear();
-                        //OP<<"obj - sumObjOffset + i = "<<obj - sumObjOffset + i<<"\n";
-                        //OP<<"calculate blacklists:\n";
+
                         calculateRelatedBB(obj - sumObjOffset + i, RI, visit, blacklist, whitelist);
-                        //errs()<<"whitelist:\n";
                         for (auto witem : whitelist)
                         {
-                            //errs()<<*witem<<"\n";
                             fSummary.args[sumArgObjIndex + i].addToWhiteList(witem->getName().str());
                         }
-                        //errs()<<"\nblacklist:\n";
                         for (auto bitem : blacklist)
                         {
-                            //errs()<<*bitem<<"\n";
                             fSummary.args[sumArgObjIndex + i].addToBlackList(bitem->getName().str());
                         }
                         //OP<<"calculate relatedNodes for "<<sumArgObjIndex + i<<", obj - sumObjOffset + i = "<<obj - sumObjOffset + i<<"\n";
@@ -2180,7 +2116,6 @@ void FuncAnalysis::setReqFor(const llvm::Instruction *I, const llvm::Value *Val,
             continue;
         qualiReq.at(aa) = _ID;
         out.at(aa) = _ID;
-        //OP<<"aualiReq.at"<<aa<<" = "<<qualiReq.at(aa)<<"\n";
 
         const llvm::Value *aaVal = nodeFactory.getValueForNode(aa);
         if (!aaVal)

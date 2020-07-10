@@ -453,6 +453,7 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
     json11::Json::array whiteArr;
     json11::Json::array blackArr;
     json11::Json::array altBlackArr;
+    json11::Json::array funcArr;
     DominatorTree T(*F);
     std::set<const BasicBlock *> newBlacklist = blacklist;
 
@@ -531,12 +532,20 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
     else {
 	
     }
-	 
+	 if (argNo >=0) {
+	     if (isFListEmpty()) {
+             calculateFList();
+	     }
+         for (auto item: FList) {
+             funcArr.push_back(json11::Json(item));
+         }
+	 }
     json11::Json jsonObj = json11::Json::object{
         {"bc", moduleName },
-	{"type", "stack"},
+	    {"type", "stack"},
         {"whitelist", json11::Json(whiteArr)},
         {"blacklist", json11::Json(blackArr)},
+        {"funclist", json11::Json(funcArr)}
         {"use", I->getParent()->getName().str()},
         {"function", I->getParent()->getParent()->getName().str()},
         {"warning", insStr},
@@ -594,6 +603,23 @@ void FuncAnalysis::calculateBLForUse(const llvm::Instruction *I, std::set<const 
 			
 		}
     	}	
+}
+void FuncAnalysis::calculateFList() {
+    std::queue<llvm::Function*> q;
+    unordered_map<llvm::Function*, bool> visit;
+    q.push(F);
+    llvm::Function *cur = F;
+    while (!q.empty()) {
+        cur = q.front();
+        q.pop();
+        visit[F] = true;
+        funcList.insert(cur->getName().str());
+        for (auto callee : Ctx->CallMaps[cur]) {
+            if (!visit[callee]){
+                q.push(callee);
+            }
+        }
+    }
 }
 void FuncAnalysis::calculateRelatedBB(NodeIndex nodeIndex, const llvm::Instruction *I, std::set<NodeIndex> &visit, 
                                         std::set<const BasicBlock *> &blacklist, std::set<const BasicBlock *> &whitelist)
