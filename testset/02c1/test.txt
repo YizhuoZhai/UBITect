@@ -1,0 +1,70 @@
+argc = 3
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/data/home/yizhuo/And-UBITect/testset/02c1/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/And-UBITect/testset/02c1/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+3 functions in total.
+partition size : 2, sccSize = 3, rec size = 0, biggest = 1
+size of indiFuncs : 0
+inside calcallee forfib_table_lookup
+==========Function 0: fib_table_lookup==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+1 Functions Finished.
+inside calcallee forfib_lookup
+==========Function 1: fib_lookup==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @fib_table_lookup(%struct.fib_result* %1)
+possible function:fib_table_lookup, from module/data/home/yizhuo/And-UBITect/testset/02c1/test.llbc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: fib_table_lookup: 0x2314808
+Callee : 0x2314808, name : fib_table_lookup2 Functions Finished.
+inside calcallee forip_route_input_slow
+==========Function 2: ip_route_input_slow==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @fib_table_lookup(%struct.fib_result* %res)
+possible function:fib_table_lookup, from module/data/home/yizhuo/And-UBITect/testset/02c1/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x2314808: fib_table_lookup
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: fib_table_lookup: 0x2314808
+Callee : 0x2314808, name : fib_table_lookup***********Warning: uninitialized ptr   %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8
+[trace] In function @ip_route_input_slow Instruction:  %tobool = icmp ne %struct.fib_table* %0, null
+Inside printRelatedBB:
+  %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8
+/data/home/yizhuo/And-UBITect/testset/02c1/test.llbc:
+json obj:{"aliasNum": 2, "alt-blist": [], "argNo": -1, "bc": "", "blacklist": ["if.then", "if.end"], "colNo": "-1", "fieldNo": -1, "function": "ip_route_input_slow", "id": "_ip_route_input_slow_%res$6$obj", "lineNo": "-1", "rank": "NORMAL_PTR", "type": "stack", "use": "entry", "warning": "  %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8", "whitelist": ["entry", "entry"]}
+3 Functions Finished.
+# of remained function = 0
+ # of modified funcs = 0

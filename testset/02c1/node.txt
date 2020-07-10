@@ -1,0 +1,117 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+3 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function fib_table_lookup==========
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+Summary for function fib_table_lookup
+sumNodeFactory:
+V #0	retIndex>
+V #1	v> %struct.fib_result* %res
+O #2	v> %struct.fib_result* %res
+O #3	field [1] of  : res
+O #4	field [2] of  : res
+O #5	field [3] of  : res
+O #6	field [4] of  : res
+O #7	field [5] of  : res
+O #8	field [6] of  : res
+sumPtsGraph: 
+0 ->
+1 ->2
+idx:      0    1    2    3    4    5    6    7    8  
+req:   -1  -1  -1  -1  -1  -1  -1  -1  -1 
+update: 1  -1  -1  -1  -1  -1  -1  -1  -1 
+V #0	retIndex>
+V #1	v> %struct.fib_result* %res
+O #2	v> %struct.fib_result* %res
+O #3	field [1] of  : res
+O #4	field [2] of  : res
+O #5	field [3] of  : res
+O #6	field [4] of  : res
+O #7	field [5] of  : res
+O #8	field [6] of  : res
+Inside qualifier check:
+1 Function Finished!
+==========Function fib_lookup==========
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+  %6 = call i32 @fib_table_lookup(%struct.fib_result* %5)
+possible function:fib_table_lookup, from moduletest.bc
+process  funcs
+Summary for function fib_lookup
+sumNodeFactory:
+V #0	retIndex>
+V #1	v> %struct.fib_result* %res
+O #2	v> %struct.fib_result* %res
+O #3	field [1] of  : res
+O #4	field [2] of  : res
+O #5	field [3] of  : res
+O #6	field [4] of  : res
+O #7	field [5] of  : res
+O #8	field [6] of  : res
+sumPtsGraph: 
+0 ->
+1 ->2
+idx:      0    1    2    3    4    5    6    7    8  
+req:   -1  -1  -1  -1  -1  -1  -1  -1  -1 
+update: 1  -1  -1  -1  -1  -1  -1  -1  -1 
+V #0	retIndex>
+V #1	v> %struct.fib_result* %res
+O #2	v> %struct.fib_result* %res
+O #3	field [1] of  : res
+O #4	field [2] of  : res
+O #5	field [3] of  : res
+O #6	field [4] of  : res
+O #7	field [5] of  : res
+O #8	field [6] of  : res
+Inside qualifier check:
+2 Function Finished!
+==========Function ip_route_input_slow==========
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+  %2 = call i32 @fib_lookup(%struct.fib_result* %res)
+possible function:fib_lookup, from moduletest.bc
+process  funcs
+Summary for function ip_route_input_slow
+sumNodeFactory:
+V #0	retIndex>
+sumPtsGraph: 
+0 ->
+idx:      0  
+req:   -1 
+update: -1 
+V #0	retIndex>
+Inside qualifier check:
+***********Local Warning: uninitialized ptr   %4 = load %struct.fib_table*, %struct.fib_table** %3, align 8
+[trace] In function @ip_route_input_slow Instruction:  %5 = icmp ne %struct.fib_table* %4, null
+---related BB: 
+---related BB: 
+Def:   %3 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 6
+---related BB: 
+---related BB: 
+Def:   %3 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 6
+---related BB: 
+---related BB: 
+3 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+collect circulate functions: 
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+

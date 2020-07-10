@@ -1,0 +1,119 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+4 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc]
+runOnFunctiondoinit
+==========Function doinit==========
+addr:0x25e65e8
+Module: /home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %4, i8* align 8 %5, i64 16, i1 false), !dbg !44
+possible function:llvm.memcpy.p0i8.p0i8.i64, from module/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc
+process memcpy funcs
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x25e65e8, name:doinit
+copy end.Inside qualifier check:
+check copy func:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 1
+1 Function Finished!
+runOnFunctionvmw_query_bo_switch_prepare
+==========Function vmw_query_bo_switch_prepare==========
+addr:0x25e9758
+Module: /home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x25e9758, name:vmw_query_bo_switch_prepare
+copy end.Inside qualifier check:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 2
+2 Function Finished!
+runOnFunctionvmw_translate_mob_ptr
+==========Function vmw_translate_mob_ptr==========
+addr:0x25e9858
+Module: /home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+  %call = call i32 @doinit(%struct.vmw_dma_buffer** %vmw_bo), !dbg !38
+possible function:doinit, from module/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x25e65e8: doinit
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x25e9858, name:vmw_translate_mob_ptr
+copy end.Inside qualifier check:
+check func: doinit: 0x25e65e8
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 3
+3 Function Finished!
+runOnFunctionvmw_cmd_end_gb_query
+==========Function vmw_cmd_end_gb_query==========
+addr:0x25e9978
+Module: /home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+  %call = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** %vmw_bo), !dbg !35
+possible function:vmw_translate_mob_ptr, from module/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x25e9858: vmw_translate_mob_ptr
+end of process funcs.
+  %call1 = call i32 @vmw_query_bo_switch_prepare(%struct.ttm_buffer_object* %base), !dbg !45
+possible function:vmw_query_bo_switch_prepare, from module/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x25e9758: vmw_query_bo_switch_prepare
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x25e9978, name:vmw_cmd_end_gb_query
+copy end.Inside qualifier check:
+check func: vmw_translate_mob_ptr: 0x25e9858
+***********Warning: potentail uninitialized ptr  %2 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %vmw_bo, align 8, !dbg !43
+[trace] In function @vmw_cmd_end_gb_query Instruction:  %base = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer* %2, i32 0, i32 0, !dbg !44
+/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc:
+json obj:{"aliasNum": 2, "alt-blist": [], "argNo": -1, "bc": "/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc", "blacklist": ["est.bc-vmw_cmd_end_gb_query-1", "est.bc-vmw_cmd_end_gb_query-3", "est.bc-vmw_translate_mob_ptr-5"], "fieldNo": -1, "function": "vmw_cmd_end_gb_query", "id": "/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc_vmw_cmd_end_gb_query_  %2 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %vmw_bo, align 8, !dbg !43_-1_-1", "rank": "NORMAL_PTR", "type": "stack", "use": "est.bc-vmw_cmd_end_gb_query-2", "warning": "  %2 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %vmw_bo, align 8, !dbg !43", "whitelist": ["est.bc-vmw_cmd_end_gb_query-0", "est.bc-vmw_translate_mob_ptr-0"]}
+check func: vmw_query_bo_switch_prepare: 0x25e9758
+Till now, Ctx->uninitArg = 1, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 3
+4 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis / 3] [/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

@@ -1,0 +1,10 @@
+digraph "CFG for 'nfnl_cthelper_new' function" {
+	label="CFG for 'nfnl_cthelper_new' function";
+
+	Node0x1b81840 [shape=record,label="{%0:\l  %1 = alloca %struct.nlattr**, align 8\l  %tuple = alloca %struct.nf_conntrack_tuple, align 4\l  %helper = alloca %struct.nf_contrack_helper*, align 8\l  %ret = alloca i32, align 4\l  %i = alloca i32, align 4\l  store %struct.nlattr** %tb, %struct.nlattr*** %1, align 8\l  store %struct.nf_contrack_helper* null, %struct.nf_contrack_helper**\l... %helper, align 8\l  store i32 0, i32* %ret, align 4\l  %2 = load %struct.nlattr**, %struct.nlattr*** %1, align 8\l  %3 = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %2, i64 2\l  %4 = load %struct.nlattr*, %struct.nlattr** %3, align 8\l  %5 = call i32 @nfnl_cthelper_parse_tuple(%struct.nf_conntrack_tuple* %tuple,\l... %struct.nlattr* %4)\l  store i32 %5, i32* %ret, align 4\l  %6 = load %struct.nf_contrack_helper*, %struct.nf_contrack_helper** %helper,\l... align 8\l  %7 = icmp eq %struct.nf_contrack_helper* %6, null\l  br i1 %7, label %8, label %11\l|{<s0>T|<s1>F}}"];
+	Node0x1b81840:s0 -> Node0x1b81890;
+	Node0x1b81840:s1 -> Node0x1b818e0;
+	Node0x1b81890 [shape=record,label="{%8:\l\l  %9 = load %struct.nlattr**, %struct.nlattr*** %1, align 8\l  %10 = call i32 @nfnl_cthelper_create(%struct.nlattr** %9,\l... %struct.nf_conntrack_tuple* %tuple)\l  store i32 %10, i32* %ret, align 4\l  br label %11\l}"];
+	Node0x1b81890 -> Node0x1b818e0;
+	Node0x1b818e0 [shape=record,label="{%11:\l\l  %12 = load i32, i32* %ret, align 4\l  ret i32 %12\l}"];
+}

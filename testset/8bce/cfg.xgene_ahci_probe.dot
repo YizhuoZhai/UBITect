@@ -1,0 +1,17 @@
+digraph "CFG for 'xgene_ahci_probe' function" {
+	label="CFG for 'xgene_ahci_probe' function";
+
+	Node0x20f5390 [shape=record,label="{%0:\l  %version = alloca i32, align 4\l  %info = alloca %struct.acpi_device_info*, align 8\l  store i32 1, i32* %version, align 4\l  %1 = call i32 @acpi_get_object_info(%struct.acpi_device_info** nonnull %info)\l  %2 = icmp eq i32 %1, 0\l  br i1 %2, label %4, label %3\l|{<s0>T|<s1>F}}"];
+	Node0x20f5390:s0 -> Node0x20f5430;
+	Node0x20f5390:s1 -> Node0x20f53e0;
+	Node0x20f53e0 [shape=record,label="{%3:\l\l  store i32 1, i32* %version, align 4\l  br label %12\l}"];
+	Node0x20f53e0 -> Node0x20f5520;
+	Node0x20f5430 [shape=record,label="{%4:\l\l  %5 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align\l... 8\l  %6 = getelementptr inbounds %struct.acpi_device_info,\l... %struct.acpi_device_info* %5, i64 0, i32 0\l  %7 = load i32, i32* %6, align 4\l  %8 = and i32 %7, 32\l  %9 = icmp eq i32 %8, 0\l  br i1 %9, label %11, label %10\l|{<s0>T|<s1>F}}"];
+	Node0x20f5430:s0 -> Node0x20f54d0;
+	Node0x20f5430:s1 -> Node0x20f5480;
+	Node0x20f5480 [shape=record,label="{%10:\l\l  store i32 2, i32* %version, align 4\l  br label %11\l}"];
+	Node0x20f5480 -> Node0x20f54d0;
+	Node0x20f54d0 [shape=record,label="{%11:\l\l  br label %12\l}"];
+	Node0x20f54d0 -> Node0x20f5520;
+	Node0x20f5520 [shape=record,label="{%12:\l\l  %13 = load i32, i32* %version, align 4\l  ret i32 %13\l}"];
+}

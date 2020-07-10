@@ -1,0 +1,313 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+6 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function refcount_dec_and_test==========
+Inside BuildPtsGraph:
+0x17d4238:   %1 = alloca %struct.refcount_struct*, align 8
+0x17d42b0:   store %struct.refcount_struct* %r, %struct.refcount_struct** %1, align 8
+0x17d63b8:   %2 = load %struct.refcount_struct*, %struct.refcount_struct** %1, align 8
+0x17d6448:   %3 = getelementptr inbounds %struct.refcount_struct, %struct.refcount_struct* %2, i32 0, i32 0
+0x17d64e8:   %4 = getelementptr inbounds %struct.atomic_t, %struct.atomic_t* %3, i32 0, i32 0
+0x17d6558:   %5 = load i32, i32* %4, align 4
+0x17d4c10:   %6 = icmp ne i32 %5, 0
+0x17d4c98:   br i1 %6, label %7, label %8
+0x17d4cf8:   br label %8
+0x17d65b8:   ret i32 0
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+O #5	nullptr>
+O #6	nullptr>
+V #7	v> @a = global i32 1, align 4
+O #8	v> @a = global i32 1, align 4
+V #9	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #10	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #11	field [1] of  : init
+O #12	field [2] of  : init
+O #13	field [3] of  : init
+O #14	field [4] of  : init
+O #15	field [5] of  : init
+V #16	f> refcount_dec_and_test
+V #17	v> %struct.refcount_struct* %r
+O #18	v> %struct.refcount_struct* %r
+V #19	v>   %1 = alloca %struct.refcount_struct*, align 8
+V #20	v>   store %struct.refcount_struct* %r, %struct.refcount_struct** %1, align 8
+V #21	v>   %2 = load %struct.refcount_struct*, %struct.refcount_struct** %1, align 8
+V #22	v>   %3 = getelementptr inbounds %struct.refcount_struct, %struct.refcount_struct* %2, i32 0, i32 0
+V #23	v>   %4 = getelementptr inbounds %struct.atomic_t, %struct.atomic_t* %3, i32 0, i32 0
+V #24	v>   %5 = load i32, i32* %4, align 4
+V #25	v>   %6 = icmp ne i32 %5, 0
+V #26	v>   br i1 %6, label %7, label %8
+V #27	v>   br label %8
+V #28	v>   ret i32 0
+O #29	v>   %1 = alloca %struct.refcount_struct*, align 8
+Inside qualifier inference:
+valNode = 17, objNode = 18
+1 Function Finished!
+==========Function kref_put==========
+Inside BuildPtsGraph:
+0x17d7dd8:   %1 = alloca %struct.kref*, align 8
+0x17d7e50:   store %struct.kref* %kref, %struct.kref** %1, align 8
+0x17d7eb8:   %2 = load %struct.kref*, %struct.kref** %1, align 8
+0x17d7f48:   %3 = getelementptr inbounds %struct.kref, %struct.kref* %2, i32 0, i32 0
+0x17d7fd0:   %4 = call i32 @refcount_dec_and_test(%struct.refcount_struct* %3)
+0x17d8050:   %5 = icmp ne i32 %4, 0
+0x17d80d8:   br i1 %5, label %6, label %7
+0x17d8138:   br label %7
+0x17d8198:   ret i32 0
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+O #5	nullptr>
+O #6	nullptr>
+V #7	v> @a = global i32 1, align 4
+O #8	v> @a = global i32 1, align 4
+V #9	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #10	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #11	field [1] of  : init
+O #12	field [2] of  : init
+O #13	field [3] of  : init
+O #14	field [4] of  : init
+O #15	field [5] of  : init
+V #16	f> kref_put
+V #17	v> %struct.kref* %kref
+O #18	v> %struct.kref* %kref
+V #19	v>   %1 = alloca %struct.kref*, align 8
+V #20	v>   store %struct.kref* %kref, %struct.kref** %1, align 8
+V #21	v>   %2 = load %struct.kref*, %struct.kref** %1, align 8
+V #22	v>   %3 = getelementptr inbounds %struct.kref, %struct.kref* %2, i32 0, i32 0
+V #23	v>   %4 = call i32 @refcount_dec_and_test(%struct.refcount_struct* %3)
+V #24	v>   %5 = icmp ne i32 %4, 0
+V #25	v>   br i1 %5, label %6, label %7
+V #26	v>   br label %7
+V #27	v>   ret i32 0
+O #28	v>   %1 = alloca %struct.kref*, align 8
+Inside qualifier inference:
+valNode = 17, objNode = 18
+2 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [test.bc]
+==========Function kobject_put==========
+Inside BuildPtsGraph:
+0x17d73f8:   %1 = alloca %struct.kobject*, align 8
+0x17d7470:   store %struct.kobject* %kobj, %struct.kobject** %1, align 8
+0x17d74d8:   %2 = load %struct.kobject*, %struct.kobject** %1, align 8
+0x17d7550:   %3 = icmp ne %struct.kobject* %2, null
+0x17d75d8:   br i1 %3, label %4, label %16
+0x17d7638:   %5 = load %struct.kobject*, %struct.kobject** %1, align 8
+0x17d76c8:   %6 = getelementptr inbounds %struct.kobject, %struct.kobject* %5, i32 0, i32 3
+0x17d7738:   %7 = load i8, i8* %6, align 8
+0x17d77b0:   %8 = and i8 %7, 1
+0x17d7808:   %9 = zext i8 %8 to i32
+0x17d7880:   %10 = icmp ne i32 %9, 0
+0x17d7908:   br i1 %10, label %12, label %11
+0x17d7968:   br label %12
+0x17d79c8:   %13 = load %struct.kobject*, %struct.kobject** %1, align 8
+0x17d7a58:   %14 = getelementptr inbounds %struct.kobject, %struct.kobject* %13, i32 0, i32 1
+0x17d7ae0:   %15 = call i32 @kref_put(%struct.kref* %14)
+0x17d7b48:   br label %16
+0x17d7b90:   ret void
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+O #5	nullptr>
+O #6	nullptr>
+V #7	v> @a = global i32 1, align 4
+O #8	v> @a = global i32 1, align 4
+V #9	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #10	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #11	field [1] of  : init
+O #12	field [2] of  : init
+O #13	field [3] of  : init
+O #14	field [4] of  : init
+O #15	field [5] of  : init
+V #16	v> %struct.kobject* %kobj
+O #17	v> %struct.kobject* %kobj
+O #18	field [1] of  : kobj
+O #19	field [2] of  : kobj
+O #20	field [3] of  : kobj
+V #21	v>   %1 = alloca %struct.kobject*, align 8
+V #22	v>   store %struct.kobject* %kobj, %struct.kobject** %1, align 8
+V #23	v>   %2 = load %struct.kobject*, %struct.kobject** %1, align 8
+V #24	v>   %3 = icmp ne %struct.kobject* %2, null
+V #25	v>   br i1 %3, label %4, label %16
+V #26	v>   %5 = load %struct.kobject*, %struct.kobject** %1, align 8
+V #27	v>   %6 = getelementptr inbounds %struct.kobject, %struct.kobject* %5, i32 0, i32 3
+V #28	v>   %7 = load i8, i8* %6, align 8
+V #29	v>   %8 = and i8 %7, 1
+V #30	v>   %9 = zext i8 %8 to i32
+V #31	v>   %10 = icmp ne i32 %9, 0
+V #32	v>   br i1 %10, label %12, label %11
+V #33	v>   br label %12
+V #34	v>   %13 = load %struct.kobject*, %struct.kobject** %1, align 8
+V #35	v>   %14 = getelementptr inbounds %struct.kobject, %struct.kobject* %13, i32 0, i32 1
+V #36	v>   %15 = call i32 @kref_put(%struct.kref* %14)
+V #37	v>   br label %16
+V #38	v>   ret void
+O #39	v>   %1 = alloca %struct.kobject*, align 8
+Inside qualifier inference:
+valNode = 16, objNode = 17
+3 Function Finished!
+==========Function put_device==========
+Inside BuildPtsGraph:
+0x17d8438:   %1 = alloca %struct.device*, align 8
+0x17d84b0:   store %struct.device* %dev, %struct.device** %1, align 8
+0x17d8518:   %2 = load %struct.device*, %struct.device** %1, align 8
+0x17d8590:   %3 = icmp ne %struct.device* %2, null
+0x17d8618:   br i1 %3, label %4, label %7
+0x17d8678:   %5 = load %struct.device*, %struct.device** %1, align 8
+0x17d8708:   %6 = getelementptr inbounds %struct.device, %struct.device* %5, i32 0, i32 1
+0x17d8790:   call void @kobject_put(%struct.kobject* %6)
+0x17d87f8:   br label %7
+0x17d8840:   ret void
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+O #5	nullptr>
+O #6	nullptr>
+V #7	v> @a = global i32 1, align 4
+O #8	v> @a = global i32 1, align 4
+V #9	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #10	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #11	field [1] of  : init
+O #12	field [2] of  : init
+O #13	field [3] of  : init
+O #14	field [4] of  : init
+O #15	field [5] of  : init
+V #16	v> %struct.device* %dev
+O #17	v> %struct.device* %dev
+O #18	field [1] of  : dev
+O #19	field [2] of  : dev
+O #20	field [3] of  : dev
+O #21	field [4] of  : dev
+V #22	v>   %1 = alloca %struct.device*, align 8
+V #23	v>   store %struct.device* %dev, %struct.device** %1, align 8
+V #24	v>   %2 = load %struct.device*, %struct.device** %1, align 8
+V #25	v>   %3 = icmp ne %struct.device* %2, null
+V #26	v>   br i1 %3, label %4, label %7
+V #27	v>   %5 = load %struct.device*, %struct.device** %1, align 8
+V #28	v>   %6 = getelementptr inbounds %struct.device, %struct.device* %5, i32 0, i32 1
+V #29	v>   call void @kobject_put(%struct.kobject* %6)
+V #30	v>   br label %7
+V #31	v>   ret void
+O #32	v>   %1 = alloca %struct.device*, align 8
+Inside qualifier inference:
+valNode = 16, objNode = 17
+4 Function Finished!
+==========Function power_supply_put==========
+Inside BuildPtsGraph:
+0x17d8a38:   %1 = alloca %struct.power_supply*, align 8
+0x17d8ab0:   store %struct.power_supply* %psy, %struct.power_supply** %1, align 8
+0x17d8b18:   %2 = load %struct.power_supply*, %struct.power_supply** %1, align 8
+0x17d8ba8:   %3 = getelementptr inbounds %struct.power_supply, %struct.power_supply* %2, i32 0, i32 1
+0x17d8c30:   call void @put_device(%struct.device* %3)
+0x17d8c80:   ret void
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+O #5	nullptr>
+O #6	nullptr>
+V #7	v> @a = global i32 1, align 4
+O #8	v> @a = global i32 1, align 4
+V #9	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #10	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #11	field [1] of  : init
+O #12	field [2] of  : init
+O #13	field [3] of  : init
+O #14	field [4] of  : init
+O #15	field [5] of  : init
+V #16	v> %struct.power_supply* %psy
+O #17	v> %struct.power_supply* %psy
+O #18	field [1] of  : psy
+O #19	field [2] of  : psy
+O #20	field [3] of  : psy
+O #21	field [4] of  : psy
+O #22	field [5] of  : psy
+V #23	v>   %1 = alloca %struct.power_supply*, align 8
+V #24	v>   store %struct.power_supply* %psy, %struct.power_supply** %1, align 8
+V #25	v>   %2 = load %struct.power_supply*, %struct.power_supply** %1, align 8
+V #26	v>   %3 = getelementptr inbounds %struct.power_supply, %struct.power_supply* %2, i32 0, i32 1
+V #27	v>   call void @put_device(%struct.device* %3)
+V #28	v>   ret void
+O #29	v>   %1 = alloca %struct.power_supply*, align 8
+Inside qualifier inference:
+valNode = 16, objNode = 17
+5 Function Finished!
+==========Function f==========
+Inside BuildPtsGraph:
+0x17d8f48:   %psy = alloca %struct.power_supply*, align 8
+0x17d8fa8:   %1 = load i32, i32* @a, align 4
+0x17d9020:   %2 = icmp eq i32 %1, 1
+0x17d90a8:   br i1 %2, label %3, label %4
+0x17d9108:   br label %5
+0x17d9180:   store %struct.power_supply* @init, %struct.power_supply** %psy, align 8
+0x17d91e8:   br label %5
+0x17d9248:   %6 = load %struct.power_supply*, %struct.power_supply** %psy, align 8
+0x17d92c0:   call void @power_supply_put(%struct.power_supply* %6)
+0x17d9328:   ret i32 0
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+O #5	nullptr>
+O #6	nullptr>
+V #7	v> @a = global i32 1, align 4
+O #8	v> @a = global i32 1, align 4
+V #9	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #10	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #11	field [1] of  : init
+O #12	field [2] of  : init
+O #13	field [3] of  : init
+O #14	field [4] of  : init
+O #15	field [5] of  : init
+V #16	f> f
+V #17	v>   %psy = alloca %struct.power_supply*, align 8
+V #18	v>   %1 = load i32, i32* @a, align 4
+V #19	v>   %2 = icmp eq i32 %1, 1
+V #20	v>   br i1 %2, label %3, label %4
+V #21	v>   br label %5
+V #22	v>   store %struct.power_supply* @init, %struct.power_supply** %psy, align 8
+V #23	v>   br label %5
+V #24	v>   %6 = load %struct.power_supply*, %struct.power_supply** %psy, align 8
+V #25	v>   call void @power_supply_put(%struct.power_supply* %6)
+V #26	v>   ret i32 0
+O #27	v>   %psy = alloca %struct.power_supply*, align 8
+Inside qualifier inference:
+6 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 3] [test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+collect circulate functions: 
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+

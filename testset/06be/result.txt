@@ -1,0 +1,312 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+readylist insert function nf_conntrack_helper_register
+readylist insert function nfnl_cthelper_parse_tuple
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function nf_conntrack_helper_register==========
+Inside BuildPtsGraph:
+  %1 = icmp eq %struct.nf_conntrack_helper* %me, null
+  %. = select i1 %1, i32 1, i32 -1
+  ret i32 %.
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> %struct.nf_conntrack_helper* %me
+O #5	v> %struct.nf_conntrack_helper* %me
+O #6	field [1] of  : me
+O #7	field [2] of  : me
+O #8	field [3] of  : me
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+Inside qualifier inference:
+  %1 = icmp eq %struct.nf_conntrack_helper* %me, null
+  %. = select i1 %1, i32 1, i32 -1
+  ret i32 %.
+inside return instruction:   ret i32 %.
+return value isn't a pointer type
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = -1
+index = 5, qualifier = -1
+index = 6, qualifier = -1
+index = 7, qualifier = -1
+index = 8, qualifier = -1
+idx = 4, requirement = 1. update = 0
+idx = 5, requirement = 0. update = 0
+idx = 6, requirement = 0. update = 0
+idx = 7, requirement = 0. update = 0
+idx = 8, requirement = 0. update = 0
+return index = 0, Qualifier = 1
+Inside QualifierCheck:
+  %1 = icmp eq %struct.nf_conntrack_helper* %me, null
+  %. = select i1 %1, i32 1, i32 -1
+  ret i32 %.
+==========Function nfnl_cthelper_create==========
+Inside BuildPtsGraph:
+  %1 = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %tb, i64 2
+  %2 = load %struct.nlattr*, %struct.nlattr** %1, align 8
+  %3 = icmp eq %struct.nlattr* %2, null
+  br i1 %3, label %10, label %4
+  %5 = tail call noalias i8* @malloc(i64 32) #5
+call instruction return a pointer
+  %6 = getelementptr inbounds i8, i8* %5, i64 16
+  %7 = bitcast i8* %6 to %struct.nf_conntrack_helper*
+  %8 = bitcast %struct.nf_conntrack_tuple* %tuple to i8*
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %6, i8* %8, i64 12, i32 4, i1 false)
+  %9 = tail call i32 @nf_conntrack_helper_register(%struct.nf_conntrack_helper* %7)
+  br label %10
+  %.0 = phi i32 [ %9, %4 ], [ -22, %0 ]
+  ret i32 %.0
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> %struct.nlattr** %tb
+O #5	v> %struct.nlattr** %tb
+V #6	v> %struct.nf_conntrack_tuple* %tuple
+O #7	v> %struct.nf_conntrack_tuple* %tuple
+O #8	field [1] of  : tuple
+O #9	field [2] of  : tuple
+V #10	v>   %1 = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %tb, i64 2
+V #11	v>   %2 = load %struct.nlattr*, %struct.nlattr** %1, align 8
+V #12	v>   %5 = tail call noalias i8* @malloc(i64 32) #5
+V #13	v>   %6 = getelementptr inbounds i8, i8* %5, i64 16
+V #14	v>   %7 = bitcast i8* %6 to %struct.nf_conntrack_helper*
+V #15	v>   %8 = bitcast %struct.nf_conntrack_tuple* %tuple to i8*
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 10 point to <5, >
+index 11 point to <0, >
+index 12 point to <1, >
+index 13 point to <1, >
+index 14 point to <1, >
+index 15 point to <7, >
+Inside qualifier inference:
+  %1 = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %tb, i64 2
+  %2 = load %struct.nlattr*, %struct.nlattr** %1, align 8
+  %3 = icmp eq %struct.nlattr* %2, null
+  br i1 %3, label %10, label %4
+  %5 = tail call noalias i8* @malloc(i64 32) #5
+  %6 = getelementptr inbounds i8, i8* %5, i64 16
+  %7 = bitcast i8* %6 to %struct.nf_conntrack_helper*
+  %8 = bitcast %struct.nf_conntrack_tuple* %tuple to i8*
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %6, i8* %8, i64 12, i32 4, i1 false)
+  %9 = tail call i32 @nf_conntrack_helper_register(%struct.nf_conntrack_helper* %7)
+  br label %10
+  %.0 = phi i32 [ %9, %4 ], [ -22, %0 ]
+  ret i32 %.0
+inside return instruction:   ret i32 %.0
+return value isn't a pointer type
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 0
+index = 2, qualifier = 0
+index = 3, qualifier = 0
+index = 4, qualifier = -1
+index = 5, qualifier = -1
+index = 6, qualifier = -1
+index = 7, qualifier = -1
+index = 8, qualifier = -1
+index = 9, qualifier = -1
+index = 10, qualifier = -1
+index = 11, qualifier = -1
+index = 12, qualifier = 0
+index = 13, qualifier = 0
+index = 14, qualifier = 0
+index = 15, qualifier = -1
+idx = 4, requirement = 1. update = 0
+idx = 5, requirement = 1. update = 0
+idx = 6, requirement = 1. update = 0
+idx = 7, requirement = 1. update = 0
+idx = 8, requirement = 1. update = 0
+idx = 9, requirement = 1. update = 0
+return index = 0, Qualifier = 1
+Inside QualifierCheck:
+  %1 = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %tb, i64 2
+  %2 = load %struct.nlattr*, %struct.nlattr** %1, align 8
+  %3 = icmp eq %struct.nlattr* %2, null
+  br i1 %3, label %10, label %4
+  %5 = tail call noalias i8* @malloc(i64 32) #5
+  %6 = getelementptr inbounds i8, i8* %5, i64 16
+  %7 = bitcast i8* %6 to %struct.nf_conntrack_helper*
+  %8 = bitcast %struct.nf_conntrack_tuple* %tuple to i8*
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %6, i8* %8, i64 12, i32 4, i1 false)
+  %9 = tail call i32 @nf_conntrack_helper_register(%struct.nf_conntrack_helper* %7)
+argIdx = 0, req = 1
+argIdx = 1, req = 0
+argIdx = 2, req = 0
+argIdx = 3, req = 0
+argIdx = 4, req = 0
+***********Warning: argument check fails @ argument 0 : ptr not initialized
+  br label %10
+  %.0 = phi i32 [ %9, %4 ], [ -22, %0 ]
+  ret i32 %.0
+==========Function nfnl_cthelper_parse_tuple==========
+Inside BuildPtsGraph:
+  %1 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %tuple, i64 0, i32 0, i32 0
+  store i32 4, i32* %1, align 4
+  %2 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %tuple, i64 0, i32 1, i32 0
+  store i32 4, i32* %2, align 4
+  ret i32 0
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> %struct.nf_conntrack_tuple* %tuple
+O #5	v> %struct.nf_conntrack_tuple* %tuple
+O #6	field [1] of  : tuple
+O #7	field [2] of  : tuple
+V #8	v> %struct.nlattr* %attr
+O #9	v> %struct.nlattr* %attr
+O #10	field [1] of  : attr
+V #11	v>   %1 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %tuple, i64 0, i32 0, i32 0
+V #12	v>   %2 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %tuple, i64 0, i32 1, i32 0
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 8 point to <9, >
+index 11 point to <1, >
+index 12 point to <1, >
+Inside qualifier inference:
+  %1 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %tuple, i64 0, i32 0, i32 0
+  store i32 4, i32* %1, align 4
+  %2 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %tuple, i64 0, i32 1, i32 0
+  store i32 4, i32* %2, align 4
+  ret i32 0
+inside return instruction:   ret i32 0
+return value isn't a pointer type
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = -1
+index = 5, qualifier = -1
+index = 6, qualifier = -1
+index = 7, qualifier = -1
+index = 8, qualifier = -1
+index = 9, qualifier = -1
+index = 10, qualifier = -1
+index = 11, qualifier = -1
+index = 12, qualifier = -1
+idx = 4, requirement = 1. update = 0
+idx = 5, requirement = 0. update = 0
+idx = 6, requirement = 0. update = 0
+idx = 7, requirement = 0. update = 0
+idx = 8, requirement = 0. update = 0
+idx = 9, requirement = 0. update = 0
+idx = 10, requirement = 0. update = 0
+return index = 0, Qualifier = 1
+Inside QualifierCheck:
+  %1 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %tuple, i64 0, i32 0, i32 0
+  store i32 4, i32* %1, align 4
+  %2 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %tuple, i64 0, i32 1, i32 0
+  store i32 4, i32* %2, align 4
+  ret i32 0
+==========Function nfnl_cthelper_new==========
+Inside BuildPtsGraph:
+  %tuple = alloca %struct.nf_conntrack_tuple, align 4
+struct type
+  %1 = call i32 @nfnl_cthelper_parse_tuple(%struct.nf_conntrack_tuple* nonnull %tuple, %struct.nlattr* undef)
+  %2 = call i32 @nfnl_cthelper_create(%struct.nlattr** %tb, %struct.nf_conntrack_tuple* nonnull %tuple)
+  ret i32 %2
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> %struct.nlattr** %tb
+O #5	v> %struct.nlattr** %tb
+V #6	v>   %tuple = alloca %struct.nf_conntrack_tuple, align 4
+O #7	v>   %tuple = alloca %struct.nf_conntrack_tuple, align 4
+O #8	field [1] of  : tuple
+O #9	field [2] of  : tuple
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+Inside qualifier inference:
+  %tuple = alloca %struct.nf_conntrack_tuple, align 4
+  %1 = call i32 @nfnl_cthelper_parse_tuple(%struct.nf_conntrack_tuple* nonnull %tuple, %struct.nlattr* undef)
+  %2 = call i32 @nfnl_cthelper_create(%struct.nlattr** %tb, %struct.nf_conntrack_tuple* nonnull %tuple)
+  ret i32 %2
+inside return instruction:   ret i32 %2
+return value isn't a pointer type
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 0
+index = 3, qualifier = 0
+index = 4, qualifier = 0
+index = 5, qualifier = 0
+index = 6, qualifier = 0
+index = 7, qualifier = 0
+index = 8, qualifier = 0
+index = 9, qualifier = 0
+idx = 4, requirement = 1. update = 0
+idx = 5, requirement = 1. update = 0
+return index = 0, Qualifier = 1
+Inside QualifierCheck:
+  %tuple = alloca %struct.nf_conntrack_tuple, align 4
+  %1 = call i32 @nfnl_cthelper_parse_tuple(%struct.nf_conntrack_tuple* nonnull %tuple, %struct.nlattr* undef)
+argIdx = 0, req = 1
+argIdx = 1, req = 0
+argIdx = 2, req = 0
+argIdx = 3, req = 0
+argIdx = 4, req = 0
+argIdx = 5, req = 0
+argIdx = 6, req = 0
+***********Warning: argument check fails @ argument 0 : ptr not initialized
+argIdx = 0, req = 1
+argIdx = 1, req = 0
+argIdx = 2, req = 0
+argIdx = 3, req = 0
+argIdx = 4, req = 0
+argIdx = 5, req = 0
+argIdx = 6, req = 0
+  %2 = call i32 @nfnl_cthelper_create(%struct.nlattr** %tb, %struct.nf_conntrack_tuple* nonnull %tuple)
+argIdx = 0, req = 1
+argIdx = 1, req = 1
+argIdx = 2, req = 1
+argIdx = 3, req = 1
+argIdx = 4, req = 1
+argIdx = 5, req = 1
+argIdx = 0, req = 1
+argIdx = 1, req = 1
+argIdx = 2, req = 1
+argIdx = 3, req = 1
+argIdx = 4, req = 1
+argIdx = 5, req = 1
+***********Warning: argument check fails @ argument 1 : ptr not initialized
+***********Warning: argument check fails @ argument 1 : field 0 not initialized
+***********Warning: argument check fails @ argument 1 : field 1 not initialized
+***********Warning: argument check fails @ argument 1 : field 2 not initialized
+  ret i32 %2
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

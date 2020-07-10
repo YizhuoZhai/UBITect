@@ -1,0 +1,113 @@
+KLEE: WARNING ONCE: function "regmap_register_patch" has inline asm
+KLEE: WARNING ONCE: function "_regmap_multi_reg_write" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_async_complete_start" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_async_complete_done" has inline asm
+KLEE: WARNING ONCE: function "cpumask_test_cpu" has inline asm
+KLEE: WARNING ONCE: function "rcu_read_lock_sched_notrace" has inline asm
+KLEE: WARNING ONCE: function "rcu_read_unlock_sched_notrace" has inline asm
+KLEE: WARNING ONCE: function "cpumask_check" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_hw_write_start" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_hw_write_done" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_reg_read" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_reg_write" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_async_io_complete" has inline asm
+KLEE: WARNING ONCE: function "_regmap_raw_read" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_hw_read_start" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_hw_read_done" has inline asm
+KLEE: WARNING ONCE: function "_regmap_raw_write" has inline asm
+KLEE: WARNING ONCE: function "trace_regmap_async_write_start" has inline asm
+KLEE: WARNING ONCE: function "dev_get_regmap_match" has inline asm
+KLEE: WARNING ONCE: function "__ilog2_u32" has inline asm
+KLEE: WARNING ONCE: function "_regmap_bus_formatted_write" has inline asm
+KLEE: WARNING ONCE: function "_regmap_bus_raw_write" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_regcache_drop_region" has inline asm
+KLEE: WARNING ONCE: function "perf_fetch_caller_regs" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_regmap_async" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_regmap_bool" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_regcache_sync" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_regmap_block" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_regmap_reg" has inline asm
+KLEE: WARNING ONCE: function "of_node_clear_flag" has inline asm
+KLEE: WARNING: undefined reference to variable: __cpu_online_mask
+KLEE: WARNING: undefined reference to function: __devres_alloc_node
+KLEE: WARNING: undefined reference to function: __dynamic_dev_dbg
+KLEE: WARNING: undefined reference to function: __dynamic_pr_debug
+KLEE: WARNING: undefined reference to function: __init_waitqueue_head
+KLEE: WARNING: undefined reference to function: __kmalloc
+KLEE: WARNING: undefined reference to function: __list_add_valid
+KLEE: WARNING: undefined reference to function: __list_del_entry_valid
+KLEE: WARNING: undefined reference to function: __might_sleep
+KLEE: WARNING: undefined reference to function: __mutex_init
+KLEE: WARNING: undefined reference to function: __platform_driver_register
+KLEE: WARNING: undefined reference to variable: __preempt_count
+KLEE: WARNING: undefined reference to function: __raw_spin_lock_init
+KLEE: WARNING: undefined reference to function: __udelay
+KLEE: WARNING: undefined reference to function: __wake_up
+KLEE: WARNING: undefined reference to function: _raw_spin_lock
+KLEE: WARNING: undefined reference to function: _raw_spin_lock_irqsave
+KLEE: WARNING: undefined reference to function: _raw_spin_unlock
+KLEE: WARNING: undefined reference to function: _raw_spin_unlock_irqrestore
+KLEE: WARNING: undefined reference to function: clk_hw_register
+KLEE: WARNING: undefined reference to function: clk_hw_register_fixed_factor
+KLEE: WARNING: undefined reference to function: clk_hw_register_fixed_rate
+KLEE: WARNING: undefined reference to function: clk_hw_register_gate
+KLEE: WARNING: undefined reference to variable: cpu_number
+KLEE: WARNING: undefined reference to function: debug_lockdep_rcu_enabled
+KLEE: WARNING: undefined reference to function: dev_err
+KLEE: WARNING: undefined reference to function: devm_ioremap_resource
+KLEE: WARNING: undefined reference to function: devm_kfree
+KLEE: WARNING: undefined reference to function: devm_kmalloc
+KLEE: WARNING: undefined reference to function: devm_reset_controller_register
+KLEE: WARNING: undefined reference to function: devres_add
+KLEE: WARNING: undefined reference to function: devres_find
+KLEE: WARNING: undefined reference to function: devres_free
+KLEE: WARNING: undefined reference to function: event_triggers_call
+KLEE: WARNING: undefined reference to function: finish_wait
+KLEE: WARNING: undefined reference to function: init_wait_entry
+KLEE: WARNING: undefined reference to function: kfree
+KLEE: WARNING: undefined reference to function: kmemdup
+KLEE: WARNING: undefined reference to function: krealloc
+KLEE: WARNING: undefined reference to function: lockdep_init_map
+KLEE: WARNING: undefined reference to function: lockdep_rcu_suspicious
+KLEE: WARNING: undefined reference to function: mutex_lock_nested
+KLEE: WARNING: undefined reference to function: mutex_unlock
+KLEE: WARNING: undefined reference to variable: nr_cpu_ids
+KLEE: WARNING: undefined reference to function: of_clk_add_hw_provider
+KLEE: WARNING: undefined reference to function: of_clk_hw_onecell_get
+KLEE: WARNING: undefined reference to function: of_find_property
+KLEE: WARNING: undefined reference to function: perf_trace_buf_alloc
+KLEE: WARNING: undefined reference to function: perf_trace_run_bpf_submit
+KLEE: WARNING: undefined reference to function: platform_get_resource
+KLEE: WARNING: undefined reference to function: prepare_to_wait_event
+KLEE: WARNING: undefined reference to function: printk
+KLEE: WARNING: undefined reference to function: rb_erase
+KLEE: WARNING: undefined reference to function: rb_first
+KLEE: WARNING: undefined reference to function: rb_insert_color
+KLEE: WARNING: undefined reference to function: rb_next
+KLEE: WARNING: undefined reference to function: rcu_read_lock_sched_held
+KLEE: WARNING: undefined reference to function: regcache_exit
+KLEE: WARNING: undefined reference to function: regcache_init
+KLEE: WARNING: undefined reference to function: regcache_read
+KLEE: WARNING: undefined reference to function: regcache_write
+KLEE: WARNING: undefined reference to function: regmap_debugfs_exit
+KLEE: WARNING: undefined reference to function: regmap_debugfs_init
+KLEE: WARNING: undefined reference to function: regmap_debugfs_initcall
+KLEE: WARNING: undefined reference to function: schedule
+KLEE: WARNING: undefined reference to function: strcpy
+KLEE: WARNING: undefined reference to function: strlen
+KLEE: WARNING: undefined reference to function: syscon_node_to_regmap
+KLEE: WARNING: undefined reference to variable: this_cpu_off
+KLEE: WARNING: undefined reference to function: trace_define_field
+KLEE: WARNING: undefined reference to function: trace_event_buffer_commit
+KLEE: WARNING: undefined reference to function: trace_event_buffer_reserve
+KLEE: WARNING: undefined reference to function: trace_event_ignore_this_pid
+KLEE: WARNING: undefined reference to function: trace_event_raw_init
+KLEE: WARNING: undefined reference to function: trace_event_reg
+KLEE: WARNING: undefined reference to function: trace_handle_return
+KLEE: WARNING: undefined reference to function: trace_raw_output_prep
+KLEE: WARNING: undefined reference to function: trace_seq_printf
+KLEE: WARNING: unable to load symbol(cpu_number) while initializing globals.
+KLEE: WARNING: unable to load symbol(__cpu_online_mask) while initializing globals.
+KLEE: WARNING: unable to load symbol(__preempt_count) while initializing globals.
+KLEE: WARNING: unable to load symbol(nr_cpu_ids) while initializing globals.
+KLEE: WARNING: unable to load symbol(this_cpu_off) while initializing globals.

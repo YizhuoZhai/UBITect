@@ -1,0 +1,5 @@
+digraph "CFG for 'fib_lookup' function" {
+	label="CFG for 'fib_lookup' function";
+
+	Node0x2462ef0 [shape=record,label="{%0:\l  %1 = alloca %struct.fib_table*, align 8\l  %2 = alloca %struct.fib_result*, align 8\l  %err = alloca i32, align 4\l  store %struct.fib_table* %tb, %struct.fib_table** %1, align 8\l  store %struct.fib_result* %res, %struct.fib_result** %2, align 8\l  store i32 0, i32* %err, align 4\l  %3 = load %struct.fib_table*, %struct.fib_table** %1, align 8\l  %4 = load %struct.fib_result*, %struct.fib_result** %2, align 8\l  call void @fib_table_lookup(%struct.fib_table* %3, %struct.fib_result* %4)\l  %5 = load i32, i32* %err, align 4\l  ret i32 %5\l}"];
+}

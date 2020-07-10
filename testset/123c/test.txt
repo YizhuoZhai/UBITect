@@ -1,0 +1,128 @@
+argc = 3
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/data/home/yizhuo/And-UBITect/testset/123c/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/And-UBITect/testset/123c/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+6 functions in total.
+partition size : 2, sccSize = 4, rec size = 0, biggest = 1
+size of indiFuncs : 2
+==========Function 0: kref_put==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %5 = call i32 @refcount_dec_and_test(%struct.refcount_struct* %4)
+possible function:refcount_dec_and_test, from module/data/home/yizhuo/And-UBITect/testset/123c/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16538c8: refcount_dec_and_test
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: refcount_dec_and_test: 0x16538c8
+Callee : 0x16538c8, name : refcount_dec_and_testno summary.
+1 Functions Finished.
+==========Function 1: refcount_dec_and_test==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+2 Functions Finished.
+inside calcallee forkobject_put
+==========Function 2: kobject_put==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %16 = call i32 @kref_put(%struct.kref* %15)
+possible function:kref_put, from module/data/home/yizhuo/And-UBITect/testset/123c/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1652c98: kref_put
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kref_put: 0x1652c98
+Callee : 0x1652c98, name : kref_put3 Functions Finished.
+inside calcallee forput_device
+==========Function 3: put_device==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @kobject_put(%struct.kobject* %7)
+possible function:kobject_put, from module/data/home/yizhuo/And-UBITect/testset/123c/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16539b8: kobject_put
+return void.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kobject_put: 0x16539b8
+Callee : 0x16539b8, name : kobject_put4 Functions Finished.
+inside calcallee forpower_supply_put
+==========Function 4: power_supply_put==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @put_device(%struct.device* %4)
+possible function:put_device, from module/data/home/yizhuo/And-UBITect/testset/123c/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1652ed8: put_device
+return void.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: put_device: 0x1652ed8
+Callee : 0x1652ed8, name : put_device5 Functions Finished.
+inside calcallee forf
+==========Function 5: f==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @power_supply_put(%struct.power_supply* %7)
+possible function:power_supply_put, from module/data/home/yizhuo/And-UBITect/testset/123c/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1656288: power_supply_put
+return void.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: power_supply_put: 0x1656288
+Callee : 0x1656288, name : power_supply_put***********Warning: argument check fails @ argument 0 : ptr not initialized, Node 22, actual qualifier = 0
+[trace] In function @f Instruction:  call void @power_supply_put(%struct.power_supply* %7)
+Inside printRelatedBB:
+  call void @power_supply_put(%struct.power_supply* %7)
+/data/home/yizhuo/And-UBITect/testset/123c/test.bc:
+json obj:{"aliasNum": 3, "alt-blist": [""], "argNo": 0, "bc": "", "blacklist": [""], "colNo": "-1", "fieldNo": -1, "function": "f", "id": "_f_%1$obj", "lineNo": "-1", "rank": "NORMAL_PTR", "type": "stack", "use": "", "warning": "  call void @power_supply_put(%struct.power_supply* %7)", "whitelist": [""]}
+6 Functions Finished.
+# of remained function = 0
+ # of modified funcs = 0

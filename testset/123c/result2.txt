@@ -1,0 +1,294 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test2.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test2.bc]
+==========Function power_supply_put==========
+Inside BuildPtsGraph:
+Inside createNodeForGlobals:
+Inside collectConstraintsForGlobals:
+init ptsGraph:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 10 point to <11, >
+index 11 point to <0, >
+  ret void
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 10 point to <11, >
+index 11 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 10 point to <11, >
+index 11 point to <0, >
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #7	v> @init = common global %struct.power_supply zeroinitializer, align 8
+V #8	f> power_supply_put
+V #9	f> f
+V #10	v> %struct.power_supply* %psy
+O #11	v> %struct.power_supply* %psy
+V #12	v>   ret void
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 10 point to <11, >
+index 11 point to <0, >
+inside compute aa set:
+  ret void
+  ret void
+============in============
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+Inside qualifier inference:
+init array:
+node 0, qualifier = 1
+node 1, qualifier = 1
+node 2, qualifier = 1
+node 3, qualifier = 1
+node 4, qualifier = 1
+node 5, qualifier = 1
+node 6, qualifier = 1
+node 7, qualifier = 1
+node 8, qualifier = 1
+node 9, qualifier = 1
+node 10, qualifier = 1
+node 11, qualifier = 1
+node 12, qualifier = -1
+  ret void
+  ret void
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = -1
+============================out=========================
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = -1
+idx = 10, requirement = 0. update = 0
+idx = 11, requirement = 0. update = 0
+  ret void
+  ret void
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = -1
+1 Function Finished!
+==========Function f==========
+Inside BuildPtsGraph:
+Inside createNodeForGlobals:
+Inside collectConstraintsForGlobals:
+init ptsGraph:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+  ret i32 0
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #7	v> @init = common global %struct.power_supply zeroinitializer, align 8
+V #8	f> power_supply_put
+V #9	f> f
+V #10	v>   ret i32 0
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+inside compute aa set:
+  ret i32 0
+  ret i32 0
+============in============
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+Inside qualifier inference:
+init array:
+node 0, qualifier = 1
+node 1, qualifier = 1
+node 2, qualifier = 1
+node 3, qualifier = 1
+node 4, qualifier = 1
+node 5, qualifier = 1
+node 6, qualifier = 1
+node 7, qualifier = 1
+node 8, qualifier = 0
+node 9, qualifier = 1
+node 10, qualifier = -1
+  ret i32 0
+  ret i32 0
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 0
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+============================out=========================
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 0
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+return index = 0, Qualifier = 1
+  ret i32 0
+  ret i32 0
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 0
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+2 Function Finished!
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

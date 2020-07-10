@@ -1,0 +1,167 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [cve.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+readylist insert function main
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [cve.bc]
+==========Function main==========
+Inside BuildPtsGraph:
+  %1 = alloca i32, align 4
+  %backlog = alloca %struct.test_struct*, align 8
+  store i32 0, i32* %1, align 4
+  %2 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %3 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %2, i32 0, i32 0
+  store i32 1, i32* %3, align 4
+  %4 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %5 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %4, i32 0, i32 0
+  %6 = load i32, i32* %5, align 4
+  %7 = icmp eq i32 %6, 0
+  br i1 %7, label %8, label %10
+  %9 = load %struct.test_struct*, %struct.test_struct** @init, align 8
+  store %struct.test_struct* %9, %struct.test_struct** %backlog, align 8
+  br label %10
+  %11 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8
+  %12 = getelementptr inbounds %struct.test_struct, %struct.test_struct* %11, i32 0, i32 0
+  %13 = load i32, i32* %12, align 4
+  %14 = icmp ne i32 %13, 0
+  br i1 %14, label %15, label %18
+  %16 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %17 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %16, i32 0, i32 0
+  store i32 0, i32* %17, align 4
+  br label %18
+  ret i32 0
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @cpg = common global %struct.aStruct* null, align 8
+O #5	v> @cpg = common global %struct.aStruct* null, align 8
+V #6	v> @init = common global %struct.test_struct* null, align 8
+O #7	v> @init = common global %struct.test_struct* null, align 8
+V #8	v>   %1 = alloca i32, align 4
+V #9	v>   %backlog = alloca %struct.test_struct*, align 8
+V #10	v>   %2 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+V #11	v>   %3 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %2, i32 0, i32 0
+V #12	v>   %4 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+V #13	v>   %5 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %4, i32 0, i32 0
+V #14	v>   %9 = load %struct.test_struct*, %struct.test_struct** @init, align 8
+V #15	v>   %11 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8
+V #16	v>   %12 = getelementptr inbounds %struct.test_struct, %struct.test_struct* %11, i32 0, i32 0
+V #17	v>   %16 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+V #18	v>   %17 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %16, i32 0, i32 0
+O #19	v>   %1 = alloca i32, align 4
+O #20	v>   %backlog = alloca %struct.test_struct*, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <1, >
+index 9 point to <14, 20, >
+index 10 point to <0, >
+index 11 point to <1, >
+index 12 point to <0, >
+index 13 point to <0, >
+index 14 point to <0, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <1, >
+index 20 point to <0, >
+Inside qualifier inference:
+  %1 = alloca i32, align 4
+  %backlog = alloca %struct.test_struct*, align 8
+  store i32 0, i32* %1, align 4
+0
+  %2 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %3 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %2, i32 0, i32 0
+  store i32 1, i32* %3, align 4
+0
+  %4 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %5 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %4, i32 0, i32 0
+  %6 = load i32, i32* %5, align 4
+  %7 = icmp eq i32 %6, 0
+invalid index in icmp
+  br i1 %7, label %8, label %10
+  %9 = load %struct.test_struct*, %struct.test_struct** @init, align 8
+  store %struct.test_struct* %9, %struct.test_struct** %backlog, align 8
+0
+  br label %10
+  %11 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8
+  %12 = getelementptr inbounds %struct.test_struct, %struct.test_struct* %11, i32 0, i32 0
+  %13 = load i32, i32* %12, align 4
+  %14 = icmp ne i32 %13, 0
+invalid index in icmp
+  br i1 %14, label %15, label %18
+  %16 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %17 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %16, i32 0, i32 0
+  store i32 0, i32* %17, align 4
+0
+  br label %18
+  ret i32 0
+inside return instruction:   ret i32 0
+return value isn't a pointer type
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 0
+index = 15, qualifier = 0
+index = 16, qualifier = 1
+index = 17, qualifier = 0
+index = 18, qualifier = 0
+index = 19, qualifier = 0
+index = 20, qualifier = 0
+return index = 0, Qualifier = 1
+Inside QualifierCheck:
+  %1 = alloca i32, align 4
+  %backlog = alloca %struct.test_struct*, align 8
+  store i32 0, i32* %1, align 4
+  %2 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %3 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %2, i32 0, i32 0
+  store i32 1, i32* %3, align 4
+  %4 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %5 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %4, i32 0, i32 0
+  %6 = load i32, i32* %5, align 4
+  %7 = icmp eq i32 %6, 0
+invalid index in icmp
+  br i1 %7, label %8, label %10
+  %9 = load %struct.test_struct*, %struct.test_struct** @init, align 8
+  store %struct.test_struct* %9, %struct.test_struct** %backlog, align 8
+  br label %10
+  %11 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8
+  %12 = getelementptr inbounds %struct.test_struct, %struct.test_struct* %11, i32 0, i32 0
+***********Warning: potentail uninitialized ptr  %11 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8
+  %13 = load i32, i32* %12, align 4
+  %14 = icmp ne i32 %13, 0
+invalid index in icmp
+  br i1 %14, label %15, label %18
+  %16 = load %struct.aStruct*, %struct.aStruct** @cpg, align 8
+  %17 = getelementptr inbounds %struct.aStruct, %struct.aStruct* %16, i32 0, i32 0
+  store i32 0, i32* %17, align 4
+  br label %18
+  ret i32 0
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

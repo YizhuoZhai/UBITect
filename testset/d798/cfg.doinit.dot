@@ -1,0 +1,14 @@
+digraph "CFG for 'doinit' function" {
+	label="CFG for 'doinit' function";
+
+	Node0xb49ec0 [shape=record,label="{%0:\l  %1 = alloca %struct.vmw_dma_buffer**, align 8\l  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %1,\l... align 8\l  %2 = load i32, i32* @a, align 4\l  %3 = icmp eq i32 %2, 1\l  br i1 %3, label %4, label %13\l|{<s0>T|<s1>F}}"];
+	Node0xb49ec0:s0 -> Node0xb4cb90;
+	Node0xb49ec0:s1 -> Node0xb4cbe0;
+	Node0xb4cb90 [shape=record,label="{%4:\l\l  %5 = load %struct.vmw_dma_buffer**, %struct.vmw_dma_buffer*** %1, align 8\l  %6 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %5, align 8\l  %7 = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer*\l... %6, i64 0, i32 0\l  store i8 1, i8* %7, align 4\l  %8 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %5, align 8\l  %9 = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer*\l... %8, i64 0, i32 1\l  store i32 1, i32* %9, align 4\l  %10 = load %struct.vmw_dma_buffer**, %struct.vmw_dma_buffer*** %1, align 8\l  %11 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %10, align 8\l  %12 = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer*\l... %11, i64 0, i32 2\l  store i8 1, i8* %12, align 4\l  br label %14\l}"];
+	Node0xb4cb90 -> Node0xb4c710;
+	Node0xb4cbe0 [shape=record,label="{%13:\l\l  br label %15\l}"];
+	Node0xb4cbe0 -> Node0xb4c760;
+	Node0xb4c710 [shape=record,label="{%14:\l\l  br label %15\l}"];
+	Node0xb4c710 -> Node0xb4c760;
+	Node0xb4c760 [shape=record,label="{%15:\l\l  %storemerge = phi i32 [ 0, %13 ], [ 1, %14 ]\l  ret i32 %storemerge\l}"];
+}

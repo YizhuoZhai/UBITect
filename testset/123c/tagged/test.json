@@ -1,0 +1,2 @@
+/home/yizhuo/And-UBITect/testset/123c/tagged/test.llbc:
+{"aliasNum": 3, "alt-blist": ["est.bc-f-0"], "argNo": 0, "bc": "/home/yizhuo/And-UBITect/testset/123c/tagged/test.llbc", "blacklist": [], "fieldNo": -1, "function": "f", "id": "/home/yizhuo/And-UBITect/testset/123c/tagged/test.llbc_f_  call void @power_supply_put(%struct.power_supply* %1), !dbg !62_0_-1", "rank": "NORMAL_PTR", "type": "stack", "use": "est.bc-f-3", "warning": "  call void @power_supply_put(%struct.power_supply* %1), !dbg !62", "whitelist": ["est.bc-f-0"]}

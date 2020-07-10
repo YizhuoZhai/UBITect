@@ -1,0 +1,89 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+3 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+runOnFunctionfib_table_lookup
+==========Function fib_table_lookup==========
+addr:0x1d1a008
+Module: /home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+inside compute aa set:
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 1
+1 Function Finished!
+runOnFunctionfib_lookup
+==========Function fib_lookup==========
+addr:0x1d1d168
+Module: /home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+inside compute aa set:
+Inside qualifier inference:
+  %call = call i32 @fib_table_lookup(%struct.fib_result* %1), !dbg !46
+possible function:fib_table_lookup, from module/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1d1a008: fib_table_lookup
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: fib_table_lookup: 0x1d1a008
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 2
+2 Function Finished!
+runOnFunctionip_route_input_slow
+==========Function ip_route_input_slow==========
+addr:0x1d1d398
+Module: /home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+inside compute aa set:
+Inside qualifier inference:
+  %call = call i32 @fib_lookup(%struct.fib_result* %res), !dbg !43
+possible function:fib_lookup, from module/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1d1d168: fib_lookup
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: fib_lookup: 0x1d1d168
+***********Warning: uninitialized ptr   %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8, !dbg !45
+[trace] In function @ip_route_input_slow Instruction:  %tobool = icmp ne %struct.fib_table* %0, null, !dbg !47
+  %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8, !dbg !45
+/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc:
+json obj:{"aliasNum": 2, "alt-blist": [], "argNo": -1, "bc": "02c1/tagged/test.bc", "blacklist": ["est.bc-ip_route_input_slow-1", "est.bc-ip_route_input_slow-2"], "fieldNo": -1, "function": "ip_route_input_slow", "id": "02c1/tagged/test.bc_ip_route_input_slow_%res_6_obj", "rank": "NORMAL_PTR", "type": "stack", "use": "est.bc-ip_route_input_slow-0", "warning": "  %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8, !dbg !45", "whitelist": ["est.bc-ip_route_input_slow-0", "est.bc-fib_lookup-0"]}
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 2
+3 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis / 3] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

@@ -1,0 +1,1152 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+5 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc]
+runOnFunctionhelper_hash
+==========Function helper_hash==========
+addr:0x2bb2c18
+Module: /home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+V #5	f> helper_hash
+V #6	v> %struct.nf_conntrack_tuple* %tuple
+O #7	v> %struct.nf_conntrack_tuple* %tuple
+O #8	field [1] of  : tuple
+O #9	field [2] of  : tuple
+O #10	field [3] of  : tuple
+V #11	v>   %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+V #12	v>   store %struct.nf_conntrack_tuple* %tuple, %struct.nf_conntrack_tuple** %tuple.addr, align 8
+V #13	v>   call void @llvm.dbg.declare(metadata %struct.nf_conntrack_tuple** %tuple.addr, metadata !31, metadata !DIExpression()), !dbg !32
+V #14	v>   %0 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !33
+V #15	v>   %src = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %0, i32 0, i32 0, !dbg !34
+V #16	v>   %l3num = getelementptr inbounds %struct.nf_conntrack_man, %struct.nf_conntrack_man* %src, i32 0, i32 0, !dbg !35
+V #17	v>   %1 = load i32, i32* %l3num, align 4, !dbg !35
+V #18	v>   %shl = shl i32 %1, 8, !dbg !36
+V #19	v>   %2 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !37
+V #20	v>   %dst = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %2, i32 0, i32 1, !dbg !38
+V #21	v>   %protonum = getelementptr inbounds %struct.anon, %struct.anon* %dst, i32 0, i32 0, !dbg !39
+V #22	v>   %3 = load i32, i32* %protonum, align 4, !dbg !39
+V #23	v>   %or = or i32 %shl, %3, !dbg !40
+V #24	v>   %4 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !41
+V #25	v>   %src1 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %4, i32 0, i32 0, !dbg !42
+V #26	v>   %u = getelementptr inbounds %struct.nf_conntrack_man, %struct.nf_conntrack_man* %src1, i32 0, i32 1, !dbg !43
+V #27	v>   %all = bitcast %union.nf_conntrack_man_proto* %u to i32*, !dbg !44
+V #28	v>   %5 = load i32, i32* %all, align 4, !dbg !44
+V #29	v>   %xor = xor i32 %or, %5, !dbg !45
+V #30	v>   ret i32 %xor, !dbg !46
+O #31	v>   %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+inside initSummary:
+sumNodeFactory:
+V #0	f> helper_hash
+V #1	v> %struct.nf_conntrack_tuple* %tuple
+O #2	v> %struct.nf_conntrack_tuple* %tuple
+O #3	field [1] of  : tuple
+O #4	field [2] of  : tuple
+O #5	field [3] of  : tuple
+sumPtsGraph:
+ptr: 1->2
+inside compute aa set:
+Inside qualifier inference:
+  %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+related qualifier out[11] = 1
+Node 11: 1
+Node 31: 0
+  store %struct.nf_conntrack_tuple* %tuple, %struct.nf_conntrack_tuple** %tuple.addr, align 8
+item = 31
+6/
+related qualifier out[31] = -1
+Node 31: -1
+  call void @llvm.dbg.declare(metadata %struct.nf_conntrack_tuple** %tuple.addr, metadata !31, metadata !DIExpression()), !dbg !32
+  %0 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !33
+relatedNode[14].insert(6)
+dstNode = 14
+6/
+relatedNode[14].insert(31)
+dstNode = 14
+6/
+related qualifier out[14] = -1
+  %src = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %0, i32 0, i32 0, !dbg !34
+related qualifier out[15] = -1
+  %l3num = getelementptr inbounds %struct.nf_conntrack_man, %struct.nf_conntrack_man* %src, i32 0, i32 0, !dbg !35
+related qualifier out[16] = -1
+  %1 = load i32, i32* %l3num, align 4, !dbg !35
+relatedNode[17].insert(7)
+dstNode = 17
+7/
+related qualifier out[17] = -1
+Node 6: 1
+Node 14: 1
+Node 15: 1
+Node 16: 1
+Node 31: 1
+  %shl = shl i32 %1, 8, !dbg !36
+Related nodes:
+7, 17, 
+related qualifier out[18] = -1
+  %2 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !37
+related qualifier out[19] = 1
+Node 19: 1
+  %dst = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %2, i32 0, i32 1, !dbg !38
+related qualifier out[20] = 1
+Node 20: 1
+  %protonum = getelementptr inbounds %struct.anon, %struct.anon* %dst, i32 0, i32 0, !dbg !39
+related qualifier out[21] = 1
+Node 21: 1
+  %3 = load i32, i32* %protonum, align 4, !dbg !39
+relatedNode[22].insert(9)
+dstNode = 22
+9/
+related qualifier out[22] = -1
+  %or = or i32 %shl, %3, !dbg !40
+Related nodes:
+7, 9, 17, 18, 22, 
+related qualifier out[23] = -1
+  %4 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !41
+related qualifier out[24] = 1
+Node 24: 1
+  %src1 = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %4, i32 0, i32 0, !dbg !42
+related qualifier out[25] = 1
+Node 25: 1
+  %u = getelementptr inbounds %struct.nf_conntrack_man, %struct.nf_conntrack_man* %src1, i32 0, i32 1, !dbg !43
+related qualifier out[26] = 1
+Node 26: 1
+  %all = bitcast %union.nf_conntrack_man_proto* %u to i32*, !dbg !44
+Related nodes:
+
+related qualifier out[27] = 1
+Node 27: 1
+  %5 = load i32, i32* %all, align 4, !dbg !44
+relatedNode[28].insert(8)
+dstNode = 28
+8/
+related qualifier out[28] = -1
+  %xor = xor i32 %or, %5, !dbg !45
+Related nodes:
+7, 8, 9, 17, 18, 22, 23, 28, 
+related qualifier out[29] = -1
+  ret i32 %xor, !dbg !46
+Node 5: -1
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x2bb2c18, name:helper_hash
+Summary for function helper_hash
+noNodes: 6
+0 ->
+1 ->2
+# of stackVar = 1, # of uninit: 1
+retun idx0, retSize = 0, getRetOffset()= 0
+args:
+args[0]: idx = 1, obj = 2
+objsize = 4, offset = 0
+
+args[1]: idx = 0, 
+args[2]: idx = 0, 
+args[3]: idx = 0, 
+args[4]: idx = 0, 
+args[5]: idx = 0, 
+idx:    0  1  2  3  4  5
+req:   -1  1  -1  -1  -1  -1 
+update: -1  -1  -1  -1  -1  -1 
+modified: -1  -1  -1  -1  -1  -1 
+List set for update:
+i = 0: 
+related nodes:
+2, 3, 4, 
+i = 1: 
+related nodes:
+
+i = 2: 
+related nodes:
+
+arg idx: 2
+argNo : 0
+whitelist: 
+est.bc-helper_hash-0:
+blacklist: 
+
+i = 3: 
+related nodes:
+
+arg idx: 3
+argNo : 0
+whitelist: 
+est.bc-helper_hash-0:
+blacklist: 
+
+i = 4: 
+related nodes:
+
+arg idx: 4
+argNo : 0
+whitelist: 
+est.bc-helper_hash-0:
+blacklist: 
+
+i = 5: 
+related nodes:
+
+arg idx: 5
+argNo : 0
+whitelist: 
+est.bc-helper_hash-0:
+blacklist: 
+
+
+Related bitcode:
+=/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+copy end.Inside qualifier check:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 1
+1 Function Finished!
+runOnFunctionnf_conntrack_helper_register
+==========Function nf_conntrack_helper_register==========
+addr:0x2bb27c8
+Module: /home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+V #5	f> nf_conntrack_helper_register
+V #6	v> %struct.nf_conntrack_helper* %me
+O #7	v> %struct.nf_conntrack_helper* %me
+O #8	field [1] of  : me
+O #9	field [2] of  : me
+O #10	field [3] of  : me
+O #11	field [4] of  : me
+V #12	v>   %me.addr = alloca %struct.nf_conntrack_helper*, align 8
+V #13	v>   %h = alloca i32, align 4
+V #14	v>   store %struct.nf_conntrack_helper* %me, %struct.nf_conntrack_helper** %me.addr, align 8
+V #15	v>   call void @llvm.dbg.declare(metadata %struct.nf_conntrack_helper** %me.addr, metadata !55, metadata !DIExpression()), !dbg !56
+V #16	v>   call void @llvm.dbg.declare(metadata i32* %h, metadata !57, metadata !DIExpression()), !dbg !58
+V #17	v>   %0 = load %struct.nf_conntrack_helper*, %struct.nf_conntrack_helper** %me.addr, align 8, !dbg !38
+V #18	v>   %tuple = getelementptr inbounds %struct.nf_conntrack_helper, %struct.nf_conntrack_helper* %0, i32 0, i32 0, !dbg !39
+V #19	v>   %call = call i32 @helper_hash(%struct.nf_conntrack_tuple* %tuple), !dbg !40
+V #20	v>   store i32 %call, i32* %h, align 4, !dbg !37
+V #21	v>   ret i32 1, !dbg !41
+O #22	v>   %me.addr = alloca %struct.nf_conntrack_helper*, align 8
+O #23	v>   %h = alloca i32, align 4
+inside initSummary:
+sumNodeFactory:
+V #0	f> nf_conntrack_helper_register
+V #1	v> %struct.nf_conntrack_helper* %me
+O #2	v> %struct.nf_conntrack_helper* %me
+O #3	field [1] of  : me
+O #4	field [2] of  : me
+O #5	field [3] of  : me
+O #6	field [4] of  : me
+sumPtsGraph:
+ptr: 1->2
+inside compute aa set:
+Inside qualifier inference:
+  %me.addr = alloca %struct.nf_conntrack_helper*, align 8
+related qualifier out[12] = 1
+Node 12: 1
+Node 22: 0
+  %h = alloca i32, align 4
+related qualifier out[13] = 1
+Node 13: 1
+Node 23: 0
+  store %struct.nf_conntrack_helper* %me, %struct.nf_conntrack_helper** %me.addr, align 8
+item = 22
+6/
+related qualifier out[22] = -1
+Node 22: -1
+  call void @llvm.dbg.declare(metadata %struct.nf_conntrack_helper** %me.addr, metadata !55, metadata !DIExpression()), !dbg !56
+  call void @llvm.dbg.declare(metadata i32* %h, metadata !57, metadata !DIExpression()), !dbg !58
+  %0 = load %struct.nf_conntrack_helper*, %struct.nf_conntrack_helper** %me.addr, align 8, !dbg !38
+relatedNode[17].insert(6)
+dstNode = 17
+6/
+relatedNode[17].insert(22)
+dstNode = 17
+6/
+related qualifier out[17] = -1
+  %tuple = getelementptr inbounds %struct.nf_conntrack_helper, %struct.nf_conntrack_helper* %0, i32 0, i32 0, !dbg !39
+related qualifier out[18] = -1
+  %call = call i32 @helper_hash(%struct.nf_conntrack_tuple* %tuple), !dbg !40
+  %call = call i32 @helper_hash(%struct.nf_conntrack_tuple* %tuple), !dbg !40
+possible function:helper_hash, from module/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x2bb2c18: helper_hash
+end of process funcs.
+Node 6: 1
+Node 17: 1
+Node 18: 1
+Node 19: 1
+Node 22: 1
+  store i32 %call, i32* %h, align 4, !dbg !37
+related qualifier out[23] = 1
+Node 23: 1
+  ret i32 1, !dbg !41
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x2bb27c8, name:nf_conntrack_helper_register
+Summary for function nf_conntrack_helper_register
+noNodes: 7
+0 ->
+1 ->2
+# of stackVar = 2, # of uninit: 1
+retun idx0, retSize = 0, getRetOffset()= 0
+args:
+args[0]: idx = 1, obj = 2
+objsize = 5, offset = 0
+
+args[1]: idx = 0, 
+args[2]: idx = 0, 
+args[3]: idx = 0, 
+args[4]: idx = 0, 
+args[5]: idx = 0, 
+args[6]: idx = 0, 
+idx:    0  1  2  3  4  5  6
+req:   -1  1  -1  -1  -1  -1  -1 
+update: 1  -1  -1  -1  -1  -1  -1 
+modified: -1  -1  -1  -1  -1  -1  -1 
+List set for update:
+i = 0: 
+related nodes:
+
+i = 1: 
+related nodes:
+
+i = 2: 
+related nodes:
+
+arg idx: 2
+argNo : 0
+whitelist: 
+est.bc-nf_conntrack_helper_register-0:
+blacklist: 
+
+i = 3: 
+related nodes:
+
+arg idx: 3
+argNo : 0
+whitelist: 
+est.bc-nf_conntrack_helper_register-0:
+blacklist: 
+
+i = 4: 
+related nodes:
+
+arg idx: 4
+argNo : 0
+whitelist: 
+est.bc-nf_conntrack_helper_register-0:
+blacklist: 
+
+i = 5: 
+related nodes:
+
+arg idx: 5
+argNo : 0
+whitelist: 
+est.bc-nf_conntrack_helper_register-0:
+blacklist: 
+
+i = 6: 
+related nodes:
+
+arg idx: 6
+argNo : 0
+whitelist: 
+est.bc-nf_conntrack_helper_register-0:
+blacklist: 
+
+
+Related bitcode:
+=/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+copy end.Inside qualifier check:
+check func: helper_hash: 0x2bb2c18
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 2
+2 Function Finished!
+runOnFunctionnfnl_cthelper_create
+==========Function nfnl_cthelper_create==========
+addr:0x2bb2d88
+Module: /home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+V #5	f> nfnl_cthelper_create
+V #6	v> %struct.nlattr** %tb
+O #7	v> %struct.nlattr** %tb
+V #8	v> %struct.nf_conntrack_tuple* %tuple
+O #9	v> %struct.nf_conntrack_tuple* %tuple
+O #10	field [1] of  : tuple
+O #11	field [2] of  : tuple
+O #12	field [3] of  : tuple
+V #13	v>   %retval = alloca i32, align 4
+V #14	v>   %tb.addr = alloca %struct.nlattr**, align 8
+V #15	v>   %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+V #16	v>   %helper = alloca %struct.nf_conntrack_helper*, align 8
+V #17	v>   %nfcth = alloca %struct.nfnl_cthelper*, align 8
+V #18	v>   %ret = alloca i32, align 4
+V #19	v>   store %struct.nlattr** %tb, %struct.nlattr*** %tb.addr, align 8
+V #20	v>   call void @llvm.dbg.declare(metadata %struct.nlattr*** %tb.addr, metadata !76, metadata !DIExpression()), !dbg !77
+V #21	v>   store %struct.nf_conntrack_tuple* %tuple, %struct.nf_conntrack_tuple** %tuple.addr, align 8
+V #22	v>   call void @llvm.dbg.declare(metadata %struct.nf_conntrack_tuple** %tuple.addr, metadata !78, metadata !DIExpression()), !dbg !79
+V #23	v>   call void @llvm.dbg.declare(metadata %struct.nf_conntrack_helper** %helper, metadata !80, metadata !DIExpression()), !dbg !81
+V #24	v>   call void @llvm.dbg.declare(metadata %struct.nfnl_cthelper** %nfcth, metadata !82, metadata !DIExpression()), !dbg !93
+V #25	v>   %0 = load %struct.nlattr**, %struct.nlattr*** %tb.addr, align 8, !dbg !62
+V #26	v>   %arrayidx = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %0, i64 2, !dbg !62
+V #27	v>   %1 = load %struct.nlattr*, %struct.nlattr** %arrayidx, align 8, !dbg !62
+V #28	v>   %tobool = icmp ne %struct.nlattr* %1, null, !dbg !62
+V #29	v>   br i1 %tobool, label %est.bc-nfnl_cthelper_create-2, label %est.bc-nfnl_cthelper_create-1, !dbg !64
+V #30	v>   store i32 -22, i32* %retval, align 4, !dbg !65
+V #31	v>   br label %est.bc-nfnl_cthelper_create-3, !dbg !65
+V #32	v>   %call = call noalias i8* @malloc(i64 40) #4, !dbg !66
+V #33	v>   %2 = bitcast i8* %call to %struct.nfnl_cthelper*, !dbg !66
+V #34	v>   store %struct.nfnl_cthelper* %2, %struct.nfnl_cthelper** %nfcth, align 8, !dbg !67
+V #35	v>   %3 = load %struct.nfnl_cthelper*, %struct.nfnl_cthelper** %nfcth, align 8, !dbg !68
+V #36	v>   %helper1 = getelementptr inbounds %struct.nfnl_cthelper, %struct.nfnl_cthelper* %3, i32 0, i32 1, !dbg !69
+V #37	v>   store %struct.nf_conntrack_helper* %helper1, %struct.nf_conntrack_helper** %helper, align 8, !dbg !70
+V #38	v>   %4 = load %struct.nf_conntrack_helper*, %struct.nf_conntrack_helper** %helper, align 8, !dbg !71
+V #39	v>   %tuple2 = getelementptr inbounds %struct.nf_conntrack_helper, %struct.nf_conntrack_helper* %4, i32 0, i32 0, !dbg !72
+V #40	v>   %5 = bitcast %struct.nf_conntrack_tuple* %tuple2 to i8*, !dbg !73
+V #41	v>   %6 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !74, !id !75
+V #42	v>   %7 = bitcast %struct.nf_conntrack_tuple* %6 to i8*, !dbg !73
+V #43	v>   call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %5, i8* align 4 %7, i64 16, i1 false), !dbg !73
+V #44	v>   call void @llvm.dbg.declare(metadata i32* %ret, metadata !108, metadata !DIExpression()), !dbg !109
+V #45	v>   %8 = load %struct.nf_conntrack_helper*, %struct.nf_conntrack_helper** %helper, align 8, !dbg !78
+V #46	v>   %call3 = call i32 @nf_conntrack_helper_register(%struct.nf_conntrack_helper* %8), !dbg !79
+V #47	v>   store i32 %call3, i32* %ret, align 4, !dbg !77
+V #48	v>   %9 = load i32, i32* %ret, align 4, !dbg !80
+V #49	v>   store i32 %9, i32* %retval, align 4, !dbg !81
+V #50	v>   br label %est.bc-nfnl_cthelper_create-3, !dbg !81
+V #51	v>   %10 = load i32, i32* %retval, align 4, !dbg !82
+V #52	v>   ret i32 %10, !dbg !82
+O #53	v>   %retval = alloca i32, align 4
+O #54	v>   %tb.addr = alloca %struct.nlattr**, align 8
+O #55	v>   %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+O #56	v>   %helper = alloca %struct.nf_conntrack_helper*, align 8
+O #57	v>   %nfcth = alloca %struct.nfnl_cthelper*, align 8
+O #58	v>   %ret = alloca i32, align 4
+O #59	v>   %call = call noalias i8* @malloc(i64 40) #4, !dbg !66
+O #60	v>   %call = call noalias i8* @malloc(i64 40) #4, !dbg !66
+O #61	field [1] of  : call
+O #62	field [2] of  : call
+O #63	field [3] of  : call
+O #64	field [4] of  : call
+O #65	field [5] of  : call
+O #66	field [6] of  : call
+inside initSummary:
+sumNodeFactory:
+V #0	f> nfnl_cthelper_create
+V #1	v> %struct.nlattr** %tb
+V #2	v> %struct.nf_conntrack_tuple* %tuple
+O #3	v> %struct.nlattr** %tb
+O #4	v> %struct.nf_conntrack_tuple* %tuple
+O #5	field [1] of  : tuple
+O #6	field [2] of  : tuple
+O #7	field [3] of  : tuple
+sumPtsGraph:
+ptr: 1->3
+ptr: 2->4
+inside compute aa set:
+Inside qualifier inference:
+  %retval = alloca i32, align 4
+related qualifier out[13] = 1
+Node 13: 1
+Node 53: 0
+  %tb.addr = alloca %struct.nlattr**, align 8
+related qualifier out[14] = 1
+Node 14: 1
+Node 54: 0
+  %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+related qualifier out[15] = 1
+Node 15: 1
+Node 55: 0
+  %helper = alloca %struct.nf_conntrack_helper*, align 8
+related qualifier out[16] = 1
+Node 16: 1
+Node 56: 0
+  %nfcth = alloca %struct.nfnl_cthelper*, align 8
+related qualifier out[17] = 1
+Node 17: 1
+Node 57: 0
+  %ret = alloca i32, align 4
+related qualifier out[18] = 1
+Node 18: 1
+Node 58: 0
+  store %struct.nlattr** %tb, %struct.nlattr*** %tb.addr, align 8
+item = 54
+6/
+related qualifier out[54] = -1
+Node 54: -1
+  call void @llvm.dbg.declare(metadata %struct.nlattr*** %tb.addr, metadata !76, metadata !DIExpression()), !dbg !77
+  store %struct.nf_conntrack_tuple* %tuple, %struct.nf_conntrack_tuple** %tuple.addr, align 8
+item = 55
+8/
+related qualifier out[55] = -1
+Node 55: -1
+  call void @llvm.dbg.declare(metadata %struct.nf_conntrack_tuple** %tuple.addr, metadata !78, metadata !DIExpression()), !dbg !79
+  call void @llvm.dbg.declare(metadata %struct.nf_conntrack_helper** %helper, metadata !80, metadata !DIExpression()), !dbg !81
+  call void @llvm.dbg.declare(metadata %struct.nfnl_cthelper** %nfcth, metadata !82, metadata !DIExpression()), !dbg !93
+  %0 = load %struct.nlattr**, %struct.nlattr*** %tb.addr, align 8, !dbg !62
+relatedNode[25].insert(6)
+dstNode = 25
+6/
+relatedNode[25].insert(54)
+dstNode = 25
+6/
+related qualifier out[25] = -1
+  %arrayidx = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %0, i64 2, !dbg !62
+related qualifier out[26] = -1
+  %1 = load %struct.nlattr*, %struct.nlattr** %arrayidx, align 8, !dbg !62
+relatedNode[27].insert(7)
+dstNode = 27
+7/
+related qualifier out[27] = -1
+Node 6: 1
+Node 25: 1
+Node 26: 1
+Node 54: 1
+  %tobool = icmp ne %struct.nlattr* %1, null, !dbg !62
+related qualifier out[28] = -1
+Node 7: 1
+Node 27: 1
+  br i1 %tobool, label %est.bc-nfnl_cthelper_create-2, label %est.bc-nfnl_cthelper_create-1, !dbg !64
+Node 28: 1
+  store i32 -22, i32* %retval, align 4, !dbg !65
+related qualifier out[53] = 1
+Node 53: 1
+  br label %est.bc-nfnl_cthelper_create-3, !dbg !65
+  %call = call noalias i8* @malloc(i64 40) #4, !dbg !66
+  %call = call noalias i8* @malloc(i64 40) #4, !dbg !66
+possible function:malloc, from module/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+Node 32: 1
+Node 59: 0
+  %2 = bitcast i8* %call to %struct.nfnl_cthelper*, !dbg !66
+Related nodes:
+
+related qualifier out[33] = 1
+Node 33: 1
+Node 60: 0
+Node 61: 0
+Node 62: 0
+Node 63: 0
+Node 64: 0
+Node 65: 0
+Node 66: 0
+  store %struct.nfnl_cthelper* %2, %struct.nfnl_cthelper** %nfcth, align 8, !dbg !67
+related qualifier out[57] = 1
+Node 57: 1
+  %3 = load %struct.nfnl_cthelper*, %struct.nfnl_cthelper** %nfcth, align 8, !dbg !68
+related qualifier out[35] = 1
+Node 35: 1
+  %helper1 = getelementptr inbounds %struct.nfnl_cthelper, %struct.nfnl_cthelper* %3, i32 0, i32 1, !dbg !69
+related qualifier out[36] = 1
+Node 36: 1
+  store %struct.nf_conntrack_helper* %helper1, %struct.nf_conntrack_helper** %helper, align 8, !dbg !70
+related qualifier out[56] = 1
+Node 56: 1
+  %4 = load %struct.nf_conntrack_helper*, %struct.nf_conntrack_helper** %helper, align 8, !dbg !71
+related qualifier out[38] = 1
+Node 38: 1
+  %tuple2 = getelementptr inbounds %struct.nf_conntrack_helper, %struct.nf_conntrack_helper* %4, i32 0, i32 0, !dbg !72
+related qualifier out[39] = 1
+Node 39: 1
+  %5 = bitcast %struct.nf_conntrack_tuple* %tuple2 to i8*, !dbg !73
+Related nodes:
+
+related qualifier out[40] = 1
+Node 40: 1
+  %6 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !74, !id !75
+relatedNode[41].insert(8)
+dstNode = 41
+8/
+relatedNode[41].insert(55)
+dstNode = 41
+8/
+related qualifier out[41] = -1
+  %7 = bitcast %struct.nf_conntrack_tuple* %6 to i8*, !dbg !73
+Related nodes:
+8, 55, 
+related qualifier out[42] = -1
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %5, i8* align 4 %7, i64 16, i1 false), !dbg !73
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %5, i8* align 4 %7, i64 16, i1 false), !dbg !73
+possible function:llvm.memcpy.p0i8.p0i8.i64, from module/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+process memcpy funcs
+inside CopyFuncs:
+dstIndex = 40: 1
+1obj = 62
+obj 62 is heapnode.
+srcObjSize = 4, srcObjOffset = 0
+srcObj + i = 9
+srcObj + i = 10
+srcObj + i = 11
+srcObj + i = 12
+srcObj = 9
+obj = 62
+srcObj = 9
+srcObj+i =9
+srcQuali = 1
+srcObj+i =10
+srcQuali = 1
+srcObj+i =11
+srcQuali = 1
+srcObj+i =12
+srcQuali = 1
+Node 8: 1
+Node 9: 1
+Node 10: 1
+Node 11: 1
+Node 12: 1
+Node 41: 1
+Node 42: 1
+Node 55: 1
+Node 62: 1
+Node 63: 1
+Node 64: 1
+Node 65: 1
+  call void @llvm.dbg.declare(metadata i32* %ret, metadata !108, metadata !DIExpression()), !dbg !109
+  %8 = load %struct.nf_conntrack_helper*, %struct.nf_conntrack_helper** %helper, align 8, !dbg !78
+related qualifier out[45] = 1
+Node 45: 1
+  %call3 = call i32 @nf_conntrack_helper_register(%struct.nf_conntrack_helper* %8), !dbg !79
+  %call3 = call i32 @nf_conntrack_helper_register(%struct.nf_conntrack_helper* %8), !dbg !79
+possible function:nf_conntrack_helper_register, from module/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x2bb27c8: nf_conntrack_helper_register
+end of process funcs.
+Node 46: 1
+  store i32 %call3, i32* %ret, align 4, !dbg !77
+related qualifier out[58] = 1
+Node 58: 1
+  %9 = load i32, i32* %ret, align 4, !dbg !80
+related qualifier out[48] = 1
+Node 48: 1
+  store i32 %9, i32* %retval, align 4, !dbg !81
+related qualifier out[53] = 1
+Node 53: 1
+  br label %est.bc-nfnl_cthelper_create-3, !dbg !81
+  %10 = load i32, i32* %retval, align 4, !dbg !82
+related qualifier out[51] = 1
+Node 51: 1
+  ret i32 %10, !dbg !82
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x2bb2d88, name:nfnl_cthelper_create
+Summary for function nfnl_cthelper_create
+noNodes: 8
+0 ->
+1 ->3
+2 ->4
+# of stackVar = 5, # of uninit: 4
+retun idx0, retSize = 0, getRetOffset()= 0
+args:
+args[0]: idx = 1, obj = 3
+objsize = 1, offset = 0
+
+args[1]: idx = 2, obj = 4
+objsize = 4, offset = 0
+
+args[2]: idx = 0, 
+args[3]: idx = 0, 
+args[4]: idx = 0, 
+args[5]: idx = 0, 
+args[6]: idx = 0, 
+args[7]: idx = 0, 
+idx:    0  1  2  3  4  5  6  7
+req:   -1  1  1  1  1  1  1  1 
+update: 1  -1  -1  1  -1  -1  -1  -1 
+modified: -1  -1  -1  -1  -1  -1  -1  -1 
+List set for update:
+i = 0: 
+related nodes:
+
+i = 1: 
+related nodes:
+
+i = 2: 
+related nodes:
+
+i = 3: 
+related nodes:
+
+i = 4: 
+related nodes:
+
+arg idx: 4
+argNo : 0
+whitelist: 
+est.bc-nfnl_cthelper_create-0:
+blacklist: 
+est.bc-nfnl_cthelper_create-2:
+i = 5: 
+related nodes:
+
+arg idx: 5
+argNo : 1
+whitelist: 
+est.bc-nfnl_cthelper_create-0:
+blacklist: 
+est.bc-nfnl_cthelper_create-2:
+i = 6: 
+related nodes:
+
+arg idx: 6
+argNo : 1
+whitelist: 
+est.bc-nfnl_cthelper_create-0:
+blacklist: 
+est.bc-nfnl_cthelper_create-2:
+i = 7: 
+related nodes:
+
+arg idx: 7
+argNo : 1
+whitelist: 
+est.bc-nfnl_cthelper_create-0:
+blacklist: 
+est.bc-nfnl_cthelper_create-2:
+
+Related bitcode:
+=/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+copy end.Inside qualifier check:
+check copy func:
+check func: nf_conntrack_helper_register: 0x2bb27c8
+Till now, Ctx->uninitArg = 1, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 3
+3 Function Finished!
+runOnFunctionnfnl_cthelper_parse_tuple
+==========Function nfnl_cthelper_parse_tuple==========
+addr:0x2bb6268
+Module: /home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+V #5	f> nfnl_cthelper_parse_tuple
+V #6	v> %struct.nf_conntrack_tuple* %tuple
+O #7	v> %struct.nf_conntrack_tuple* %tuple
+O #8	field [1] of  : tuple
+O #9	field [2] of  : tuple
+O #10	field [3] of  : tuple
+V #11	v> %struct.nlattr* %attr
+O #12	v> %struct.nlattr* %attr
+O #13	field [1] of  : attr
+V #14	v>   %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+V #15	v>   %attr.addr = alloca %struct.nlattr*, align 8
+V #16	v>   store %struct.nf_conntrack_tuple* %tuple, %struct.nf_conntrack_tuple** %tuple.addr, align 8
+V #17	v>   call void @llvm.dbg.declare(metadata %struct.nf_conntrack_tuple** %tuple.addr, metadata !118, metadata !DIExpression()), !dbg !119
+V #18	v>   store %struct.nlattr* %attr, %struct.nlattr** %attr.addr, align 8
+V #19	v>   call void @llvm.dbg.declare(metadata %struct.nlattr** %attr.addr, metadata !120, metadata !DIExpression()), !dbg !121
+V #20	v>   %0 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !41
+V #21	v>   %src = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %0, i32 0, i32 0, !dbg !42
+V #22	v>   %l3num = getelementptr inbounds %struct.nf_conntrack_man, %struct.nf_conntrack_man* %src, i32 0, i32 0, !dbg !43
+V #23	v>   store i32 4, i32* %l3num, align 4, !dbg !44
+V #24	v>   %1 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !45
+V #25	v>   %dst = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %1, i32 0, i32 1, !dbg !46
+V #26	v>   %protonum = getelementptr inbounds %struct.anon, %struct.anon* %dst, i32 0, i32 0, !dbg !47
+V #27	v>   store i32 4, i32* %protonum, align 4, !dbg !48
+V #28	v>   ret i32 0, !dbg !49
+O #29	v>   %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+O #30	v>   %attr.addr = alloca %struct.nlattr*, align 8
+inside initSummary:
+sumNodeFactory:
+V #0	f> nfnl_cthelper_parse_tuple
+V #1	v> %struct.nf_conntrack_tuple* %tuple
+V #2	v> %struct.nlattr* %attr
+O #3	v> %struct.nf_conntrack_tuple* %tuple
+O #4	field [1] of  : tuple
+O #5	field [2] of  : tuple
+O #6	field [3] of  : tuple
+O #7	v> %struct.nlattr* %attr
+O #8	field [1] of  : attr
+sumPtsGraph:
+ptr: 1->3
+ptr: 2->7
+inside compute aa set:
+Inside qualifier inference:
+  %tuple.addr = alloca %struct.nf_conntrack_tuple*, align 8
+related qualifier out[14] = 1
+Node 14: 1
+Node 29: 0
+  %attr.addr = alloca %struct.nlattr*, align 8
+related qualifier out[15] = 1
+Node 15: 1
+Node 30: 0
+  store %struct.nf_conntrack_tuple* %tuple, %struct.nf_conntrack_tuple** %tuple.addr, align 8
+item = 29
+6/
+related qualifier out[29] = -1
+Node 29: -1
+  call void @llvm.dbg.declare(metadata %struct.nf_conntrack_tuple** %tuple.addr, metadata !118, metadata !DIExpression()), !dbg !119
+  store %struct.nlattr* %attr, %struct.nlattr** %attr.addr, align 8
+item = 30
+11/
+related qualifier out[30] = -1
+Node 30: -1
+  call void @llvm.dbg.declare(metadata %struct.nlattr** %attr.addr, metadata !120, metadata !DIExpression()), !dbg !121
+  %0 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !41
+relatedNode[20].insert(6)
+dstNode = 20
+6/
+relatedNode[20].insert(29)
+dstNode = 20
+6/
+related qualifier out[20] = -1
+  %src = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %0, i32 0, i32 0, !dbg !42
+related qualifier out[21] = -1
+  %l3num = getelementptr inbounds %struct.nf_conntrack_man, %struct.nf_conntrack_man* %src, i32 0, i32 0, !dbg !43
+related qualifier out[22] = -1
+  store i32 4, i32* %l3num, align 4, !dbg !44
+item = 7
+4/
+Node 6: 1
+Node 7: 1
+Node 20: 1
+Node 21: 1
+Node 22: 1
+Node 29: 1
+  %1 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %tuple.addr, align 8, !dbg !45
+related qualifier out[24] = 1
+Node 24: 1
+  %dst = getelementptr inbounds %struct.nf_conntrack_tuple, %struct.nf_conntrack_tuple* %1, i32 0, i32 1, !dbg !46
+related qualifier out[25] = 1
+Node 25: 1
+  %protonum = getelementptr inbounds %struct.anon, %struct.anon* %dst, i32 0, i32 0, !dbg !47
+related qualifier out[26] = 1
+Node 26: 1
+  store i32 4, i32* %protonum, align 4, !dbg !48
+item = 9
+4/
+related qualifier out[9] = 1
+Node 9: 1
+  ret i32 0, !dbg !49
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x2bb6268, name:nfnl_cthelper_parse_tuple
+Summary for function nfnl_cthelper_parse_tuple
+noNodes: 9
+0 ->
+1 ->3
+2 ->7
+# of stackVar = 2, # of uninit: 2
+retun idx0, retSize = 0, getRetOffset()= 0
+args:
+args[0]: idx = 1, obj = 3
+objsize = 4, offset = 0
+
+args[1]: idx = 2, obj = 7
+objsize = 2, offset = 0
+
+args[2]: idx = 0, 
+args[3]: idx = 0, 
+args[4]: idx = 0, 
+args[5]: idx = 0, 
+args[6]: idx = 0, 
+args[7]: idx = 0, 
+args[8]: idx = 0, 
+idx:    0  1  2  3  4  5  6  7  8
+req:   -1  1  -1  -1  -1  -1  -1  -1  -1 
+update: 1  -1  -1  1  -1  1  -1  -1  -1 
+modified: -1  -1  -1  -1  -1  -1  -1  -1  -1 
+List set for update:
+i = 0: 
+related nodes:
+
+i = 1: 
+related nodes:
+
+i = 2: 
+related nodes:
+
+i = 3: 
+related nodes:
+
+i = 4: 
+related nodes:
+
+arg idx: 4
+argNo : 0
+whitelist: 
+est.bc-nfnl_cthelper_parse_tuple-0:
+blacklist: 
+
+i = 5: 
+related nodes:
+
+i = 6: 
+related nodes:
+
+arg idx: 6
+argNo : 0
+whitelist: 
+est.bc-nfnl_cthelper_parse_tuple-0:
+blacklist: 
+
+i = 7: 
+related nodes:
+
+arg idx: 7
+argNo : 0
+whitelist: 
+est.bc-nfnl_cthelper_parse_tuple-0:
+blacklist: 
+
+i = 8: 
+related nodes:
+
+arg idx: 8
+argNo : 1
+whitelist: 
+est.bc-nfnl_cthelper_parse_tuple-0:
+blacklist: 
+
+
+Related bitcode:
+=/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+copy end.Inside qualifier check:
+Till now, Ctx->uninitArg = 1, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 4
+4 Function Finished!
+runOnFunctionnfnl_cthelper_new
+==========Function nfnl_cthelper_new==========
+addr:0x2bb6368
+Module: /home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+V #5	f> nfnl_cthelper_new
+V #6	v> %struct.nlattr** %tb
+O #7	v> %struct.nlattr** %tb
+V #8	v>   %tb.addr = alloca %struct.nlattr**, align 8
+V #9	v>   %tuple = alloca %struct.nf_conntrack_tuple, align 4
+V #10	v>   %helper = alloca %struct.nf_contrack_helper*, align 8
+V #11	v>   %ret = alloca i32, align 4
+V #12	v>   %i = alloca i32, align 4
+V #13	v>   store %struct.nlattr** %tb, %struct.nlattr*** %tb.addr, align 8
+V #14	v>   call void @llvm.dbg.declare(metadata %struct.nlattr*** %tb.addr, metadata !134, metadata !DIExpression()), !dbg !135
+V #15	v>   call void @llvm.dbg.declare(metadata %struct.nf_conntrack_tuple* %tuple, metadata !136, metadata !DIExpression()), !dbg !137
+V #16	v>   call void @llvm.dbg.declare(metadata %struct.nf_contrack_helper** %helper, metadata !138, metadata !DIExpression()), !dbg !141
+V #17	v>   store %struct.nf_contrack_helper* null, %struct.nf_contrack_helper** %helper, align 8, !dbg !45
+V #18	v>   call void @llvm.dbg.declare(metadata i32* %ret, metadata !142, metadata !DIExpression()), !dbg !143
+V #19	v>   store i32 0, i32* %ret, align 4, !dbg !47
+V #20	v>   call void @llvm.dbg.declare(metadata i32* %i, metadata !144, metadata !DIExpression()), !dbg !145
+V #21	v>   %0 = load %struct.nlattr**, %struct.nlattr*** %tb.addr, align 8, !dbg !50
+V #22	v>   %arrayidx = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %0, i64 2, !dbg !50
+V #23	v>   %1 = load %struct.nlattr*, %struct.nlattr** %arrayidx, align 8, !dbg !50
+V #24	v>   %call = call i32 @nfnl_cthelper_parse_tuple(%struct.nf_conntrack_tuple* %tuple, %struct.nlattr* %1), !dbg !51
+V #25	v>   store i32 %call, i32* %ret, align 4, !dbg !52
+V #26	v>   %2 = load %struct.nf_contrack_helper*, %struct.nf_contrack_helper** %helper, align 8, !dbg !53
+V #27	v>   %cmp = icmp eq %struct.nf_contrack_helper* %2, null, !dbg !55
+V #28	v>   br i1 %cmp, label %est.bc-nfnl_cthelper_new-1, label %est.bc-nfnl_cthelper_new-2, !dbg !56
+V #29	v>   %3 = load %struct.nlattr**, %struct.nlattr*** %tb.addr, align 8, !dbg !57
+V #30	v>   %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59
+V #31	v>   store i32 %call1, i32* %ret, align 4, !dbg !60
+V #32	v>   br label %est.bc-nfnl_cthelper_new-2, !dbg !61
+V #33	v>   %4 = load i32, i32* %ret, align 4, !dbg !62
+V #34	v>   ret i32 %4, !dbg !63
+O #35	v>   %tb.addr = alloca %struct.nlattr**, align 8
+O #36	v>   %tuple = alloca %struct.nf_conntrack_tuple, align 4
+O #37	field [1] of  : tuple
+O #38	field [2] of  : tuple
+O #39	field [3] of  : tuple
+O #40	v>   %helper = alloca %struct.nf_contrack_helper*, align 8
+O #41	v>   %ret = alloca i32, align 4
+O #42	v>   %i = alloca i32, align 4
+inside initSummary:
+sumNodeFactory:
+V #0	f> nfnl_cthelper_new
+V #1	v> %struct.nlattr** %tb
+O #2	v> %struct.nlattr** %tb
+sumPtsGraph:
+ptr: 1->2
+inside compute aa set:
+Inside qualifier inference:
+  %tb.addr = alloca %struct.nlattr**, align 8
+related qualifier out[8] = 1
+Node 8: 1
+Node 35: 0
+  %tuple = alloca %struct.nf_conntrack_tuple, align 4
+related qualifier out[9] = 1
+Node 9: 1
+Node 36: 0
+Node 37: 0
+Node 38: 0
+Node 39: 0
+  %helper = alloca %struct.nf_contrack_helper*, align 8
+related qualifier out[10] = 1
+Node 10: 1
+Node 40: 0
+  %ret = alloca i32, align 4
+related qualifier out[11] = 1
+Node 11: 1
+Node 41: 0
+  %i = alloca i32, align 4
+related qualifier out[12] = 1
+Node 12: 1
+Node 42: 0
+  store %struct.nlattr** %tb, %struct.nlattr*** %tb.addr, align 8
+item = 35
+6/
+related qualifier out[35] = -1
+Node 35: -1
+  call void @llvm.dbg.declare(metadata %struct.nlattr*** %tb.addr, metadata !134, metadata !DIExpression()), !dbg !135
+  call void @llvm.dbg.declare(metadata %struct.nf_conntrack_tuple* %tuple, metadata !136, metadata !DIExpression()), !dbg !137
+  call void @llvm.dbg.declare(metadata %struct.nf_contrack_helper** %helper, metadata !138, metadata !DIExpression()), !dbg !141
+  store %struct.nf_contrack_helper* null, %struct.nf_contrack_helper** %helper, align 8, !dbg !45
+related qualifier out[40] = 1
+Node 40: 1
+  call void @llvm.dbg.declare(metadata i32* %ret, metadata !142, metadata !DIExpression()), !dbg !143
+  store i32 0, i32* %ret, align 4, !dbg !47
+related qualifier out[41] = 1
+Node 41: 1
+  call void @llvm.dbg.declare(metadata i32* %i, metadata !144, metadata !DIExpression()), !dbg !145
+  %0 = load %struct.nlattr**, %struct.nlattr*** %tb.addr, align 8, !dbg !50
+relatedNode[21].insert(6)
+dstNode = 21
+6/
+relatedNode[21].insert(35)
+dstNode = 21
+6/
+related qualifier out[21] = -1
+  %arrayidx = getelementptr inbounds %struct.nlattr*, %struct.nlattr** %0, i64 2, !dbg !50
+related qualifier out[22] = -1
+  %1 = load %struct.nlattr*, %struct.nlattr** %arrayidx, align 8, !dbg !50
+relatedNode[23].insert(7)
+dstNode = 23
+7/
+related qualifier out[23] = -1
+Node 6: 1
+Node 21: 1
+Node 22: 1
+Node 35: 1
+  %call = call i32 @nfnl_cthelper_parse_tuple(%struct.nf_conntrack_tuple* %tuple, %struct.nlattr* %1), !dbg !51
+  %call = call i32 @nfnl_cthelper_parse_tuple(%struct.nf_conntrack_tuple* %tuple, %struct.nlattr* %1), !dbg !51
+possible function:nfnl_cthelper_parse_tuple, from module/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x2bb6268: nfnl_cthelper_parse_tuple
+end of process funcs.
+Node 24: 1
+Node 36: 1
+Node 38: 1
+  store i32 %call, i32* %ret, align 4, !dbg !52
+related qualifier out[41] = 1
+  %2 = load %struct.nf_contrack_helper*, %struct.nf_contrack_helper** %helper, align 8, !dbg !53
+related qualifier out[26] = 1
+Node 26: 1
+  %cmp = icmp eq %struct.nf_contrack_helper* %2, null, !dbg !55
+related qualifier out[27] = 1
+Node 27: 1
+  br i1 %cmp, label %est.bc-nfnl_cthelper_new-1, label %est.bc-nfnl_cthelper_new-2, !dbg !56
+  %3 = load %struct.nlattr**, %struct.nlattr*** %tb.addr, align 8, !dbg !57
+related qualifier out[29] = 1
+Node 29: 1
+  %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59
+  %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59
+possible function:nfnl_cthelper_create, from module/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x2bb2d88: nfnl_cthelper_create
+end of process funcs.
+Node 30: 1
+  store i32 %call1, i32* %ret, align 4, !dbg !60
+related qualifier out[41] = 1
+  br label %est.bc-nfnl_cthelper_new-2, !dbg !61
+  %4 = load i32, i32* %ret, align 4, !dbg !62
+related qualifier out[33] = 1
+Node 33: 1
+  ret i32 %4, !dbg !63
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x2bb6368, name:nfnl_cthelper_new
+Summary for function nfnl_cthelper_new
+noNodes: 3
+0 ->
+1 ->2
+# of stackVar = 5, # of uninit: 2
+retun idx0, retSize = 0, getRetOffset()= 0
+args:
+args[0]: idx = 1, obj = 2
+objsize = 1, offset = 0
+
+args[1]: idx = 0, 
+args[2]: idx = 0, 
+idx:    0  1  2
+req:   -1  1  -1 
+update: 1  -1  -1 
+modified: -1  -1  -1 
+List set for update:
+i = 0: 
+related nodes:
+
+i = 1: 
+related nodes:
+
+i = 2: 
+related nodes:
+
+arg idx: 2
+argNo : 0
+whitelist: 
+est.bc-nfnl_cthelper_new-0:
+blacklist: 
+
+
+Related bitcode:
+=/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc
+copy end.Inside qualifier check:
+check func: nfnl_cthelper_parse_tuple: 0x2bb6268
+check func: nfnl_cthelper_create: 0x2bb2d88
+***********Warning: argument check fails @ argument 1 : field 1 not initialized3, actual qualifier is 0, nodeIndex = 37
+[trace] In function @nfnl_cthelper_new Instruction:  %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59
+/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc:
+json obj:{"aliasNum": 1, "alt-blist": [], "argNo": 1, "bc": "/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc", "blacklist": ["est.bc-nfnl_cthelper_new-2", "est.bc-nfnl_cthelper_create-2"], "fieldNo": 1, "function": "nfnl_cthelper_new", "id": "/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc_nfnl_cthelper_new_  %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59_1_1", "rank": "NORMAL_PTR", "type": "stack", "use": "est.bc-nfnl_cthelper_new-1", "warning": "  %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59", "whitelist": ["est.bc-nfnl_cthelper_new-0", "est.bc-nfnl_cthelper_create-0"]}
+***********Warning: argument check fails @ argument 1 : field 3 not initialized3, actual qualifier is 0, nodeIndex = 39
+[trace] In function @nfnl_cthelper_new Instruction:  %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59
+/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc:
+json obj:{"aliasNum": 1, "alt-blist": [], "argNo": 1, "bc": "/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc", "blacklist": ["est.bc-nfnl_cthelper_new-2", "est.bc-nfnl_cthelper_create-2"], "fieldNo": 3, "function": "nfnl_cthelper_new", "id": "/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc_nfnl_cthelper_new_  %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59_1_3", "rank": "NORMAL_PTR", "type": "stack", "use": "est.bc-nfnl_cthelper_new-1", "warning": "  %call1 = call i32 @nfnl_cthelper_create(%struct.nlattr** %3, %struct.nf_conntrack_tuple* %tuple), !dbg !59", "whitelist": ["est.bc-nfnl_cthelper_new-0", "est.bc-nfnl_cthelper_create-0"]}
+Till now, Ctx->uninitArg = 3, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 5
+5 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis / 3] [/home/yizhuo/And-UBITect/testset/06be/tagged/test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

@@ -1,0 +1,34 @@
+argc = 3
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/data/home/yizhuo/And-UBITect/testset/cve/cve.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/And-UBITect/testset/cve/cve.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+1 functions in total.
+partition size : 0, sccSize = 0, rec size = 0, biggest = 0
+size of indiFuncs : 1
+==========Function 0: test==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+***********Warning: uninitialized ptr   %3 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8, !dbg !46
+[trace] In function @test Instruction:  %tobool1 = icmp ne %struct.test_struct* %3, null, !dbg !46
+Inside printRelatedBB:
+  %3 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8, !dbg !46
+/data/home/yizhuo/And-UBITect/testset/cve/cve.bc:
+json obj:{"aliasNum": 4, "alt-blist": ["entry"], "argNo": -1, "bc": "", "blacklist": ["if.then", "if.then2", "if.end4"], "colNo": "5", "fieldNo": -1, "function": "test", "id": "_test_%backlog$obj", "lineNo": "25", "rank": "NORMAL_PTR", "type": "stack", "use": "if.end", "warning": "  %3 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8, !dbg !46", "whitelist": ["entry"]}
+1 Functions Finished.
+# of remained function = 0
+ # of modified funcs = 0

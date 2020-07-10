@@ -1,0 +1,119 @@
+argc = 3
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/data/home/yizhuo/And-UBITect/testset/06be/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/And-UBITect/testset/06be/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+5 functions in total.
+partition size : 3, sccSize = 5, rec size = 0, biggest = 1
+size of indiFuncs : 0
+inside calcallee fornfnl_cthelper_parse_tuple
+==========Function 0: nfnl_cthelper_parse_tuple==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+1 Functions Finished.
+inside calcallee forhelper_hash
+==========Function 1: helper_hash==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+2 Functions Finished.
+inside calcallee fornf_conntrack_helper_register
+==========Function 2: nf_conntrack_helper_register==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %6 = call i32 @helper_hash(%struct.nf_conntrack_tuple* %5)
+possible function:helper_hash, from module/data/home/yizhuo/And-UBITect/testset/06be/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1ff0368: helper_hash
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: helper_hash: 0x1ff0368
+Callee : 0x1ff0368, name : helper_hash3 Functions Finished.
+inside calcallee fornfnl_cthelper_create
+==========Function 3: nfnl_cthelper_create==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %15 = call noalias i8* @malloc(i64 40) #3
+possible function:malloc, from module/data/home/yizhuo/And-UBITect/testset/06be/test.bc
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 4 %21, i8* align 4 %23, i64 16, i1 false)
+possible function:llvm.memcpy.p0i8.p0i8.i64, from module/data/home/yizhuo/And-UBITect/testset/06be/test.bc
+process memcpy funcs
+  %25 = call i32 @nf_conntrack_helper_register(%struct.nf_conntrack_helper* %24)
+possible function:nf_conntrack_helper_register, from module/data/home/yizhuo/And-UBITect/testset/06be/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1ff23c8: nf_conntrack_helper_register
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check copy func:
+check func: nf_conntrack_helper_register: 0x1ff23c8
+Callee : 0x1ff23c8, name : nf_conntrack_helper_register4 Functions Finished.
+inside calcallee fornfnl_cthelper_new
+==========Function 4: nfnl_cthelper_new==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %10 = call i32 @nfnl_cthelper_parse_tuple(%struct.nf_conntrack_tuple* %3, %struct.nlattr* %9)
+possible function:nfnl_cthelper_parse_tuple, from module/data/home/yizhuo/And-UBITect/testset/06be/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1ff3d48: nfnl_cthelper_parse_tuple
+end of process funcs.
+  %15 = call i32 @nfnl_cthelper_create(%struct.nlattr** %14, %struct.nf_conntrack_tuple* %3)
+possible function:nfnl_cthelper_create, from module/data/home/yizhuo/And-UBITect/testset/06be/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1ff0a88: nfnl_cthelper_create
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: nfnl_cthelper_parse_tuple: 0x1ff3d48
+Callee : 0x1ff3d48, name : nfnl_cthelper_parse_tuplecheck func: nfnl_cthelper_create: 0x1ff0a88
+Callee : 0x1ff0a88, name : nfnl_cthelper_create***********Warning: argument check fails @ argument 1 : field 1 not initialized3, actual qualifier is 0, nodeIndex = 32
+[trace] In function @nfnl_cthelper_new Instruction:  %15 = call i32 @nfnl_cthelper_create(%struct.nlattr** %14, %struct.nf_conntrack_tuple* %3)
+Inside printRelatedBB:
+  %15 = call i32 @nfnl_cthelper_create(%struct.nlattr** %14, %struct.nf_conntrack_tuple* %3)
+/data/home/yizhuo/And-UBITect/testset/06be/test.bc:
+json obj:{"aliasNum": 1, "alt-blist": [], "argNo": 1, "bc": "", "blacklist": ["", ""], "colNo": "-1", "fieldNo": 1, "function": "nfnl_cthelper_new", "id": "_nfnl_cthelper_new_%3$1$obj", "lineNo": "-1", "rank": "NORMAL_PTR", "type": "stack", "use": "", "warning": "  %15 = call i32 @nfnl_cthelper_create(%struct.nlattr** %14, %struct.nf_conntrack_tuple* %3)", "whitelist": ["", ""]}
+***********Warning: argument check fails @ argument 1 : field 3 not initialized3, actual qualifier is 0, nodeIndex = 34
+[trace] In function @nfnl_cthelper_new Instruction:  %15 = call i32 @nfnl_cthelper_create(%struct.nlattr** %14, %struct.nf_conntrack_tuple* %3)
+Inside printRelatedBB:
+  %15 = call i32 @nfnl_cthelper_create(%struct.nlattr** %14, %struct.nf_conntrack_tuple* %3)
+/data/home/yizhuo/And-UBITect/testset/06be/test.bc:
+json obj:{"aliasNum": 1, "alt-blist": [], "argNo": 1, "bc": "", "blacklist": ["", ""], "colNo": "-1", "fieldNo": 3, "function": "nfnl_cthelper_new", "id": "_nfnl_cthelper_new_%3$3$obj", "lineNo": "-1", "rank": "NORMAL_PTR", "type": "stack", "use": "", "warning": "  %15 = call i32 @nfnl_cthelper_create(%struct.nlattr** %14, %struct.nf_conntrack_tuple* %3)", "whitelist": ["", ""]}
+5 Functions Finished.
+# of remained function = 0
+ # of modified funcs = 0

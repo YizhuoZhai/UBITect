@@ -1,0 +1,10 @@
+digraph "CFG for 'f' function" {
+	label="CFG for 'f' function";
+
+	Node0xb7fa00 [shape=record,label="{%0:\l  %1 = getelementptr inbounds %struct.video_code, %struct.video_code* %kp, i64\l... 0, i32 2\l  %2 = load i8*, i8** %1, align 8\l  %3 = icmp eq i8* %2, null\l  br i1 %3, label %5, label %4\l|{<s0>T|<s1>F}}"];
+	Node0xb7fa00:s0 -> Node0xb7faa0;
+	Node0xb7fa00:s1 -> Node0xb7fa50;
+	Node0xb7fa50 [shape=record,label="{%4:\l\l  br label %5\l}"];
+	Node0xb7fa50 -> Node0xb7faa0;
+	Node0xb7faa0 [shape=record,label="{%5:\l\l  ret void\l}"];
+}

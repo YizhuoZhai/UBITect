@@ -1,0 +1,211 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+readylist insert function acpi_get_object_info
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function acpi_get_object_info==========
+Inside BuildPtsGraph:
+  %1 = alloca i32, align 4
+  %2 = alloca %struct.acpi_device_info**, align 8
+  store %struct.acpi_device_info** %return_buffer, %struct.acpi_device_info*** %2, align 8
+  %3 = icmp eq %struct.acpi_device_info** %return_buffer, null
+  br i1 %3, label %4, label %5
+  store i32 4097, i32* %1, align 4
+  br label %10
+  %6 = call i8* @malloc(i64 4) #2
+call instruction return a pointer
+  %7 = bitcast i8* %6 to i32*
+  store i32 0, i32* %7, align 4
+  %.cast = ptrtoint i8* %6 to i64
+  %8 = bitcast %struct.acpi_device_info*** %2 to i64**
+  %9 = load i64*, i64** %8, align 8
+  store i64 %.cast, i64* %9, align 8
+  br label %10
+  %11 = load i32, i32* %1, align 4
+  ret i32 %11
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> %struct.acpi_device_info** %return_buffer
+O #5	v> %struct.acpi_device_info** %return_buffer
+V #6	v>   %1 = alloca i32, align 4
+V #7	v>   %2 = alloca %struct.acpi_device_info**, align 8
+V #8	v>   %6 = call i8* @malloc(i64 4) #2
+V #9	v>   %7 = bitcast i8* %6 to i32*
+V #10	v>   %8 = bitcast %struct.acpi_device_info*** %2 to i64**
+V #11	v>   %9 = load i64*, i64** %8, align 8
+O #12	v>   %1 = alloca i32, align 4
+O #13	v>   %2 = alloca %struct.acpi_device_info**, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <1, 12, >
+index 7 point to <4, >
+index 8 point to <1, >
+index 9 point to <1, >
+index 10 point to <4, >
+index 11 point to <5, >
+index 13 point to <5, >
+Inside qualifier inference:
+  %1 = alloca i32, align 4
+  %2 = alloca %struct.acpi_device_info**, align 8
+  store %struct.acpi_device_info** %return_buffer, %struct.acpi_device_info*** %2, align 8
+  %3 = icmp eq %struct.acpi_device_info** %return_buffer, null
+  br i1 %3, label %4, label %5
+  store i32 4097, i32* %1, align 4
+  br label %10
+  %6 = call i8* @malloc(i64 4) #2
+  %7 = bitcast i8* %6 to i32*
+  store i32 0, i32* %7, align 4
+  %.cast = ptrtoint i8* %6 to i64
+  %8 = bitcast %struct.acpi_device_info*** %2 to i64**
+  %9 = load i64*, i64** %8, align 8
+  store i64 %.cast, i64* %9, align 8
+  br label %10
+  %11 = load i32, i32* %1, align 4
+  ret i32 %11
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 0
+index = 9, qualifier = 0
+index = 10, qualifier = 0
+index = 11, qualifier = 0
+index = 12, qualifier = 0
+index = 13, qualifier = 0
+idx = 4, requirement = 1. update = 0
+idx = 5, requirement = 0. update = 0
+Inside QualifierCheck:
+  %1 = alloca i32, align 4
+  %2 = alloca %struct.acpi_device_info**, align 8
+  store %struct.acpi_device_info** %return_buffer, %struct.acpi_device_info*** %2, align 8
+  %3 = icmp eq %struct.acpi_device_info** %return_buffer, null
+  br i1 %3, label %4, label %5
+  store i32 4097, i32* %1, align 4
+  br label %10
+  %6 = call i8* @malloc(i64 4) #2
+  %7 = bitcast i8* %6 to i32*
+  store i32 0, i32* %7, align 4
+  %.cast = ptrtoint i8* %6 to i64
+  %8 = bitcast %struct.acpi_device_info*** %2 to i64**
+  %9 = load i64*, i64** %8, align 8
+  store i64 %.cast, i64* %9, align 8
+  br label %10
+  %11 = load i32, i32* %1, align 4
+  ret i32 %11
+==========Function xgene_ahci_probe==========
+Inside BuildPtsGraph:
+  %version = alloca i32, align 4
+  %info = alloca %struct.acpi_device_info*, align 8
+  store i32 1, i32* %version, align 4
+  %1 = call i32 @acpi_get_object_info(%struct.acpi_device_info** nonnull %info)
+  %2 = icmp eq i32 %1, 0
+  br i1 %2, label %4, label %3
+  store i32 1, i32* %version, align 4
+  br label %12
+  %5 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align 8
+  %6 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %5, i64 0, i32 0
+  %7 = load i32, i32* %6, align 4
+  %8 = and i32 %7, 32
+  %9 = icmp eq i32 %8, 0
+  br i1 %9, label %11, label %10
+  store i32 2, i32* %version, align 4
+  br label %11
+  br label %12
+  %13 = load i32, i32* %version, align 4
+  ret i32 %13
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v>   %version = alloca i32, align 4
+V #5	v>   %info = alloca %struct.acpi_device_info*, align 8
+V #6	v>   %5 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align 8
+V #7	v>   %6 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %5, i64 0, i32 0
+O #8	v>   %version = alloca i32, align 4
+O #9	v>   %info = alloca %struct.acpi_device_info*, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <1, >
+index 5 point to <9, >
+index 6 point to <>
+Inside qualifier inference:
+  %version = alloca i32, align 4
+  %info = alloca %struct.acpi_device_info*, align 8
+  store i32 1, i32* %version, align 4
+  %1 = call i32 @acpi_get_object_info(%struct.acpi_device_info** nonnull %info)
+  %2 = icmp eq i32 %1, 0
+invalid index in icmp
+  br i1 %2, label %4, label %3
+  store i32 1, i32* %version, align 4
+  br label %12
+  %5 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align 8
+  %6 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %5, i64 0, i32 0
+  %7 = load i32, i32* %6, align 4
+  %8 = and i32 %7, 32
+  %9 = icmp eq i32 %8, 0
+invalid index in icmp
+  br i1 %9, label %11, label %10
+  store i32 2, i32* %version, align 4
+  br label %11
+  br label %12
+  %13 = load i32, i32* %version, align 4
+  ret i32 %13
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 0
+index = 7, qualifier = 0
+index = 8, qualifier = 0
+index = 9, qualifier = 0
+Inside QualifierCheck:
+  %version = alloca i32, align 4
+  %info = alloca %struct.acpi_device_info*, align 8
+  store i32 1, i32* %version, align 4
+  %1 = call i32 @acpi_get_object_info(%struct.acpi_device_info** nonnull %info)
+  %2 = icmp eq i32 %1, 0
+invalid index in icmp
+  br i1 %2, label %4, label %3
+  store i32 1, i32* %version, align 4
+  br label %12
+  %5 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align 8
+  %6 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %5, i64 0, i32 0
+***********Warning: potentail uninitialized ptr  %5 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align 8
+  %7 = load i32, i32* %6, align 4
+***********Warning: potentail uninitialized ptr  %6 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %5, i64 0, i32 0
+  %8 = and i32 %7, 32
+  %9 = icmp eq i32 %8, 0
+invalid index in icmp
+  br i1 %9, label %11, label %10
+  store i32 2, i32* %version, align 4
+  br label %11
+  br label %12
+  %13 = load i32, i32* %version, align 4
+  ret i32 %13
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

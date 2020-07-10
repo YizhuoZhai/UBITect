@@ -1,0 +1,84 @@
+argc = 3
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/data/home/yizhuo/And-UBITect/testset/2963/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/And-UBITect/testset/2963/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+4 functions in total.
+partition size : 2, sccSize = 2, rec size = 0, biggest = 1
+size of indiFuncs : 2
+==========Function 0: compat_ptr==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+1 Functions Finished.
+==========Function 1: copy_from_user==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+2 Functions Finished.
+inside calcallee forget_microcode32
+==========Function 2: get_microcode32==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %17 = call i64 @copy_from_user(i8* %7, i8* %12, i64 %16)
+possible function:copy_from_user, from module/data/home/yizhuo/And-UBITect/testset/2963/test.bc
+process transfer funcs
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+3 Functions Finished.
+inside calcallee forcaller
+==========Function 3: caller==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %7 = call i8* @compat_ptr(i32 %6)
+possible function:compat_ptr, from module/data/home/yizhuo/And-UBITect/testset/2963/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x2c99348: compat_ptr
+end of process funcs.
+  call void @get_microcode32(%struct.video_code* %10, %struct.video_code32* %12)
+possible function:get_microcode32, from module/data/home/yizhuo/And-UBITect/testset/2963/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x2c95d48: get_microcode32
+return void.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: compat_ptr: 0x2c99348
+Callee : 0x2c99348, name : compat_ptrcheck func: get_microcode32: 0x2c95d48
+Callee : 0x2c95d48, name : get_microcode32***********Warning: argument check fails @ argument 0 some field inside union not initialized2, actual qualifier is 0, nodeIndex = 25
+[trace] In function @caller Instruction:  call void @get_microcode32(%struct.video_code* %10, %struct.video_code32* %12)
+Inside printRelatedBB:
+  call void @get_microcode32(%struct.video_code* %10, %struct.video_code32* %12)
+/data/home/yizhuo/And-UBITect/testset/2963/test.bc:
+json obj:{"aliasNum": 1, "alt-blist": [], "argNo": 0, "bc": "", "blacklist": [""], "colNo": "-1", "fieldNo": -1, "function": "caller", "id": "_caller_%3$0$obj", "lineNo": "-1", "rank": "DATA", "type": "stack", "use": "", "warning": "  call void @get_microcode32(%struct.video_code* %10, %struct.video_code32* %12)", "whitelist": ["", ""]}
+4 Functions Finished.
+# of remained function = 0
+ # of modified funcs = 0

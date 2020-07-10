@@ -1,0 +1,72 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function ip_route_input_slow==========
+Inside createNodeForGlobals:
+4.6
+4.7
+4.8
+4.9
+5
+Inside collectConstraintsForGlobals:
+inside compute aa set:
+  %res = alloca %struct.fib_result, align 8
+  %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 1
+  %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+  %3 = icmp ne %struct.fib_table* %2, null
+  br i1 %3, label %4, label %5
+  br label %5
+  ret void
+Inside qualifier inference:
+  %res = alloca %struct.fib_result, align 8
+  %res = alloca %struct.fib_result, align 8
+related qualifier out[5] = 1
+  %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 1
+  %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 1
+related qualifier out[6] = 1
+  %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+  %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+related qualifier out[7] = 0
+  %3 = icmp ne %struct.fib_table* %2, null
+  %3 = icmp ne %struct.fib_table* %2, null
+related qualifier out[8] = 0
+  br i1 %3, label %4, label %5
+  br i1 %3, label %4, label %5
+  br label %5
+  br label %5
+  ret void
+  ret void
+Inside QualifierCheck:
+  %res = alloca %struct.fib_result, align 8
+  %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 1
+opIdx = 5, qualifier = 1
+  %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+opIdx = 6, qualifier = 1
+  %3 = icmp ne %struct.fib_table* %2, null
+aa:7 is uninitialized
+***********Warning: uninitialized ptr   %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+[trace] In function @ip_route_input_slow Instruction:  %3 = icmp ne %struct.fib_table* %2, null
+aa:13 is uninitialized
+***********Warning: uninitialized ptr   %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+[trace] In function @ip_route_input_slow Instruction:  %3 = icmp ne %struct.fib_table* %2, null
+  br i1 %3, label %4, label %5
+  br label %5
+  ret void
+Qualifer Check Finished
+1 Function Finished!
+function analysis done!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

@@ -1,0 +1,3 @@
+KLEE: Using STP solver backend
+KLEE: symbolic: memory error: out of bound pointer
+KLEE: symbolic: (location information missing) invalid function pointer

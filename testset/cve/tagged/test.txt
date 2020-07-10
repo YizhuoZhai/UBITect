@@ -1,0 +1,52 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+1 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [/data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc]
+runOnFunctiontest
+==========Function test==========
+addr:0x39709f8
+Module: /data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x39709f8, name:test
+copy end.Inside qualifier check:
+***********Warning: uninitialized ptr   %3 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8, !dbg !46
+[trace] In function @test Instruction:  %tobool1 = icmp ne %struct.test_struct* %3, null, !dbg !46
+/data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc:
+json obj:{"aliasNum": 4, "alt-blist": ["ve.bc-test-0"], "argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc", "blacklist": ["ve.bc-test-1", "ve.bc-test-3", "ve.bc-test-4"], "fieldNo": -1, "function": "test", "id": "/data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc_test_  %3 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8, !dbg !46_-1_-1", "rank": "NORMAL_PTR", "type": "stack", "use": "ve.bc-test-2", "warning": "  %3 = load %struct.test_struct*, %struct.test_struct** %backlog, align 8, !dbg !46", "whitelist": ["ve.bc-test-0"]}
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 1
+1 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [/data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis / 3] [/data/home/yizhuo/And-UBITect/testset/cve/tagged/test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

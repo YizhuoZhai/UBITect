@@ -1,0 +1,4 @@
+/home/yizhuo/klee/2018_klee_confirm_path/build/bin/klee -json={"aliasNum": 2, "alt-blist": [], "argNo": -1, "bc": "/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc", "blacklist": ["est.bc-vmw_cmd_end_gb_query-1", "est.bc-vmw_cmd_end_gb_query-3", "est.bc-vmw_translate_mob_ptr-5"], "fieldNo": -1, "function": "vmw_cmd_end_gb_query", "id": "/home/yizhuo/And-UBITect/testset/d798/tagged/test.llbc_vmw_cmd_end_gb_query_  %base = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer* %2, i32 0, i32 0, !dbg !44_-1_-1", "rank": "NORMAL_PTR", "type": "stack", "use": "est.bc-vmw_cmd_end_gb_query-2", "warning": "  %base = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer* %2, i32 0, i32 0, !dbg !44", "whitelist": ["est.bc-vmw_cmd_end_gb_query-0", "est.bc-vmw_translate_mob_ptr-0"]} ./built-in.bc
+PID: 59870
+Using monotonic steady clock with 1/1000000000s resolution
+Started: 2019-08-06 18:42:55

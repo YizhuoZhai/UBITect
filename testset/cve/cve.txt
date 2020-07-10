@@ -1,0 +1,72 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [cve.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [cve.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+1 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [cve.bc]
+runOnFunctionmain
+==========Function main==========
+addr:0x30cf4b8
+Module: cve.bc
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+summarize the return:
+begin to summarize funcs.
+inference end.
+copy Summaries for function 0x30cf4b8, name:main
+copy end.Inside qualifier check:
+***********Warning: potentail uninitialized ptr  %12 = load %struct.test_struct*, %struct.test_struct** %2, align 8
+[trace] In function @main Instruction:  %13 = getelementptr inbounds %struct.test_struct, %struct.test_struct* %12, i32 0, i32 0
+ dominates 
+---whitelist: 
+--blacklist: 
+--blacklist: 
+--blacklist: 
+--alt-blacklist: 
+-use: 
+moduleName = cve.bc
+cve.bc:
+json obj:{"aliasNum": 4, "alt-blist": [""], "argNo": -1, "bc": "cve.bc", "blacklist": ["", "", ""], "fieldNo": -1, "function": "main", "id": "cve.bc_main_  %13 = getelementptr inbounds %struct.test_struct, %struct.test_struct* %12, i32 0, i32 0_-1_-1", "rank": "NORMAL_PTR", "type": "stack", "use": "", "warning": "  %13 = getelementptr inbounds %struct.test_struct, %struct.test_struct* %12, i32 0, i32 0", "whitelist": [""]}
+***********Warning: uninitialized ptr   %14 = load i32, i32* %13, align 4
+[trace] In function @main Instruction:  %15 = icmp ne i32 %14, 0
+ dominates 
+---whitelist: 
+--blacklist: 
+--blacklist: 
+--blacklist: 
+--alt-blacklist: 
+-use: 
+moduleName = cve.bc
+cve.bc:
+json obj:{"aliasNum": 3, "alt-blist": [""], "argNo": -1, "bc": "cve.bc", "blacklist": ["", "", ""], "fieldNo": -1, "function": "main", "id": "cve.bc_main_  %15 = icmp ne i32 %14, 0_-1_-1", "rank": "DATA", "type": "stack", "use": "", "warning": "  %15 = icmp ne i32 %14, 0", "whitelist": [""]}
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 0
+1 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [cve.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis / 3] [cve.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

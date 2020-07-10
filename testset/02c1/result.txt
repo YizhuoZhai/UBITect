@@ -1,0 +1,47 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+3 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.llbc]
+==========Function fib_table_lookup==========
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+Inside qualifier check:
+1 Function Finished!
+==========Function fib_lookup==========
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+possible function:fib_table_lookup, from moduletest.llbc
+process  funcs
+Inside qualifier check:
+2 Function Finished!
+==========Function ip_route_input_slow==========
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+possible function:fib_lookup, from moduletest.llbc
+process  funcs
+Inside qualifier check:
+***********Local Warning: uninitialized ptr   %3 = load %struct.fib_table*, %struct.fib_table** %2, align 8
+[trace] In function @ip_route_input_slow Instruction:  %4 = icmp ne %struct.fib_table* %3, null
+-----related BB:test.bc-ip_route_input_slow-0
+3 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+collect circulate functions: 
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+

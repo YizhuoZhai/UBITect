@@ -1,0 +1,5126 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function doinit==========
+Inside BuildPtsGraph:
+Inside createNodeForGlobals:
+Inside collectConstraintsForGlobals:
+init ptsGraph:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+  %1 = load i32, i32* @a, align 4
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+  %2 = icmp eq i32 %1, 1
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+  br i1 %2, label %3, label %7
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+  %4 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i8**
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+  %5 = load i8*, i8** %4, align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+  %6 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 8, i1 false)
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+  br label %7
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+  %storemerge = phi i32 [ 1, %3 ], [ 0, %0 ]
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+  ret i32 %storemerge
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	f> doinit
+V #11	f> llvm.memcpy.p0i8.p0i8.i64
+V #12	f> vmw_query_bo_switch_prepare
+V #13	f> vmw_translate_mob_ptr
+V #14	f> vmw_cmd_end_gb_query
+V #15	v> %struct.vmw_dma_buffer** %vmw_bo_p
+O #16	v> %struct.vmw_dma_buffer** %vmw_bo_p
+V #17	v>   %1 = load i32, i32* @a, align 4
+V #18	v>   %2 = icmp eq i32 %1, 1
+V #19	v>   br i1 %2, label %3, label %7
+V #20	v>   %4 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i8**
+V #21	v>   %5 = load i8*, i8** %4, align 8
+V #22	v>   %6 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+V #23	v>   tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 8, i1 false)
+V #24	v>   br label %7
+V #25	v>   %storemerge = phi i32 [ 1, %3 ], [ 0, %0 ]
+V #26	v>   ret i32 %storemerge
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 20 point to <16, >
+index 21 point to <0, >
+index 22 point to <0, >
+inside compute aa set:
+  %1 = load i32, i32* @a, align 4
+  %1 = load i32, i32* @a, align 4
+============in============
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+
+============out============
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+  %2 = icmp eq i32 %1, 1
+  %2 = icmp eq i32 %1, 1
+============in============
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+
+============out============
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+  br i1 %2, label %3, label %7
+  br i1 %2, label %3, label %7
+============in============
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+
+============out============
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+  %4 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i8**
+  %4 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i8**
+============in============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+
+============out============
+21:<21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+  %5 = load i8*, i8** %4, align 8
+  %5 = load i8*, i8** %4, align 8
+============in============
+21:<21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+
+============out============
+21:<16,21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+  %6 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  %6 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+============in============
+21:<16,21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+
+============out============
+21:<16,21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<7,22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 8, i1 false)
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 8, i1 false)
+============in============
+21:<16,21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<7,22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+
+============out============
+21:<16,21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<7,22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+  br label %7
+  br label %7
+============in============
+21:<16,21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<7,22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+
+============out============
+21:<16,21,>
+20:<15,20,>
+19:<19,>
+18:<18,>
+17:<5,17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<7,22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+  %storemerge = phi i32 [ 1, %3 ], [ 0, %0 ]
+  %storemerge = phi i32 [ 1, %3 ], [ 0, %0 ]
+============in============
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<7,22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<15,20,>
+21:<16,21,>
+
+============out============
+26:<26,>
+25:<1,25,>
+24:<24,>
+23:<23,>
+22:<7,22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<15,20,>
+21:<16,21,>
+  ret i32 %storemerge
+  ret i32 %storemerge
+============in============
+26:<26,>
+25:<1,25,>
+24:<24,>
+23:<23,>
+22:<7,22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<15,20,>
+21:<16,21,>
+
+============out============
+26:<26,>
+25:<1,25,>
+24:<24,>
+23:<23,>
+22:<7,22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<5,17,>
+18:<18,>
+19:<19,>
+20:<15,20,>
+21:<16,21,>
+Inside qualifier inference:
+init array:
+node 0, qualifier = 1
+node 1, qualifier = 1
+node 2, qualifier = 1
+node 3, qualifier = 1
+node 4, qualifier = 1
+node 5, qualifier = 1
+node 6, qualifier = 1
+node 7, qualifier = 1
+node 8, qualifier = 1
+node 9, qualifier = 1
+node 10, qualifier = 1
+node 11, qualifier = 1
+node 12, qualifier = 1
+node 13, qualifier = 1
+node 14, qualifier = 1
+node 15, qualifier = 1
+node 16, qualifier = 1
+node 17, qualifier = -1
+node 18, qualifier = -1
+node 19, qualifier = -1
+node 20, qualifier = -1
+node 21, qualifier = -1
+node 22, qualifier = -1
+node 23, qualifier = -1
+node 24, qualifier = -1
+node 25, qualifier = -1
+node 26, qualifier = -1
+  %1 = load i32, i32* @a, align 4
+  %1 = load i32, i32* @a, align 4
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = -1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+related qualifier out[17] = 1
+============================out=========================
+index = 17, qualifier = 1
+  %2 = icmp eq i32 %1, 1
+  %2 = icmp eq i32 %1, 1
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+related qualifier out[18] = 1
+============================out=========================
+index = 18, qualifier = 1
+  br i1 %2, label %3, label %7
+  br i1 %2, label %3, label %7
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+============================out=========================
+  %4 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i8**
+  %4 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i8**
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+related qualifier out[20] = 1
+============================out=========================
+index = 20, qualifier = 1
+  %5 = load i8*, i8** %4, align 8
+  %5 = load i8*, i8** %4, align 8
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+related qualifier out[21] = 1
+============================out=========================
+index = 21, qualifier = 1
+  %6 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  %6 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+related qualifier out[22] = 1
+============================out=========================
+index = 22, qualifier = 1
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 8, i1 false)
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 8, i1 false)
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+============================out=========================
+  br label %7
+  br label %7
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+============================out=========================
+  %storemerge = phi i32 [ 1, %3 ], [ 0, %0 ]
+  %storemerge = phi i32 [ 1, %3 ], [ 0, %0 ]
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+initIndex in[1]: 1
+incomming edge 1, initIndex in[1]: 1
+related qualifier out[25] = 1
+============================out=========================
+index = 25, qualifier = 1
+  ret i32 %storemerge
+  ret i32 %storemerge
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = -1
+============================out=========================
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = -1
+idx = 15, requirement = 0. update = 0
+idx = 16, requirement = 1. update = 0
+return index = 0, Qualifier = 1
+  %1 = load i32, i32* @a, align 4
+  %1 = load i32, i32* @a, align 4
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+opIdx = 4, qualifier = 1
+  %2 = icmp eq i32 %1, 1
+  %2 = icmp eq i32 %1, 1
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+  br i1 %2, label %3, label %7
+  br i1 %2, label %3, label %7
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+  %4 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i8**
+  %4 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i8**
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+  %5 = load i8*, i8** %4, align 8
+  %5 = load i8*, i8** %4, align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+opIdx = 20, qualifier = 1
+  %6 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  %6 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+opIdx = 6, qualifier = 1
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 8, i1 false)
+  tail call void @llvm.memcpy.p0i8.p0i8.i64(i8* %5, i8* %6, i64 16, i32 8, i1 false)
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+  br label %7
+  br label %7
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+  %storemerge = phi i32 [ 1, %3 ], [ 0, %0 ]
+  %storemerge = phi i32 [ 1, %3 ], [ 0, %0 ]
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = -1
+  ret i32 %storemerge
+  ret i32 %storemerge
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = 1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = -1
+1 Function Finished!
+==========Function vmw_query_bo_switch_prepare==========
+Inside BuildPtsGraph:
+Inside createNodeForGlobals:
+Inside collectConstraintsForGlobals:
+init ptsGraph:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <0, >
+  %not. = icmp ne %struct.ttm_buffer_object* %1, %new_query_bo
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <0, >
+  %. = sext i1 %not. to i32
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <0, >
+  ret i32 %.
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <0, >
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	f> doinit
+V #11	f> llvm.memcpy.p0i8.p0i8.i64
+V #12	f> vmw_query_bo_switch_prepare
+V #13	f> vmw_translate_mob_ptr
+V #14	f> vmw_cmd_end_gb_query
+V #15	v> %struct.ttm_buffer_object* %new_query_bo
+O #16	v> %struct.ttm_buffer_object* %new_query_bo
+O #17	field [1] of  : new_query_bo
+V #18	v>   %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+V #19	v>   %not. = icmp ne %struct.ttm_buffer_object* %1, %new_query_bo
+V #20	v>   %. = sext i1 %not. to i32
+V #21	v>   ret i32 %.
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <0, >
+index 18 point to <0, >
+inside compute aa set:
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+============in============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<7,18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  %not. = icmp ne %struct.ttm_buffer_object* %1, %new_query_bo
+  %not. = icmp ne %struct.ttm_buffer_object* %1, %new_query_bo
+============in============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<7,18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<7,18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  %. = sext i1 %not. to i32
+  %. = sext i1 %not. to i32
+============in============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<7,18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<7,18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  ret i32 %.
+  ret i32 %.
+============in============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<7,18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+21:<21,>
+20:<20,>
+19:<19,>
+18:<7,18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+Inside qualifier inference:
+init array:
+node 0, qualifier = 1
+node 1, qualifier = 1
+node 2, qualifier = 1
+node 3, qualifier = 1
+node 4, qualifier = 1
+node 5, qualifier = 1
+node 6, qualifier = 1
+node 7, qualifier = 1
+node 8, qualifier = 1
+node 9, qualifier = 1
+node 10, qualifier = 1
+node 11, qualifier = 1
+node 12, qualifier = 1
+node 13, qualifier = 1
+node 14, qualifier = 1
+node 15, qualifier = 1
+node 16, qualifier = 1
+node 17, qualifier = 1
+node 18, qualifier = -1
+node 19, qualifier = -1
+node 20, qualifier = -1
+node 21, qualifier = -1
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+related qualifier out[18] = 1
+============================out=========================
+index = 18, qualifier = 1
+  %not. = icmp ne %struct.ttm_buffer_object* %1, %new_query_bo
+  %not. = icmp ne %struct.ttm_buffer_object* %1, %new_query_bo
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+related qualifier out[19] = 1
+============================out=========================
+index = 19, qualifier = 1
+  %. = sext i1 %not. to i32
+  %. = sext i1 %not. to i32
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = 1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+related qualifier out[20] = 1
+============================out=========================
+index = 20, qualifier = 1
+  ret i32 %.
+  ret i32 %.
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = 1
+index = 20, qualifier = 1
+index = 21, qualifier = -1
+============================out=========================
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = 1
+index = 20, qualifier = 1
+index = 21, qualifier = -1
+idx = 15, requirement = 0. update = 0
+idx = 16, requirement = 0. update = 0
+idx = 17, requirement = 0. update = 0
+return index = 0, Qualifier = 1
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+opIdx = 6, qualifier = 1
+  %not. = icmp ne %struct.ttm_buffer_object* %1, %new_query_bo
+  %not. = icmp ne %struct.ttm_buffer_object* %1, %new_query_bo
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = 1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+  %. = sext i1 %not. to i32
+  %. = sext i1 %not. to i32
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = 1
+index = 20, qualifier = 1
+index = 21, qualifier = -1
+  ret i32 %.
+  ret i32 %.
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = 1
+index = 19, qualifier = 1
+index = 20, qualifier = 1
+index = 21, qualifier = -1
+2 Function Finished!
+==========Function vmw_translate_mob_ptr==========
+Inside BuildPtsGraph:
+Inside createNodeForGlobals:
+Inside collectConstraintsForGlobals:
+init ptsGraph:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+  %1 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+  %2 = icmp ne i32 %1, 0
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+  %3 = load i32, i32* @a, align 4
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+  %4 = icmp eq i32 %3, 1
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+  %or.cond = or i1 %2, %4
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+  br i1 %or.cond, label %9, label %5
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+  %6 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 31 point to <2, >
+  %7 = load i64, i64* %6, align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 31 point to <2, >
+  %8 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i64*
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 27 point to <16, >
+index 31 point to <2, >
+  store i64 %7, i64* %8, align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 27 point to <16, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 27 point to <16, >
+index 31 point to <2, >
+  br label %9
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 27 point to <16, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 27 point to <16, >
+index 31 point to <2, >
+  ret i32 0
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 27 point to <16, >
+index 31 point to <2, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 27 point to <16, >
+index 31 point to <2, >
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	f> doinit
+V #11	f> llvm.memcpy.p0i8.p0i8.i64
+V #12	f> vmw_query_bo_switch_prepare
+V #13	f> vmw_translate_mob_ptr
+V #14	f> vmw_cmd_end_gb_query
+V #15	v> %struct.vmw_dma_buffer** %vmw_bo_p
+O #16	v> %struct.vmw_dma_buffer** %vmw_bo_p
+V #17	v>   %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+V #18	v>   store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+V #19	v>   %1 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+V #20	v>   %2 = icmp ne i32 %1, 0
+V #21	v>   %3 = load i32, i32* @a, align 4
+V #22	v>   %4 = icmp eq i32 %3, 1
+V #23	v>   %or.cond = or i1 %2, %4
+V #24	v>   br i1 %or.cond, label %9, label %5
+V #25	v>   %6 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+V #26	v>   %7 = load i64, i64* %6, align 8
+V #27	v>   %8 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i64*
+V #28	v>   store i64 %7, i64* %8, align 8
+V #29	v>   br label %9
+V #30	v>   ret i32 0
+O #31	v>   %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <16, >
+index 16 point to <0, >
+index 17 point to <31, >
+index 25 point to <31, >
+index 27 point to <16, >
+index 31 point to <2, >
+inside compute aa set:
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+============in============
+31:<31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+
+============out============
+31:<31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+============in============
+31:<31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+
+============out============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+  %1 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  %1 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+============in============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+
+============out============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+  %2 = icmp ne i32 %1, 0
+  %2 = icmp ne i32 %1, 0
+============in============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+
+============out============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+  %3 = load i32, i32* @a, align 4
+  %3 = load i32, i32* @a, align 4
+============in============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<21,>
+
+============out============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+  %4 = icmp eq i32 %3, 1
+  %4 = icmp eq i32 %3, 1
+============in============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+
+============out============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+  %or.cond = or i1 %2, %4
+  %or.cond = or i1 %2, %4
+============in============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+
+============out============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+  br i1 %or.cond, label %9, label %5
+  br i1 %or.cond, label %9, label %5
+============in============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+
+============out============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<27,>
+26:<26,>
+25:<25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+  %6 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+  %6 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+============in============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<25,>
+26:<26,>
+27:<27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+
+============out============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<26,>
+27:<27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+  %7 = load i64, i64* %6, align 8
+  %7 = load i64, i64* %6, align 8
+============in============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<26,>
+27:<27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+
+============out============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<2,26,31,>
+27:<27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+  %8 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i64*
+  %8 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i64*
+============in============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<2,26,31,>
+27:<27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+
+============out============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<2,26,31,>
+27:<15,27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+  store i64 %7, i64* %8, align 8
+  store i64 %7, i64* %8, align 8
+============in============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<2,26,31,>
+27:<15,27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+
+============out============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,26,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<2,26,31,>
+27:<15,27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+  br label %9
+  br label %9
+============in============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,26,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<2,26,31,>
+27:<15,27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+
+============out============
+21:<5,21,>
+20:<20,>
+19:<19,>
+18:<18,>
+17:<17,>
+16:<16,26,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+22:<22,>
+23:<23,>
+24:<24,>
+25:<17,25,>
+26:<2,26,31,>
+27:<15,27,>
+28:<28,>
+29:<29,>
+30:<30,>
+31:<2,31,>
+  ret i32 0
+  ret i32 0
+============in============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<15,27,>
+26:<2,26,31,>
+25:<17,25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,26,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+
+============out============
+31:<2,31,>
+30:<30,>
+29:<29,>
+28:<28,>
+27:<15,27,>
+26:<2,26,31,>
+25:<17,25,>
+24:<24,>
+23:<23,>
+22:<22,>
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,26,>
+17:<17,>
+18:<18,>
+19:<19,>
+20:<20,>
+21:<5,21,>
+Inside qualifier inference:
+init array:
+node 0, qualifier = 1
+node 1, qualifier = 1
+node 2, qualifier = 1
+node 3, qualifier = 1
+node 4, qualifier = 1
+node 5, qualifier = 1
+node 6, qualifier = 1
+node 7, qualifier = 1
+node 8, qualifier = 1
+node 9, qualifier = 1
+node 10, qualifier = 1
+node 11, qualifier = 1
+node 12, qualifier = 1
+node 13, qualifier = 1
+node 14, qualifier = 1
+node 15, qualifier = 1
+node 16, qualifier = 1
+node 17, qualifier = -1
+node 18, qualifier = -1
+node 19, qualifier = -1
+node 20, qualifier = -1
+node 21, qualifier = -1
+node 22, qualifier = -1
+node 23, qualifier = -1
+node 24, qualifier = -1
+node 25, qualifier = -1
+node 26, qualifier = -1
+node 27, qualifier = -1
+node 28, qualifier = -1
+node 29, qualifier = -1
+node 30, qualifier = -1
+node 31, qualifier = -1
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = -1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = -1
+related qualifier out[17] = 1
+============================out=========================
+index = 17, qualifier = 1
+index = 31, qualifier = 0
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 0
+related qualifier out[31] = 1
+============================out=========================
+index = 31, qualifier = 1
+  %1 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  %1 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+============================out=========================
+  %2 = icmp ne i32 %1, 0
+  %2 = icmp ne i32 %1, 0
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+related qualifier out[20] = -1
+============================out=========================
+  %3 = load i32, i32* @a, align 4
+  %3 = load i32, i32* @a, align 4
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+related qualifier out[21] = 1
+============================out=========================
+index = 21, qualifier = 1
+  %4 = icmp eq i32 %3, 1
+  %4 = icmp eq i32 %3, 1
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+related qualifier out[22] = 1
+============================out=========================
+index = 22, qualifier = 1
+  %or.cond = or i1 %2, %4
+  %or.cond = or i1 %2, %4
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+related qualifier out[23] = -1
+============================out=========================
+  br i1 %or.cond, label %9, label %5
+  br i1 %or.cond, label %9, label %5
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+============================out=========================
+  %6 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+  %6 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+related qualifier out[25] = 1
+============================out=========================
+index = 25, qualifier = 1
+  %7 = load i64, i64* %6, align 8
+  %7 = load i64, i64* %6, align 8
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+related qualifier out[26] = 1
+============================out=========================
+index = 26, qualifier = 1
+  %8 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i64*
+  %8 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i64*
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+related qualifier out[27] = 1
+============================out=========================
+index = 27, qualifier = 1
+  store i64 %7, i64* %8, align 8
+  store i64 %7, i64* %8, align 8
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = 1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+related qualifier out[16] = 1
+related qualifier out[16] = 1
+============================out=========================
+  br label %9
+  br label %9
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = 1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+============================out=========================
+  ret i32 0
+  ret i32 0
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = 1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+============================out=========================
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = 1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+idx = 15, requirement = 0. update = 0
+idx = 16, requirement = 0. update = 0
+return index = 0, Qualifier = 1
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 0
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  %1 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  %1 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  %2 = icmp ne i32 %1, 0
+  %2 = icmp ne i32 %1, 0
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = -1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  %3 = load i32, i32* @a, align 4
+  %3 = load i32, i32* @a, align 4
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = -1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+opIdx = 4, qualifier = 1
+  %4 = icmp eq i32 %3, 1
+  %4 = icmp eq i32 %3, 1
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  %or.cond = or i1 %2, %4
+  %or.cond = or i1 %2, %4
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  br i1 %or.cond, label %9, label %5
+  br i1 %or.cond, label %9, label %5
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = -1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  %6 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+  %6 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = -1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  %7 = load i64, i64* %6, align 8
+  %7 = load i64, i64* %6, align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = -1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+opIdx = 25, qualifier = 1
+  %8 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i64*
+  %8 = bitcast %struct.vmw_dma_buffer** %vmw_bo_p to i64*
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = 1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  store i64 %7, i64* %8, align 8
+  store i64 %7, i64* %8, align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = 1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  br label %9
+  br label %9
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = 1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+  ret i32 0
+  ret i32 0
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 1
+index = 17, qualifier = 1
+index = 18, qualifier = -1
+index = 19, qualifier = -1
+index = 20, qualifier = -1
+index = 21, qualifier = 1
+index = 22, qualifier = 1
+index = 23, qualifier = -1
+index = 24, qualifier = -1
+index = 25, qualifier = 1
+index = 26, qualifier = 1
+index = 27, qualifier = 1
+index = 28, qualifier = -1
+index = 29, qualifier = -1
+index = 30, qualifier = -1
+index = 31, qualifier = 1
+3 Function Finished!
+==========Function vmw_cmd_end_gb_query==========
+Inside BuildPtsGraph:
+Inside createNodeForGlobals:
+Inside collectConstraintsForGlobals:
+init ptsGraph:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <18, >
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <18, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <18, >
+  ret i32 %1
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <18, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <18, >
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	f> doinit
+V #11	f> llvm.memcpy.p0i8.p0i8.i64
+V #12	f> vmw_query_bo_switch_prepare
+V #13	f> vmw_translate_mob_ptr
+V #14	f> vmw_cmd_end_gb_query
+V #15	v>   %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+V #16	v>   %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+V #17	v>   ret i32 %1
+O #18	v>   %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 15 point to <18, >
+inside compute aa set:
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+============in============
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+============in============
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  ret i32 %1
+  ret i32 %1
+============in============
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+18:<18,>
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+Inside qualifier inference:
+init array:
+node 0, qualifier = 1
+node 1, qualifier = 1
+node 2, qualifier = 1
+node 3, qualifier = 1
+node 4, qualifier = 1
+node 5, qualifier = 1
+node 6, qualifier = 1
+node 7, qualifier = 1
+node 8, qualifier = 1
+node 9, qualifier = 1
+node 10, qualifier = 1
+node 11, qualifier = 1
+node 12, qualifier = 1
+node 13, qualifier = 1
+node 14, qualifier = 1
+node 15, qualifier = -1
+node 16, qualifier = -1
+node 17, qualifier = -1
+node 18, qualifier = -1
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = -1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+index = 18, qualifier = -1
+related qualifier out[15] = 1
+============================out=========================
+index = 15, qualifier = 1
+index = 18, qualifier = 0
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+index = 18, qualifier = 0
+============================out=========================
+  ret i32 %1
+  ret i32 %1
+=============================in==========================
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+index = 18, qualifier = 0
+============================out=========================
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+index = 18, qualifier = 0
+return index = 0, Qualifier = -1
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+index = 18, qualifier = 0
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+index = 18, qualifier = 0
+  ret i32 %1
+  ret i32 %1
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+index = 18, qualifier = 0
+4 Function Finished!
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

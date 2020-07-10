@@ -1,0 +1,12 @@
+digraph "CFG for 'acpi_get_object_info' function" {
+	label="CFG for 'acpi_get_object_info' function";
+
+	Node0x20f3730 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %2 = alloca %struct.acpi_device_info**, align 8\l  store %struct.acpi_device_info** %return_buffer, %struct.acpi_device_info***\l... %2, align 8\l  %3 = icmp eq %struct.acpi_device_info** %return_buffer, null\l  br i1 %3, label %4, label %5\l|{<s0>T|<s1>F}}"];
+	Node0x20f3730:s0 -> Node0x20f3780;
+	Node0x20f3730:s1 -> Node0x20f37d0;
+	Node0x20f3780 [shape=record,label="{%4:\l\l  store i32 4097, i32* %1, align 4\l  br label %10\l}"];
+	Node0x20f3780 -> Node0x20f3820;
+	Node0x20f37d0 [shape=record,label="{%5:\l\l  %6 = call i8* @malloc(i64 4) #2\l  %7 = bitcast i8* %6 to i32*\l  store i32 0, i32* %7, align 4\l  %.cast = ptrtoint i8* %6 to i64\l  %8 = bitcast %struct.acpi_device_info*** %2 to i64**\l  %9 = load i64*, i64** %8, align 8\l  store i64 %.cast, i64* %9, align 8\l  br label %10\l}"];
+	Node0x20f37d0 -> Node0x20f3820;
+	Node0x20f3820 [shape=record,label="{%10:\l\l  %11 = load i32, i32* %1, align 4\l  ret i32 %11\l}"];
+}

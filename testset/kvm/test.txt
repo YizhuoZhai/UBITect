@@ -1,0 +1,2388 @@
+argc = 3
+Total 2 file(s)
+!dbg attachment points at wrong subprogram for function
+!36318 = distinct !DISubprogram(name: "do_realtime", scope: !3, file: !3, line: 1635, type: !36319, scopeLine: 1636, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !2, retainedNodes: !7045)
+i32 (%struct.timespec*, i64*)* @do_realtime
+  br label %data-home-yizhuo-experiment-lll-414-arch-x86-kvm-x86.llbc-do_realtime-4, !dbg !36375, !llvm.loop !36385
+!36386 = !DILocation(line: 123, column: 2, scope: !36322)
+!36322 = distinct !DISubprogram(name: "__iter_div_u64_rem", scope: !34146, file: !34146, line: 119, type: !36323, scopeLine: 120, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !2, retainedNodes: !7045)
+!36322 = distinct !DISubprogram(name: "__iter_div_u64_rem", scope: !34146, file: !34146, line: 119, type: !36323, scopeLine: 120, flags: DIFlagPrototyped, spFlags: DISPFlagLocalToUnit | DISPFlagDefinition, unit: !2, retainedNodes: !7045)
+warning: ignoring invalid debug info in /data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+[CallGraph] Initializing 2 modules ..
+[CallGraph / 1] [/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc]
+
+[CallGraph / 1] [/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc]
+
+[CallGraph / 2] [/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+1422 functions in total.
+partition size : 313, sccSize = 1215, rec size = 1, biggest = 6
+size of indiFuncs : 207
+==========Function 0: lock_is_held==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @lock_is_held_type(%struct.lockdep_map* %0, i32 -1) #6, !dbg !8991
+possible function:lock_is_held_type, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1dccc78: lock_is_held_type
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: lock_is_held_type: 0x1dccc78
+Callee : 0x1dccc78, name : lock_is_held_typeno summary.
+1 Functions Finished.
+==========Function 1: hlist_empty==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void asm sideeffect "", "~{memory},~{dirflag},~{fpsr},~{flags}"() #6, !dbg !9020, !srcloc !9022
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %21, i8* align 1 %22, i64 %conv.i, i1 false) #6, !dbg !9020
+possible function:llvm.memcpy.p0i8.p0i8.i64, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process memcpy funcs
+  call void asm sideeffect "", "~{memory},~{dirflag},~{fpsr},~{flags}"() #6, !dbg !9020, !srcloc !9023
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check copy func:
+2 Functions Finished.
+==========Function 2: kvm_check_has_quirk==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+3 Functions Finished.
+==========Function 3: kvm_event_needs_reinjection==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+4 Functions Finished.
+==========Function 4: kvm_mmu_reload==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @kvm_mmu_load(%struct.kvm_vcpu* %2) #6, !dbg !8994
+possible function:kvm_mmu_load, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1dc58f8: kvm_mmu_load
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_mmu_load: 0x1dc58f8
+Callee : 0x1dc58f8, name : kvm_mmu_loadno summary.
+5 Functions Finished.
+==========Function 5: trace_raw_output_kvm_write_tsc_offset==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([29 x i8], [29 x i8]* @.str.486, i32 0, i32 0), i32 %11, i64 %13, i64 %15) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %16) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+6 Functions Finished.
+==========Function 6: trace_raw_output_vcpu_match_mmio==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.479, i32 0, i32 0), i64 %11, i64 %13, i8* %cond, i8* %cond2) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call3 = call i32 @trace_handle_return(%struct.trace_seq* %20) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+7 Functions Finished.
+==========Function 7: srcu_read_lock==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @__srcu_read_lock(%struct.srcu_struct* %0) #6, !dbg !8994
+possible function:__srcu_read_lock, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1be87c8: __srcu_read_lock
+Function not Found.
+end of process funcs.
+  call void @rcu_lock_acquire(%struct.lockdep_map* %dep_map) #6, !dbg !8998
+possible function:rcu_lock_acquire, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1be9418: rcu_lock_acquire
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: __srcu_read_lock: 0x1be87c8
+Callee : 0x1be87c8, name : __srcu_read_lockno summary.
+check func: rcu_lock_acquire: 0x1be9418
+Callee : 0x1be9418, name : rcu_lock_acquireno summary.
+8 Functions Finished.
+==========Function 8: trace_raw_output_kvm_nested_intercepts==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.446, i32 0, i32 0), i32 %conv, i32 %conv1, i32 %15, i64 %17) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call2 = call i32 @trace_handle_return(%struct.trace_seq* %18) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+9 Functions Finished.
+==========Function 9: trace_raw_output_kvm_pv_eoi==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.432, i32 0, i32 0), i32 %11, i32 %13) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %14) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+10 Functions Finished.
+==========Function 10: trace_raw_output_kvm_apic_ipi==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call4 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %14, i64 %conv3, %struct.trace_print_flags* getelementptr inbounds ([9 x %struct.trace_print_flags], [9 x %struct.trace_print_flags]* @trace_raw_output_kvm_apic_ipi.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  %call20 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %27, i64 %conv19, %struct.trace_print_flags* getelementptr inbounds ([5 x %struct.trace_print_flags], [5 x %struct.trace_print_flags]* @trace_raw_output_kvm_apic_ipi.symbols.420, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([32 x i8], [32 x i8]* @.str.407, i32 0, i32 0), i32 %11, i32 %conv1, i8* %17, i8* %cond, i8* %cond10, i8* %cond14, i8* %30) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call21 = call i32 @trace_handle_return(%struct.trace_seq* %31) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+11 Functions Finished.
+==========Function 11: rcu_read_unlock_sched_notrace==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void asm sideeffect "", "~{memory},~{dirflag},~{fpsr},~{flags}"() #6, !dbg !8995, !srcloc !8996
+  call void asm "addl $1, %gs:$0", "=*m,ri,*m,~{dirflag},~{fpsr},~{flags}"(i32* @__preempt_count, i32 %sub.i, i32* @__preempt_count) #6, !dbg !8997, !srcloc !9000
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+12 Functions Finished.
+==========Function 12: trace_raw_output_kvm_cr==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.392, i32 0, i32 0), i8* %cond, i32 %14, i64 %16) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %17) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+13 Functions Finished.
+==========Function 13: emulator_get_cpuid==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call zeroext i1 @kvm_cpuid(%struct.kvm_vcpu* %4, i32* %5, i32* %6, i32* %7, i32* %8, i1 zeroext %tobool) #6
+possible function:kvm_cpuid, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1697c68: kvm_cpuid
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_cpuid: 0x1697c68
+Callee : 0x1697c68, name : kvm_cpuidno summary.
+14 Functions Finished.
+==========Function 14: trace_raw_output_kvm_apic==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %13, i64 %conv, %struct.trace_print_flags* getelementptr inbounds ([29 x %struct.trace_print_flags], [29 x %struct.trace_print_flags]* @trace_raw_output_kvm_apic.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.177, i32 0, i32 0), i8* %cond, i8* %16, i32 %18) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call2 = call i32 @trace_handle_return(%struct.trace_seq* %19) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+15 Functions Finished.
+==========Function 15: trace_raw_output_kvm_hv_synic_set_msr==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([41 x i8], [41 x i8]* @.str.532, i32 0, i32 0), i32 %11, i32 %13, i64 %15, i32 %conv) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %18) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+16 Functions Finished.
+==========Function 16: trace_raw_output_kvm_pio==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([45 x i8], [45 x i8]* @.str.162, i32 0, i32 0), i8* %cond, i32 %14, i32 %16, i32 %18, i32 %20, i8* %cond3) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call4 = call i32 @trace_handle_return(%struct.trace_seq* %24) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+17 Functions Finished.
+==========Function 17: kvm_arch_flush_shadow_memslot==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @kvm_page_track_flush_slot(%struct.kvm* %0, %struct.kvm_memory_slot* %1) #6
+possible function:kvm_page_track_flush_slot, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x169e898: kvm_page_track_flush_slot
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_page_track_flush_slot: 0x169e898
+Callee : 0x169e898, name : kvm_page_track_flush_slotno summary.
+18 Functions Finished.
+==========Function 18: trace_raw_output_kvm_hv_stimer_start_one_shot==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([46 x i8], [46 x i8]* @.str.540, i32 0, i32 0), i32 %11, i32 %13, i64 %15, i64 %17) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %18) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+19 Functions Finished.
+==========Function 19: trace_raw_output_kvm_pvclock_update==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([128 x i8], [128 x i8]* @.str.508, i32 0, i32 0), i32 %11, i32 %13, i64 %15, i64 %17, i32 %19, i32 %conv, i32 %conv2) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call3 = call i32 @trace_handle_return(%struct.trace_seq* %24) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+20 Functions Finished.
+==========Function 20: trace_event_define_fields_kvm_cpuid==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.168, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.169, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.170, i32 0, i32 0), i32 24, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.171, i32 0, i32 0), i32 32, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.172, i32 0, i32 0), i32 40, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call17 = call i32 @trace_define_field(%struct.trace_event_call* %15, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.173, i32 0, i32 0), i32 48, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+21 Functions Finished.
+==========Function 21: trace_raw_output_kvm_avic_incomplete_ipi==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([50 x i8], [50 x i8]* @.str.549, i32 0, i32 0), i32 %11, i32 %13, i32 %15, i32 %17, i32 %19) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %20) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+22 Functions Finished.
+==========Function 22: test_ti_thread_flag==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void asm sideeffect "bt $2,$1\0A\09\0A\09setc $0\0A", "=*qm,*m,Ir,~{dirflag},~{fpsr},~{flags}"(i8* %oldbit.i, i64* %2, i64 %3) #6, !dbg !9010, !srcloc !9011
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+23 Functions Finished.
+==========Function 23: emulator_read_pmc==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @kvm_pmu_rdpmc(%struct.kvm_vcpu* %4, i32 %5, i64* %6) #6
+possible function:kvm_pmu_rdpmc, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16656d8: kvm_pmu_rdpmc
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_pmu_rdpmc: 0x16656d8
+Callee : 0x16656d8, name : kvm_pmu_rdpmcno summary.
+24 Functions Finished.
+==========Function 24: trace_raw_output_kvm_track_tsc==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call2 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %18, i64 %conv1, %struct.trace_print_flags* getelementptr inbounds ([3 x %struct.trace_print_flags], [3 x %struct.trace_print_flags]* @trace_raw_output_kvm_track_tsc.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([70 x i8], [70 x i8]* @.str.495, i32 0, i32 0), i32 %11, i32 %conv, i32 %15, i32 %17, i8* %21) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call3 = call i32 @trace_handle_return(%struct.trace_seq* %22) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+25 Functions Finished.
+==========Function 25: kvm_test_request==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void asm sideeffect "bt $2,$1\0A\09\0A\09setc $0\0A", "=*qm,*m,Ir,~{dirflag},~{fpsr},~{flags}"(i8* %oldbit.i, i64* %2, i64 %3) #6, !dbg !9009, !srcloc !9010
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+26 Functions Finished.
+==========Function 26: kvm_vector_hashing_enabled==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+27 Functions Finished.
+==========Function 27: kvm_arch_vcpu_ioctl_set_fpu==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %2, i8* align 8 %4, i64 128, i1 false)
+possible function:llvm.memcpy.p0i8.p0i8.i64, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process memcpy funcs
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 16 %28, i8* align 8 %30, i64 256, i1 false)
+possible function:llvm.memcpy.p0i8.p0i8.i64, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process memcpy funcs
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check copy func:
+check copy func:
+28 Functions Finished.
+==========Function 28: trace_raw_output_kvm_pic_set_irq==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.399, i32 0, i32 0), i32 %conv, i32 %conv1, i8* %cond, i8* %cond11, i8* %cond14) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call15 = call i32 @trace_handle_return(%struct.trace_seq* %27) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+29 Functions Finished.
+==========Function 29: kvm_arch_has_irq_bypass==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+30 Functions Finished.
+==========Function 30: kvm_arch_vcpu_in_kernel==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+31 Functions Finished.
+==========Function 31: rcu_lock_release==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @lock_release(%struct.lockdep_map* %0, i32 1, i64 %1) #6, !dbg !8994
+possible function:lock_release, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+32 Functions Finished.
+==========Function 32: kvm_arch_can_inject_async_page_present==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call zeroext i1 @kvm_can_do_async_pf(%struct.kvm_vcpu* %2) #6
+possible function:kvm_can_do_async_pf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x169fec8: kvm_can_do_async_pf
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_can_do_async_pf: 0x169fec8
+Callee : 0x169fec8, name : kvm_can_do_async_pfno summary.
+33 Functions Finished.
+==========Function 33: trace_raw_output_kvm_hv_hypercall==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.155, i32 0, i32 0), i32 %conv, i8* %cond, i32 %conv2, i32 %conv3, i64 %20, i64 %22) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call4 = call i32 @trace_handle_return(%struct.trace_seq* %23) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+34 Functions Finished.
+==========Function 34: trace_raw_output_kvm_inj_exception==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %10, i64 %conv, %struct.trace_print_flags* getelementptr inbounds ([17 x %struct.trace_print_flags], [17 x %struct.trace_print_flags]* @trace_raw_output_kvm_inj_exception.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.367, i32 0, i32 0), i8* %13, i32 %cond) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call3 = call i32 @trace_handle_return(%struct.trace_seq* %18) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+35 Functions Finished.
+==========Function 35: is_device_public_page==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call zeroext i1 @is_zone_device_page(%struct.page* %0) #6, !dbg !8991
+possible function:is_zone_device_page, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1a6aed8: is_zone_device_page
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: is_zone_device_page: 0x1a6aed8
+Callee : 0x1a6aed8, name : is_zone_device_pageno summary.
+36 Functions Finished.
+==========Function 36: kvm_arch_memslots_updated==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @kvm_mmu_invalidate_mmio_sptes(%struct.kvm* %0, %struct.kvm_memslots* %1) #6
+possible function:kvm_mmu_invalidate_mmio_sptes, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x169de98: kvm_mmu_invalidate_mmio_sptes
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_mmu_invalidate_mmio_sptes: 0x169de98
+Callee : 0x169de98, name : kvm_mmu_invalidate_mmio_sptesno summary.
+37 Functions Finished.
+==========Function 37: is_guest_mode==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+38 Functions Finished.
+==========Function 38: trace_raw_output_kvm_nested_intr_vmexit==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.456, i32 0, i32 0), i64 %11) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %12) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+39 Functions Finished.
+==========Function 39: trace_raw_output_kvm_update_master_clock==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call2 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %12, i64 %conv1, %struct.trace_print_flags* getelementptr inbounds ([3 x %struct.trace_print_flags], [3 x %struct.trace_print_flags]* @trace_raw_output_kvm_update_master_clock.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([46 x i8], [46 x i8]* @.str.490, i32 0, i32 0), i32 %conv, i8* %15, i32 %conv4) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_handle_return(%struct.trace_seq* %18) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+40 Functions Finished.
+==========Function 40: kvm_rip_write==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @kvm_register_write(%struct.kvm_vcpu* %0, i32 16, i64 %1) #6, !dbg !8993
+possible function:kvm_register_write, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1b8c498: kvm_register_write
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_register_write: 0x1b8c498
+Callee : 0x1b8c498, name : kvm_register_writeno summary.
+41 Functions Finished.
+==========Function 41: signal_pending==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @test_tsk_thread_flag(%struct.task_struct* %0, i32 2) #6, !dbg !8988
+possible function:test_tsk_thread_flag, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1ce4598: test_tsk_thread_flag
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: test_tsk_thread_flag: 0x1ce4598
+Callee : 0x1ce4598, name : test_tsk_thread_flagno summary.
+42 Functions Finished.
+==========Function 42: gpa_to_gfn==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+43 Functions Finished.
+==========Function 43: trace_event_define_fields_kvm_hv_timer_state==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.555, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+44 Functions Finished.
+==========Function 44: trace_event_define_fields_kvm_nested_vmexit==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.433, i32 0, i32 0), i32 8, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.447, i32 0, i32 0), i32 16, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.448, i32 0, i32 0), i32 24, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.449, i32 0, i32 0), i32 32, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.450, i32 0, i32 0), i32 40, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call17 = call i32 @trace_define_field(%struct.trace_event_call* %15, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.451, i32 0, i32 0), i32 44, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call21 = call i32 @trace_define_field(%struct.trace_event_call* %18, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.209, i32 0, i32 0), i32 48, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+45 Functions Finished.
+==========Function 45: trace_raw_output_kvm_nested_vmrun==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([90 x i8], [90 x i8]* @.str.439, i32 0, i32 0), i64 %11, i64 %13, i64 %15, i32 %17, i32 %19, i8* %cond) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %23) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+46 Functions Finished.
+==========Function 46: trace_raw_output_kvm_apic_accept_irq==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call3 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %14, i64 %conv2, %struct.trace_print_flags* getelementptr inbounds ([9 x %struct.trace_print_flags], [9 x %struct.trace_print_flags]* @trace_raw_output_kvm_apic_accept_irq.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.429, i32 0, i32 0), i32 %11, i32 %conv, i8* %17, i8* %cond) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_handle_return(%struct.trace_seq* %21) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+47 Functions Finished.
+==========Function 47: kvm_get_vcpu==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void asm sideeffect "", "~{memory},~{dirflag},~{fpsr},~{flags}"() #6, !dbg !8992, !srcloc !8993
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+48 Functions Finished.
+==========Function 48: trace_event_define_fields_kvm_avic_unaccelerated_access==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.544, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.550, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.551, i32 0, i32 0), i32 16, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.157, i32 0, i32 0), i32 17, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.428, i32 0, i32 0), i32 20, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+49 Functions Finished.
+==========Function 49: trace_event_define_fields_kvm_avic_incomplete_ipi==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.544, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.545, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.546, i32 0, i32 0), i32 16, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.547, i32 0, i32 0), i32 20, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.548, i32 0, i32 0), i32 24, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+50 Functions Finished.
+==========Function 50: kvm_arch_vcpu_ioctl_get_mpstate==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @kvm_apic_accept_events(%struct.kvm_vcpu* %0) #6
+possible function:kvm_apic_accept_events, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1614b08: kvm_apic_accept_events
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_apic_accept_events: 0x1614b08
+Callee : 0x1614b08, name : kvm_apic_accept_eventsno summary.
+51 Functions Finished.
+==========Function 51: trace_event_define_fields_kvm_write_tsc_offset==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.484, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.485, i32 0, i32 0), i32 24, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+52 Functions Finished.
+==========Function 52: trace_event_define_fields_kvm_nested_vmexit_inject==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.447, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.448, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.449, i32 0, i32 0), i32 24, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.450, i32 0, i32 0), i32 32, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.451, i32 0, i32 0), i32 36, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call17 = call i32 @trace_define_field(%struct.trace_event_call* %15, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.209, i32 0, i32 0), i32 40, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+53 Functions Finished.
+==========Function 53: trace_raw_output_kvm_eoi==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.432, i32 0, i32 0), i32 %11, i32 %13) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %14) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+54 Functions Finished.
+==========Function 54: trace_raw_output_kvm_hv_stimer_expiration==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([40 x i8], [40 x i8]* @.str.543, i32 0, i32 0), i32 %11, i32 %13, i32 %15) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %16) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+55 Functions Finished.
+==========Function 55: trace_event_define_fields_kvm_pv_eoi==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.425, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.431, i32 0, i32 0), i32 12, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+56 Functions Finished.
+==========Function 56: kvm_read_guest_phys_system==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @kvm_vcpu_read_guest(%struct.kvm_vcpu* %5, i64 %6, i8* %7, i64 %conv) #6
+possible function:kvm_vcpu_read_guest, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16ccfb8: kvm_vcpu_read_guest
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_vcpu_read_guest: 0x16ccfb8
+Callee : 0x16ccfb8, name : kvm_vcpu_read_guestno summary.
+57 Functions Finished.
+==========Function 57: compound_head==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void asm sideeffect "", "~{memory},~{dirflag},~{fpsr},~{flags}"() #6, !dbg !9019, !srcloc !9021
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 1 %23, i8* align 1 %24, i64 %conv.i, i1 false) #6, !dbg !9019
+possible function:llvm.memcpy.p0i8.p0i8.i64, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process memcpy funcs
+  call void asm sideeffect "", "~{memory},~{dirflag},~{fpsr},~{flags}"() #6, !dbg !9019, !srcloc !9022
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check copy func:
+58 Functions Finished.
+==========Function 58: trace_event_define_fields_kvm_apic_accept_irq==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.425, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.146, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.426, i32 0, i32 0), i32 12, i32 2, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.393, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.427, i32 0, i32 0), i32 14, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.393, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.428, i32 0, i32 0), i32 15, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+59 Functions Finished.
+==========Function 59: trace_raw_output_kvm_page_fault==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.385, i32 0, i32 0), i64 %11, i32 %13) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %14) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+60 Functions Finished.
+==========Function 60: trace_raw_output_kvm_exit==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call2 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %12, i64 %conv, %struct.trace_print_flags* getelementptr inbounds ([57 x %struct.trace_print_flags], [57 x %struct.trace_print_flags]* @trace_raw_output_kvm_exit.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  %call6 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %16, i64 %conv5, %struct.trace_print_flags* getelementptr inbounds ([93 x %struct.trace_print_flags], [93 x %struct.trace_print_flags]* @trace_raw_output_kvm_exit.symbols.269, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([36 x i8], [36 x i8]* @.str.212, i32 0, i32 0), i8* %cond, i64 %21, i64 %23, i64 %25) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call7 = call i32 @trace_handle_return(%struct.trace_seq* %26) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+61 Functions Finished.
+==========Function 61: kvm_arch_prepare_memory_region==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+62 Functions Finished.
+==========Function 62: trace_raw_output_kvm_avic_unaccelerated_access==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call2 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %14, i64 %conv, %struct.trace_print_flags* getelementptr inbounds ([29 x %struct.trace_print_flags], [29 x %struct.trace_print_flags]* @trace_raw_output_kvm_avic_unaccelerated_access.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([43 x i8], [43 x i8]* @.str.552, i32 0, i32 0), i32 %11, i32 %13, i8* %17, i8* %cond, i8* %cond6, i32 %25) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call7 = call i32 @trace_handle_return(%struct.trace_seq* %26) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+63 Functions Finished.
+==========Function 63: trace_event_define_fields_kvm_wait_lapic_expire==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.509, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.510, i32 0, i32 0), i32 16, i32 8, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+64 Functions Finished.
+==========Function 64: mmu_is_nested==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+65 Functions Finished.
+==========Function 65: put_page==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call %struct.page* @compound_head(%struct.page* %0) #6, !dbg !8989
+possible function:compound_head, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1a5d6a8: compound_head
+end of process funcs.
+  %call1 = call i32 @static_key_count(%struct.static_key* getelementptr inbounds (%struct.static_key_false, %struct.static_key_false* @device_private_key, i32 0, i32 0)) #6, !dbg !8991
+possible function:static_key_count, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1b88088: static_key_count
+Function not Found.
+end of process funcs.
+  %call5 = call zeroext i1 @is_device_private_page(%struct.page* %2) #6, !dbg !8998
+possible function:is_device_private_page, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1a5d7b8: is_device_private_page
+Function not Found.
+end of process funcs.
+  %call7 = call zeroext i1 @is_device_public_page(%struct.page* %3) #6, !dbg !8998
+possible function:is_device_public_page, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1a67db8: is_device_public_page
+end of process funcs.
+  call void @put_zone_device_private_or_public_page(%struct.page* %5) #6, !dbg !9002
+possible function:put_zone_device_private_or_public_page, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1a6a758: put_zone_device_private_or_public_page
+Function not Found.
+end of process funcs.
+  %call20 = call i32 @put_page_testzero(%struct.page* %6) #6, !dbg !9006
+possible function:put_page_testzero, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1a6a888: put_page_testzero
+Function not Found.
+end of process funcs.
+  call void @__put_page(%struct.page* %7) #6, !dbg !9009
+possible function:__put_page, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1a6ab78: __put_page
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: compound_head: 0x1a5d6a8
+Callee : 0x1a5d6a8, name : compound_headcheck func: static_key_count: 0x1b88088
+Callee : 0x1b88088, name : static_key_countno summary.
+check func: is_device_private_page: 0x1a5d7b8
+Callee : 0x1a5d7b8, name : is_device_private_pageno summary.
+check func: is_device_public_page: 0x1a67db8
+Callee : 0x1a67db8, name : is_device_public_pagecheck func: put_zone_device_private_or_public_page: 0x1a6a758
+Callee : 0x1a6a758, name : put_zone_device_private_or_public_pageno summary.
+check func: put_page_testzero: 0x1a6a888
+Callee : 0x1a6a888, name : put_page_testzerono summary.
+check func: __put_page: 0x1a6ab78
+Callee : 0x1a6ab78, name : __put_pageno summary.
+66 Functions Finished.
+==========Function 66: trace_event_define_fields_kvm_entry==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+67 Functions Finished.
+==========Function 67: trace_event_define_fields_kvm_apic_ipi==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.405, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.406, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+68 Functions Finished.
+==========Function 68: trace_event_define_fields_kvm_track_tsc==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.493, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.494, i32 0, i32 0), i32 16, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.487, i32 0, i32 0), i32 20, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.488, i32 0, i32 0), i32 24, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+69 Functions Finished.
+==========Function 69: page_zonenum==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+70 Functions Finished.
+==========Function 70: emulator_halt==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+71 Functions Finished.
+==========Function 71: trace_event_define_fields_kvm_nested_intr_vmexit==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.433, i32 0, i32 0), i32 8, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+72 Functions Finished.
+==========Function 72: cpuid==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @__cpuid(i32* %3, i32* %4, i32* %5, i32* %6) #6, !dbg !9007
+possible function:__cpuid, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1b30bd8: __cpuid
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: __cpuid: 0x1b30bd8
+Callee : 0x1b30bd8, name : __cpuidno summary.
+73 Functions Finished.
+==========Function 73: trace_event_define_fields_kvm_hv_synic_set_msr==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.340, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.165, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.388, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.531, i32 0, i32 0), i32 24, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+74 Functions Finished.
+==========Function 74: vcpu_virt_addr_bits==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i64 @kvm_read_cr4_bits(%struct.kvm_vcpu* %0, i64 4096) #6, !dbg !8992
+possible function:kvm_read_cr4_bits, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1949ee8: kvm_read_cr4_bits
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_read_cr4_bits: 0x1949ee8
+Callee : 0x1949ee8, name : kvm_read_cr4_bitsno summary.
+75 Functions Finished.
+==========Function 75: arch_local_save_flags==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void asm sideeffect "1:\09.byte 0x0f, 0x0b\0A.pushsection __bug_table,\22aw\22\0A2:\09.long 1b - 2b\09# bug_entry::bug_addr\0A\09.long ${0:c} - 2b\09# bug_entry::file\0A\09.word ${1:c}\09# bug_entry::line\0A\09.word ${2:c}\09# bug_entry::flags\0A\09.org 2b+${3:c}\0A.popsection", "i,i,i,i,~{dirflag},~{fpsr},~{flags}"(i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.6, i32 0, i32 0), i32 773, i32 0, i64 12) #6, !dbg !9003, !srcloc !9005
+  call void asm sideeffect "${0:c}:\0A\09.pushsection .discard.reachable\0A\09.long ${0:c}b - .\0A\09.popsection\0A\09", "i,~{dirflag},~{fpsr},~{flags}"(i32 93) #6, !dbg !9006, !srcloc !9009
+  %7 = call i64 asm sideeffect "771:\0A\09call *${3:c};\0A772:\0A.pushsection .parainstructions,\22a\22\0A .balign 8 \0A .quad  771b\0A  .byte ${2:c}\0A  .byte 772b-771b\0A  .short ${4:c}\0A.popsection\0A", "={ax},=*r,i,i,i,1,~{memory},~{cc},~{dirflag},~{fpsr},~{flags}"([4 x i8]* @.str, i64 37, i8** getelementptr inbounds (%struct.pv_irq_ops, %struct.pv_irq_ops* @pv_irq_ops, i32 0, i32 0, i32 0), i32 1, i32 %6) #6, !dbg !9014, !srcloc !9017
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+76 Functions Finished.
+==========Function 76: trace_raw_output_kvm_nested_vmexit_inject==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call2 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %12, i64 %conv, %struct.trace_print_flags* getelementptr inbounds ([57 x %struct.trace_print_flags], [57 x %struct.trace_print_flags]* @trace_raw_output_kvm_nested_vmexit_inject.symbols, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  %call6 = call i8* @trace_print_symbols_seq(%struct.trace_seq* %16, i64 %conv5, %struct.trace_print_flags* getelementptr inbounds ([93 x %struct.trace_print_flags], [93 x %struct.trace_print_flags]* @trace_raw_output_kvm_nested_vmexit_inject.symbols.455, i32 0, i32 0)) #6
+possible function:trace_print_symbols_seq, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a2058: trace_print_symbols_seq
+Function not Found.
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([88 x i8], [88 x i8]* @.str.454, i32 0, i32 0), i8* %cond, i64 %21, i64 %23, i32 %25, i32 %27) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call7 = call i32 @trace_handle_return(%struct.trace_seq* %28) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+77 Functions Finished.
+==========Function 77: trace_event_define_fields_kvm_cr==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.157, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.391, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.161, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+78 Functions Finished.
+==========Function 78: trace_event_define_fields_kvm_hv_stimer_start_one_shot==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.533, i32 0, i32 0), i32 12, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.165, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.537, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.165, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.160, i32 0, i32 0), i32 24, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+79 Functions Finished.
+==========Function 79: trace_raw_output_kvm_msr==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.389, i32 0, i32 0), i8* %cond, i32 %14, i64 %16, i8* %cond2) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call3 = call i32 @trace_handle_return(%struct.trace_seq* %20) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+80 Functions Finished.
+==========Function 80: trace_event_define_fields_kvm_pic_set_irq==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.393, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.394, i32 0, i32 0), i32 8, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.393, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.395, i32 0, i32 0), i32 9, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.393, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.396, i32 0, i32 0), i32 10, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.393, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.397, i32 0, i32 0), i32 11, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.398, i32 0, i32 0), i32 12, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+81 Functions Finished.
+==========Function 81: trace_event_define_fields_kvm_hv_stimer_set_count==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.533, i32 0, i32 0), i32 12, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.165, i32 0, i32 0), i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.160, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.531, i32 0, i32 0), i32 24, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+82 Functions Finished.
+==========Function 82: trace_raw_output_kvm_inj_virq==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.362, i32 0, i32 0), i32 %11) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %12) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+83 Functions Finished.
+==========Function 83: trace_raw_output_kvm_hv_stimer_callback==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_raw_output_prep(%struct.trace_iterator* %5, %struct.trace_event* %6) #6
+possible function:trace_raw_output_prep, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  call void (%struct.trace_seq*, i8*, ...) @trace_seq_printf(%struct.trace_seq* %9, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.541, i32 0, i32 0), i32 %11, i32 %13) #6
+possible function:trace_seq_printf, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_handle_return(%struct.trace_seq* %14) #6
+possible function:trace_handle_return, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x16a1358: trace_handle_return
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: trace_handle_return: 0x16a1358
+Callee : 0x16a1358, name : trace_handle_returnno summary.
+84 Functions Finished.
+==========Function 84: kvm_arch_flush_shadow_all==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @kvm_mmu_invalidate_zap_all_pages(%struct.kvm* %0) #6
+possible function:kvm_mmu_invalidate_zap_all_pages, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+Callee: 0x169e698: kvm_mmu_invalidate_zap_all_pages
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_mmu_invalidate_zap_all_pages: 0x169e698
+Callee : 0x169e698, name : kvm_mmu_invalidate_zap_all_pagesno summary.
+85 Functions Finished.
+==========Function 85: trace_event_define_fields_kvm_apic==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.157, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.176, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.161, i32 0, i32 0), i32 16, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+86 Functions Finished.
+==========Function 86: is_paging==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i64 @kvm_read_cr0_bits(%struct.kvm_vcpu* %0, i64 2147483648) #6, !dbg !8989
+possible function:kvm_read_cr0_bits, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1c8bcd8: kvm_read_cr0_bits
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_read_cr0_bits: 0x1c8bcd8
+Callee : 0x1c8bcd8, name : kvm_read_cr0_bitsno summary.
+87 Functions Finished.
+==========Function 87: emulate_instruction==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @x86_emulate_instruction(%struct.kvm_vcpu* %0, i64 0, i32 %1, i8* null, i32 0) #6, !dbg !8994
+possible function:x86_emulate_instruction, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1ce1518: x86_emulate_instruction
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: x86_emulate_instruction: 0x1ce1518
+Callee : 0x1ce1518, name : x86_emulate_instructionno summary.
+88 Functions Finished.
+==========Function 88: trace_event_define_fields_kvm_page_fault==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.384, i32 0, i32 0), i32 8, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.366, i32 0, i32 0), i32 16, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+89 Functions Finished.
+==========Function 89: trace_event_define_fields_kvm_nested_vmrun==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.433, i32 0, i32 0), i32 8, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.434, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.149, i32 0, i32 0), i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.435, i32 0, i32 0), i32 24, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.436, i32 0, i32 0), i32 32, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.404, i32 0, i32 0), i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.437, i32 0, i32 0), i32 36, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call17 = call i32 @trace_define_field(%struct.trace_event_call* %15, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.438, i32 0, i32 0), i32 40, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+90 Functions Finished.
+==========Function 90: trace_event_define_fields_kvm_hv_stimer_cleanup==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.533, i32 0, i32 0), i32 12, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+91 Functions Finished.
+==========Function 91: is_error_page==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call zeroext i1 @IS_ERR(i8* %1) #6, !dbg !8991
+possible function:IS_ERR, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1a5cdd8: IS_ERR
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: IS_ERR: 0x1a5cdd8
+Callee : 0x1a5cdd8, name : IS_ERRno summary.
+92 Functions Finished.
+==========Function 92: trace_event_define_fields_kvm_enter_smm==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.136, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.165, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.514, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.153, i32 0, i32 0), i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.515, i32 0, i32 0), i32 24, i32 1, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+93 Functions Finished.
+==========Function 93: trace_event_define_fields_kvm_hypercall==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.140, i32 0, i32 0), i32 8, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.141, i32 0, i32 0), i32 16, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.142, i32 0, i32 0), i32 24, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.143, i32 0, i32 0), i32 32, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call13 = call i32 @trace_define_field(%struct.trace_event_call* %12, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.139, i32 0, i32 0), i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.144, i32 0, i32 0), i32 40, i32 8, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+94 Functions Finished.
+==========Function 94: trace_event_define_fields_kvm_hv_synic_set_irq==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i32 @trace_define_field(%struct.trace_event_call* %0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.137, i32 0, i32 0), i32 8, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call1 = call i32 @trace_define_field(%struct.trace_event_call* %3, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.208, i32 0, i32 0), i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.526, i32 0, i32 0), i32 12, i32 4, i32 0, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call5 = call i32 @trace_define_field(%struct.trace_event_call* %6, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.431, i32 0, i32 0), i32 16, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+  %call9 = call i32 @trace_define_field(%struct.trace_event_call* %9, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.430, i32 0, i32 0), i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.528, i32 0, i32 0), i32 20, i32 4, i32 1, i32 0) #6
+possible function:trace_define_field, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/x86.bc
+process  funcs
+inside processFuncs:
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+95 Functions Finished.
+==========Function 95: kvm_read_cr4==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %call = call i64 @kvm_read_cr4_bits(%struct.kvm_vcpu* %0, i64 -1) #6, !dbg !8992
+possible function:kvm_read_cr4_bits, from module/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc
+process  funcs
+inside processFuncs:
+Callee: 0x1949ee8: kvm_read_cr4_bits
+Function not Found.
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: kvm_read_cr4_bits: 0x1949ee8
+Callee : 0x1949ee8, name : kvm_read_cr4_bitsno summary.
+96 Functions Finished.
+==========Function 96: trace_event_define_fields_kvm_update_master_clock==========
+Module: 
+inside initSummary:
+Inside computeAASet :

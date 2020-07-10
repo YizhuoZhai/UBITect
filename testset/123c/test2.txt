@@ -1,0 +1,135 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+6 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function refcount_dec_and_test==========
+Module: test.bc
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+inference end.copy Summaries for function 0x368e3e8, name:refcount_dec_and_test
+copy end.Inside qualifier check:
+1 Function Finished!
+==========Function kref_put==========
+Module: test.bc
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+  %5 = call i32 @refcount_dec_and_test(%struct.refcount_struct* %4)
+possible function:refcount_dec_and_test, from moduletest.bc
+process  funcs
+inside processFuncs:
+Callee: 0x368e3e8
+Functions in Ctx->FSummaries: 
+--Addr : 0x368e3e8, name: refcount_dec_and_test
+end of process funcs.
+inference end.copy Summaries for function 0x368cbc8, name:kref_put
+copy end.Inside qualifier check:
+quali of index20= 1, req = 1
+2 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [test.bc]
+==========Function kobject_put==========
+Module: test.bc
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+  %16 = call i32 @kref_put(%struct.kref* %15)
+possible function:kref_put, from moduletest.bc
+process  funcs
+inside processFuncs:
+Callee: 0x368cbc8
+Functions in Ctx->FSummaries: 
+--Addr : 0x368cbc8, name: kref_put
+--Addr : 0x368e3e8, name: refcount_dec_and_test
+end of process funcs.
+inference end.copy Summaries for function 0x368d8f8, name:kobject_put
+copy end.Inside qualifier check:
+quali of index33= 1, req = 1
+3 Function Finished!
+==========Function put_device==========
+Module: test.bc
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+  call void @kobject_put(%struct.kobject* %7)
+possible function:kobject_put, from moduletest.bc
+process  funcs
+inside processFuncs:
+Callee: 0x368d8f8
+Functions in Ctx->FSummaries: 
+--Addr : 0x368d8f8, name: kobject_put
+--Addr : 0x368e3e8, name: refcount_dec_and_test
+--Addr : 0x368cbc8, name: kref_put
+end of process funcs.
+inference end.copy Summaries for function 0x368cdb8, name:put_device
+copy end.Inside qualifier check:
+quali of index26= 1, req = 1
+4 Function Finished!
+==========Function power_supply_put==========
+Module: test.bc
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+  call void @put_device(%struct.device* %4)
+possible function:put_device, from moduletest.bc
+process  funcs
+inside processFuncs:
+Callee: 0x368cdb8
+Functions in Ctx->FSummaries: 
+--Addr : 0x368cdb8, name: put_device
+--Addr : 0x368d8f8, name: kobject_put
+--Addr : 0x368e3e8, name: refcount_dec_and_test
+--Addr : 0x368cbc8, name: kref_put
+end of process funcs.
+inference end.copy Summaries for function 0x368fd78, name:power_supply_put
+copy end.Inside qualifier check:
+quali of index24= 1, req = 1
+5 Function Finished!
+==========Function f==========
+Module: test.bc
+Inside BuildPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+  call void @power_supply_put(%struct.power_supply* %7)
+possible function:power_supply_put, from moduletest.bc
+process  funcs
+inside processFuncs:
+Callee: 0x368fd78
+Functions in Ctx->FSummaries: 
+--Addr : 0x368fd78, name: power_supply_put
+--Addr : 0x368cdb8, name: put_device
+--Addr : 0x368d8f8, name: kobject_put
+--Addr : 0x368e3e8, name: refcount_dec_and_test
+--Addr : 0x368cbc8, name: kref_put
+end of process funcs.
+inference end.copy Summaries for function 0x368fe88, name:f
+copy end.Inside qualifier check:
+quali of index22= 0, req = 1
+***********Warning: argument check fails @ argument 0 : ptr not initialized, Node 22, actual qualifier = 0
+[trace] In function @f Instruction:  call void @power_supply_put(%struct.power_supply* %7)
+---whitelist: 
+--blacklist: 
+-use: 
+moduleName = test.bc
+json obj:{"bc": "test.bc", "blacklist": [""], "function": "f", "type": "stack", "use": "", "warning": "  call void @power_supply_put(%struct.power_supply* %7)", "whitelist": [""]}
+6 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 3] [test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+collect circulate functions: 
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+

@@ -1,0 +1,56 @@
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %4 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %3, i32 0, i32 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %7 = icmp ne i32 %6, 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %4 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %3, i32 0, i32 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %7 = icmp ne i32 %6, 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %4 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %3, i32 0, i32 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %7 = icmp ne i32 %6, 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %4 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %3, i32 0, i32 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %7 = icmp ne i32 %6, 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "priority": "NORMAL_PTR", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %4 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %3, i32 0, i32 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "function": "xgene_ahci_probe", "priority": "DATA", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %7 = icmp ne i32 %6, 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "fieldNo": -1, "function": "xgene_ahci_probe", "ramk": "NORMAL_PTR", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %4 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %3, i32 0, i32 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "fieldNo": -1, "function": "xgene_ahci_probe", "ramk": "DATA", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %7 = icmp ne i32 %6, 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "fieldNo": -1, "function": "xgene_ahci_probe", "ramk": "NORMAL_PTR", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %4 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %3, i32 0, i32 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "fieldNo": -1, "function": "xgene_ahci_probe", "ramk": "DATA", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %7 = icmp ne i32 %6, 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "fieldNo": -1, "function": "xgene_ahci_probe", "ramk": "NORMAL_PTR", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %4 = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %3, i32 0, i32 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc:
+{"argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/8bce/test.llbc", "blacklist": [], "fieldNo": -1, "function": "xgene_ahci_probe", "ramk": "DATA", "type": "stack", "use": "test.bc-xgene_ahci_probe-2", "warning": "  %7 = icmp ne i32 %6, 0", "whitelist": ["test.bc-xgene_ahci_probe-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-2"], "fieldNo": -1, "function": "blk_mq_sched_free_hctx_data", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-5", "warning": "  %21 = getelementptr inbounds %struct.blk_mq_hw_ctx, %struct.blk_mq_hw_ctx* %20, i32 0, i32 6", "whitelist": ["blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-2"], "fieldNo": -1, "function": "blk_mq_sched_free_hctx_data", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-5", "warning": "  %23 = icmp ne i8* %22, null", "whitelist": ["blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-2"], "fieldNo": -1, "function": "blk_mq_sched_free_hctx_data", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-7", "warning": "  %27 = getelementptr inbounds %struct.blk_mq_hw_ctx, %struct.blk_mq_hw_ctx* %26, i32 0, i32 6", "whitelist": ["blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-2"], "fieldNo": -1, "function": "blk_mq_sched_free_hctx_data", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-7", "warning": "  %30 = getelementptr inbounds %struct.blk_mq_hw_ctx, %struct.blk_mq_hw_ctx* %29, i32 0, i32 6", "whitelist": ["blk-mq-sched.llbc-blk_mq_sched_free_hctx_data-0"]}
+blk-mq-sched.bc:
+{"argNo": 1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_sched_tags_teardown-2"], "fieldNo": -1, "function": "blk_mq_sched_tags_teardown", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_sched_tags_teardown-4", "warning": "  call void @blk_mq_sched_free_tags(%struct.blk_mq_tag_set* %20, %struct.blk_mq_hw_ctx* %21, i32 %22) #5", "whitelist": ["blk-mq-sched.llbc-blk_mq_sched_tags_teardown-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_sched_restart-40", "blk-mq-sched.llbc-blk_mq_sched_restart-52"], "fieldNo": -1, "function": "blk_mq_sched_restart", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_sched_restart-42", "warning": "  %185 = getelementptr inbounds %struct.blk_mq_hw_ctx, %struct.blk_mq_hw_ctx* %184, i32 0, i32 15", "whitelist": ["blk-mq-sched.llbc-blk_mq_sched_restart-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_sched_restart-40", "blk-mq-sched.llbc-blk_mq_sched_restart-52"], "fieldNo": -1, "function": "blk_mq_sched_restart", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_sched_restart-42", "warning": "  %188 = icmp eq %struct.blk_mq_tags* %186, %187", "whitelist": ["blk-mq-sched.llbc-blk_mq_sched_restart-0"]}
+blk-mq-sched.bc:
+{"argNo": 0, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_sched_restart-40", "blk-mq-sched.llbc-blk_mq_sched_restart-52"], "fieldNo": -1, "function": "blk_mq_sched_restart", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_sched_restart-43", "warning": "  %190 = call zeroext i1 @blk_mq_sched_restart_hctx(%struct.blk_mq_hw_ctx* %189) #6", "whitelist": ["blk-mq-sched.llbc-blk_mq_sched_restart-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_exit_sched-2"], "fieldNo": -1, "function": "blk_mq_exit_sched", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_exit_sched-5", "warning": "  %28 = getelementptr inbounds %struct.blk_mq_hw_ctx, %struct.blk_mq_hw_ctx* %27, i32 0, i32 6", "whitelist": ["blk-mq-sched.llbc-blk_mq_exit_sched-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_exit_sched-2"], "fieldNo": -1, "function": "blk_mq_exit_sched", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_exit_sched-5", "warning": "  %30 = icmp ne i8* %29, null", "whitelist": ["blk-mq-sched.llbc-blk_mq_exit_sched-0"]}
+blk-mq-sched.bc:
+{"argNo": -1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_exit_sched-2"], "fieldNo": -1, "function": "blk_mq_exit_sched", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_exit_sched-6", "warning": "  %41 = getelementptr inbounds %struct.blk_mq_hw_ctx, %struct.blk_mq_hw_ctx* %40, i32 0, i32 6", "whitelist": ["blk-mq-sched.llbc-blk_mq_exit_sched-0"]}
+blk-mq-sched.bc:
+{"argNo": 1, "bc": "blk-mq-sched.bc", "blacklist": ["blk-mq-sched.llbc-blk_mq_init_sched-7", "blk-mq-sched.llbc-blk_mq_init_sched-17"], "fieldNo": -1, "function": "blk_mq_init_sched", "ramk": "NORMAL_PTR", "type": "stack", "use": "blk-mq-sched.llbc-blk_mq_init_sched-9", "warning": "  %46 = call i32 @blk_mq_sched_alloc_tags(%struct.request_queue* %43, %struct.blk_mq_hw_ctx* %44, i32 %45) #5", "whitelist": ["blk-mq-sched.llbc-blk_mq_init_sched-0"]}

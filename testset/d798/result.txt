@@ -1,0 +1,133 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+readylist insert function doinit
+readylist insert function vmw_query_bo_switch_prepare
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function doinit==========
+Inside BuildPtsGraph:
+  %1 = alloca %struct.vmw_dma_buffer**, align 8
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %1, align 8
+  %2 = load i32, i32* @a, align 4
+  %3 = icmp eq i32 %2, 1
+  br i1 %3, label %4, label %9
+  %5 = bitcast %struct.vmw_dma_buffer*** %1 to i8***
+  %6 = load i8**, i8*** %5, align 8
+  %7 = load i8*, i8** %6, align 8
+  %8 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 16, i32 8, i1 false)
+  br label %10
+  br label %11
+  br label %11
+  %storemerge = phi i32 [ 0, %9 ], [ 1, %10 ]
+  ret i32 %storemerge
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	v> %struct.vmw_dma_buffer** %vmw_bo_p
+O #11	v> %struct.vmw_dma_buffer** %vmw_bo_p
+V #12	v>   %1 = alloca %struct.vmw_dma_buffer**, align 8
+V #13	v>   %5 = bitcast %struct.vmw_dma_buffer*** %1 to i8***
+V #14	v>   %6 = load i8**, i8*** %5, align 8
+V #15	v>   %7 = load i8*, i8** %6, align 8
+V #16	v>   %8 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+O #17	v>   %1 = alloca %struct.vmw_dma_buffer**, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <11, >
+index 11 point to <0, >
+index 12 point to <10, >
+index 13 point to <10, >
+index 14 point to <11, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <11, >
+Inside qualifier inference:
+  %1 = alloca %struct.vmw_dma_buffer**, align 8
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %1, align 8
+  %2 = load i32, i32* @a, align 4
+  %3 = icmp eq i32 %2, 1
+invalid index in icmp
+  br i1 %3, label %4, label %9
+  %5 = bitcast %struct.vmw_dma_buffer*** %1 to i8***
+  %6 = load i8**, i8*** %5, align 8
+  %7 = load i8*, i8** %6, align 8
+  %8 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 16, i32 8, i1 false)
+  br label %10
+  br label %11
+  br label %11
+  %storemerge = phi i32 [ 0, %9 ], [ 1, %10 ]
+  ret i32 %storemerge
+inside return instruction:   ret i32 %storemerge
+return value isn't a pointer type
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+index = 11, qualifier = -1
+index = 12, qualifier = 1
+index = 13, qualifier = 0
+index = 14, qualifier = -1
+index = 15, qualifier = -1
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+idx = 10, requirement = 0. update = 0
+idx = 11, requirement = 1. update = 0
+return index = 0, Qualifier = 1
+Inside QualifierCheck:
+  %1 = alloca %struct.vmw_dma_buffer**, align 8
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %1, align 8
+  %2 = load i32, i32* @a, align 4
+  %3 = icmp eq i32 %2, 1
+invalid index in icmp
+  br i1 %3, label %4, label %9
+  %5 = bitcast %struct.vmw_dma_buffer*** %1 to i8***
+  %6 = load i8**, i8*** %5, align 8
+  %7 = load i8*, i8** %6, align 8
+  %8 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 16, i32 8, i1 false)
+0
+1
+./../../kernel-analyzer/build/ubianalysis(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamE+0x2a)[0x5be65a]
+./../../kernel-analyzer/build/ubianalysis(_ZN4llvm3sys17RunSignalHandlersEv+0x3e)[0x5bc3ce]
+./../../kernel-analyzer/build/ubianalysis[0x5bc542]
+/lib/x86_64-linux-gnu/libpthread.so.0(+0x11390)[0x7fca046df390]
+./../../kernel-analyzer/build/ubianalysis(_ZN17QualifierAnalysis14QualifierCheckEPN4llvm8FunctionER17AndersNodeFactoryRSt3mapIPNS0_11InstructionES5_IjSt3setIjSt4lessIjESaIjEESA_SaISt4pairIKjSC_EEES9_IS7_ESaISD_IKS7_SH_EEERS5_IS7_PiSI_SaISD_ISJ_SO_EEER15FunctionSummary+0xd71)[0x5869a1]
+./../../kernel-analyzer/build/ubianalysis(_ZN17QualifierAnalysis13runOnFunctionEPN4llvm8FunctionE+0x1b5)[0x565b65]
+./../../kernel-analyzer/build/ubianalysis(_ZN17QualifierAnalysis12doModulePassEPN4llvm6ModuleE+0xfe)[0x56574e]
+./../../kernel-analyzer/build/ubianalysis(_ZN19IterativeModulePass3runERSt6vectorISt4pairIPN4llvm6ModuleENS2_9StringRefEESaIS6_EE+0x318)[0x529678]
+./../../kernel-analyzer/build/ubianalysis(main+0x99d)[0x52acad]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf0)[0x7fca03a83830]
+./../../kernel-analyzer/build/ubianalysis(_start+0x29)[0x529289]
+Stack dump:
+0.	Program arguments: ./../../kernel-analyzer/build/ubianalysis -uni-analysis test.bc 

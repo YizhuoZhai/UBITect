@@ -1,0 +1,571 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+3 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+runOnFunctionfib_table_lookup
+==========Function fib_table_lookup==========
+addr:0x336dee8
+Module: /home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+V #5	v> @a = dso_local global i32 0, align 4, !dbg !0
+O #6	v> @a = dso_local global i32 0, align 4, !dbg !0
+V #7	v> @fs = dso_local global %struct.fib_result { i8 97, i8 0, i8 0, i8 0, i32 0, %struct.fib_info* null, %struct.fib_table* null }, align 8, !dbg !6
+O #8	v> @fs = dso_local global %struct.fib_result { i8 97, i8 0, i8 0, i8 0, i32 0, %struct.fib_info* null, %struct.fib_table* null }, align 8, !dbg !6
+O #9	field [1] of  : fs
+O #10	field [2] of  : fs
+O #11	field [3] of  : fs
+O #12	field [4] of  : fs
+O #13	field [5] of  : fs
+O #14	field [6] of  : fs
+V #15	f> fib_table_lookup
+V #16	v> %struct.fib_result* %res
+O #17	v> %struct.fib_result* %res
+O #18	field [1] of  : res
+O #19	field [2] of  : res
+O #20	field [3] of  : res
+O #21	field [4] of  : res
+O #22	field [5] of  : res
+O #23	field [6] of  : res
+V #24	v>   %res.addr = alloca %struct.fib_result*, align 8
+V #25	v>   store %struct.fib_result* %res, %struct.fib_result** %res.addr, align 8
+V #26	v>   call void @llvm.dbg.declare(metadata %struct.fib_result** %res.addr, metadata !38, metadata !DIExpression()), !dbg !39
+V #27	v>   %0 = load i32, i32* @a, align 4, !dbg !40
+V #28	v>   %tobool = icmp ne i32 %0, 0, !dbg !40
+V #29	v>   br i1 %tobool, label %est.bc-fib_table_lookup-1, label %est.bc-fib_table_lookup-2, !dbg !42
+V #30	v>   store %struct.fib_result* @fs, %struct.fib_result** %res.addr, align 8, !dbg !43
+V #31	v>   br label %est.bc-fib_table_lookup-2, !dbg !45
+V #32	v>   ret i32 0, !dbg !46
+O #33	v>   %res.addr = alloca %struct.fib_result*, align 8
+inside initSummary:
+sumNodeFactory:
+V #0	f> fib_table_lookup
+V #1	v> %struct.fib_result* %res
+O #2	v> %struct.fib_result* %res
+O #3	field [1] of  : res
+O #4	field [2] of  : res
+O #5	field [3] of  : res
+O #6	field [4] of  : res
+O #7	field [5] of  : res
+O #8	field [6] of  : res
+sumPtsGraph:
+ptr: 1->2
+inside compute aa set:
+Inside qualifier inference:
+  %res.addr = alloca %struct.fib_result*, align 8
+related qualifier out[24] = 1
+Node 24: 1
+Node 33: 0
+  store %struct.fib_result* %res, %struct.fib_result** %res.addr, align 8
+item = 33
+16/
+related qualifier out[33] = -1
+Node 33: -1
+  call void @llvm.dbg.declare(metadata %struct.fib_result** %res.addr, metadata !38, metadata !DIExpression()), !dbg !39
+  %0 = load i32, i32* @a, align 4, !dbg !40
+related qualifier out[27] = 1
+Node 27: 1
+  %tobool = icmp ne i32 %0, 0, !dbg !40
+related qualifier out[28] = 1
+Node 28: 1
+  br i1 %tobool, label %est.bc-fib_table_lookup-1, label %est.bc-fib_table_lookup-2, !dbg !42
+  store %struct.fib_result* @fs, %struct.fib_result** %res.addr, align 8, !dbg !43
+item = 33
+7/16/
+related qualifier out[33] = 1
+Node 33: 1
+  br label %est.bc-fib_table_lookup-2, !dbg !45
+  ret i32 0, !dbg !46
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x336dee8, name:fib_table_lookup
+Summary for function fib_table_lookup
+noNodes: 9
+0 ->
+1 ->2
+# of stackVar = 1, # of uninit: 1
+retun idx0, retSize = 0, getRetOffset()= 0
+args:
+args[0]: idx = 1, obj = 2
+objsize = 7, offset = 0
+
+args[1]: idx = 0, 
+args[2]: idx = 0, 
+args[3]: idx = 0, 
+args[4]: idx = 0, 
+args[5]: idx = 0, 
+args[6]: idx = 0, 
+args[7]: idx = 0, 
+args[8]: idx = 0, 
+idx:    0  1  2  3  4  5  6  7  8
+req:   -1  -1  -1  -1  -1  -1  -1  -1  -1 
+update: 1  -1  -1  -1  -1  -1  -1  -1  -1 
+modified: -1  -1  -1  -1  -1  -1  -1  -1  -1 
+List set for update:
+i = 0: 
+related nodes:
+
+i = 1: 
+related nodes:
+
+i = 2: 
+related nodes:
+
+arg idx: 2
+argNo : 0
+whitelist: 
+est.bc-fib_table_lookup-0:
+blacklist: 
+
+i = 3: 
+related nodes:
+
+arg idx: 3
+argNo : 0
+whitelist: 
+est.bc-fib_table_lookup-0:
+blacklist: 
+
+i = 4: 
+related nodes:
+
+arg idx: 4
+argNo : 0
+whitelist: 
+est.bc-fib_table_lookup-0:
+blacklist: 
+
+i = 5: 
+related nodes:
+
+arg idx: 5
+argNo : 0
+whitelist: 
+est.bc-fib_table_lookup-0:
+blacklist: 
+
+i = 6: 
+related nodes:
+
+arg idx: 6
+argNo : 0
+whitelist: 
+est.bc-fib_table_lookup-0:
+blacklist: 
+
+i = 7: 
+related nodes:
+
+arg idx: 7
+argNo : 0
+whitelist: 
+est.bc-fib_table_lookup-0:
+blacklist: 
+
+i = 8: 
+related nodes:
+
+arg idx: 8
+argNo : 0
+whitelist: 
+est.bc-fib_table_lookup-0:
+blacklist: 
+
+
+Related bitcode:
+=/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+copy end.Inside qualifier check:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 1
+1 Function Finished!
+runOnFunctionfib_lookup
+==========Function fib_lookup==========
+addr:0x3370bb8
+Module: /home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+V #5	v> @a = dso_local global i32 0, align 4, !dbg !0
+O #6	v> @a = dso_local global i32 0, align 4, !dbg !0
+V #7	v> @fs = dso_local global %struct.fib_result { i8 97, i8 0, i8 0, i8 0, i32 0, %struct.fib_info* null, %struct.fib_table* null }, align 8, !dbg !6
+O #8	v> @fs = dso_local global %struct.fib_result { i8 97, i8 0, i8 0, i8 0, i32 0, %struct.fib_info* null, %struct.fib_table* null }, align 8, !dbg !6
+O #9	field [1] of  : fs
+O #10	field [2] of  : fs
+O #11	field [3] of  : fs
+O #12	field [4] of  : fs
+O #13	field [5] of  : fs
+O #14	field [6] of  : fs
+V #15	f> fib_lookup
+V #16	v> %struct.fib_result* %res
+O #17	v> %struct.fib_result* %res
+O #18	field [1] of  : res
+O #19	field [2] of  : res
+O #20	field [3] of  : res
+O #21	field [4] of  : res
+O #22	field [5] of  : res
+O #23	field [6] of  : res
+V #24	v>   %res.addr = alloca %struct.fib_result*, align 8
+V #25	v>   %err = alloca i32, align 4
+V #26	v>   store %struct.fib_result* %res, %struct.fib_result** %res.addr, align 8
+V #27	v>   call void @llvm.dbg.declare(metadata %struct.fib_result** %res.addr, metadata !48, metadata !DIExpression()), !dbg !49
+V #28	v>   call void @llvm.dbg.declare(metadata i32* %err, metadata !50, metadata !DIExpression()), !dbg !51
+V #29	v>   store i32 -51, i32* %err, align 4, !dbg !41
+V #30	v>   %0 = load i32, i32* @a, align 4, !dbg !42
+V #31	v>   %tobool = icmp ne i32 %0, 0, !dbg !42
+V #32	v>   br i1 %tobool, label %est.bc-fib_lookup-1, label %est.bc-fib_lookup-2, !dbg !44
+V #33	v>   %1 = load %struct.fib_result*, %struct.fib_result** %res.addr, align 8, !dbg !45
+V #34	v>   %call = call i32 @fib_table_lookup(%struct.fib_result* %1), !dbg !46
+V #35	v>   store i32 %call, i32* %err, align 4, !dbg !47
+V #36	v>   br label %est.bc-fib_lookup-2, !dbg !48
+V #37	v>   %2 = load i32, i32* %err, align 4, !dbg !49
+V #38	v>   %cmp = icmp eq i32 %2, -35, !dbg !51
+V #39	v>   br i1 %cmp, label %est.bc-fib_lookup-3, label %est.bc-fib_lookup-4, !dbg !52
+V #40	v>   store i32 -51, i32* %err, align 4, !dbg !53
+V #41	v>   br label %est.bc-fib_lookup-4, !dbg !54
+V #42	v>   %3 = load i32, i32* %err, align 4, !dbg !55
+V #43	v>   ret i32 %3, !dbg !56
+O #44	v>   %res.addr = alloca %struct.fib_result*, align 8
+O #45	v>   %err = alloca i32, align 4
+inside initSummary:
+sumNodeFactory:
+V #0	f> fib_lookup
+V #1	v> %struct.fib_result* %res
+O #2	v> %struct.fib_result* %res
+O #3	field [1] of  : res
+O #4	field [2] of  : res
+O #5	field [3] of  : res
+O #6	field [4] of  : res
+O #7	field [5] of  : res
+O #8	field [6] of  : res
+sumPtsGraph:
+ptr: 1->2
+inside compute aa set:
+Inside qualifier inference:
+  %res.addr = alloca %struct.fib_result*, align 8
+related qualifier out[24] = 1
+Node 24: 1
+Node 44: 0
+  %err = alloca i32, align 4
+related qualifier out[25] = 1
+Node 25: 1
+Node 45: 0
+  store %struct.fib_result* %res, %struct.fib_result** %res.addr, align 8
+item = 44
+16/
+related qualifier out[44] = -1
+Node 44: -1
+  call void @llvm.dbg.declare(metadata %struct.fib_result** %res.addr, metadata !48, metadata !DIExpression()), !dbg !49
+  call void @llvm.dbg.declare(metadata i32* %err, metadata !50, metadata !DIExpression()), !dbg !51
+  store i32 -51, i32* %err, align 4, !dbg !41
+related qualifier out[45] = 1
+Node 45: 1
+  %0 = load i32, i32* @a, align 4, !dbg !42
+related qualifier out[30] = 1
+Node 30: 1
+  %tobool = icmp ne i32 %0, 0, !dbg !42
+related qualifier out[31] = 1
+Node 31: 1
+  br i1 %tobool, label %est.bc-fib_lookup-1, label %est.bc-fib_lookup-2, !dbg !44
+  %1 = load %struct.fib_result*, %struct.fib_result** %res.addr, align 8, !dbg !45
+relatedNode[33].insert(16)
+dstNode = 33
+16/
+relatedNode[33].insert(44)
+dstNode = 33
+16/
+related qualifier out[33] = -1
+  %call = call i32 @fib_table_lookup(%struct.fib_result* %1), !dbg !46
+  %call = call i32 @fib_table_lookup(%struct.fib_result* %1), !dbg !46
+possible function:fib_table_lookup, from module/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x336dee8: fib_table_lookup
+end of process funcs.
+Node 34: 1
+  store i32 %call, i32* %err, align 4, !dbg !47
+related qualifier out[45] = 1
+  br label %est.bc-fib_lookup-2, !dbg !48
+  %2 = load i32, i32* %err, align 4, !dbg !49
+related qualifier out[37] = 1
+Node 37: 1
+  %cmp = icmp eq i32 %2, -35, !dbg !51
+related qualifier out[38] = 1
+Node 38: 1
+  br i1 %cmp, label %est.bc-fib_lookup-3, label %est.bc-fib_lookup-4, !dbg !52
+  store i32 -51, i32* %err, align 4, !dbg !53
+related qualifier out[45] = 1
+  br label %est.bc-fib_lookup-4, !dbg !54
+  %3 = load i32, i32* %err, align 4, !dbg !55
+related qualifier out[42] = 1
+Node 42: 1
+  ret i32 %3, !dbg !56
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x3370bb8, name:fib_lookup
+Summary for function fib_lookup
+noNodes: 9
+0 ->
+1 ->2
+# of stackVar = 2, # of uninit: 1
+retun idx0, retSize = 0, getRetOffset()= 0
+args:
+args[0]: idx = 1, obj = 2
+objsize = 7, offset = 0
+
+args[1]: idx = 0, 
+args[2]: idx = 0, 
+args[3]: idx = 0, 
+args[4]: idx = 0, 
+args[5]: idx = 0, 
+args[6]: idx = 0, 
+args[7]: idx = 0, 
+args[8]: idx = 0, 
+idx:    0  1  2  3  4  5  6  7  8
+req:   -1  -1  -1  -1  -1  -1  -1  -1  -1 
+update: 1  -1  -1  -1  -1  -1  -1  -1  -1 
+modified: -1  -1  -1  -1  -1  -1  -1  -1  -1 
+List set for update:
+i = 0: 
+related nodes:
+
+i = 1: 
+related nodes:
+
+i = 2: 
+related nodes:
+
+arg idx: 2
+argNo : 0
+whitelist: 
+est.bc-fib_lookup-0:
+blacklist: 
+
+i = 3: 
+related nodes:
+
+arg idx: 3
+argNo : 0
+whitelist: 
+est.bc-fib_lookup-0:
+blacklist: 
+
+i = 4: 
+related nodes:
+
+arg idx: 4
+argNo : 0
+whitelist: 
+est.bc-fib_lookup-0:
+blacklist: 
+
+i = 5: 
+related nodes:
+
+arg idx: 5
+argNo : 0
+whitelist: 
+est.bc-fib_lookup-0:
+blacklist: 
+
+i = 6: 
+related nodes:
+
+arg idx: 6
+argNo : 0
+whitelist: 
+est.bc-fib_lookup-0:
+blacklist: 
+
+i = 7: 
+related nodes:
+
+arg idx: 7
+argNo : 0
+whitelist: 
+est.bc-fib_lookup-0:
+blacklist: 
+
+i = 8: 
+related nodes:
+
+arg idx: 8
+argNo : 0
+whitelist: 
+est.bc-fib_lookup-0:
+blacklist: 
+
+
+Related bitcode:
+=/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+copy end.Inside qualifier check:
+check func: fib_table_lookup: 0x336dee8
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 2
+2 Function Finished!
+runOnFunctionip_route_input_slow
+==========Function ip_route_input_slow==========
+addr:0x3370d48
+Module: /home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+O #4	nullptr>
+V #5	v> @a = dso_local global i32 0, align 4, !dbg !0
+O #6	v> @a = dso_local global i32 0, align 4, !dbg !0
+V #7	v> @fs = dso_local global %struct.fib_result { i8 97, i8 0, i8 0, i8 0, i32 0, %struct.fib_info* null, %struct.fib_table* null }, align 8, !dbg !6
+O #8	v> @fs = dso_local global %struct.fib_result { i8 97, i8 0, i8 0, i8 0, i32 0, %struct.fib_info* null, %struct.fib_table* null }, align 8, !dbg !6
+O #9	field [1] of  : fs
+O #10	field [2] of  : fs
+O #11	field [3] of  : fs
+O #12	field [4] of  : fs
+O #13	field [5] of  : fs
+O #14	field [6] of  : fs
+V #15	f> ip_route_input_slow
+V #16	v>   %res = alloca %struct.fib_result, align 8
+V #17	v>   %err = alloca i32, align 4
+V #18	v>   call void @llvm.dbg.declare(metadata %struct.fib_result* %res, metadata !70, metadata !DIExpression()), !dbg !71
+V #19	v>   call void @llvm.dbg.declare(metadata i32* %err, metadata !72, metadata !DIExpression()), !dbg !73
+V #20	v>   %fi = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 5, !dbg !41
+V #21	v>   store %struct.fib_info* null, %struct.fib_info** %fi, align 8, !dbg !42
+V #22	v>   %call = call i32 @fib_lookup(%struct.fib_result* %res), !dbg !43
+V #23	v>   store i32 %call, i32* %err, align 4, !dbg !44
+V #24	v>   %table = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 6, !dbg !45
+V #25	v>   %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8, !dbg !45
+V #26	v>   %tobool = icmp ne %struct.fib_table* %0, null, !dbg !47
+V #27	v>   br i1 %tobool, label %est.bc-ip_route_input_slow-1, label %est.bc-ip_route_input_slow-2, !dbg !48
+V #28	v>   store i32 1, i32* @a, align 4, !dbg !49
+V #29	v>   br label %est.bc-ip_route_input_slow-2, !dbg !51
+V #30	v>   %1 = load i32, i32* @a, align 4, !dbg !52
+V #31	v>   ret i32 %1, !dbg !53
+O #32	v>   %res = alloca %struct.fib_result, align 8
+O #33	field [1] of  : res
+O #34	field [2] of  : res
+O #35	field [3] of  : res
+O #36	field [4] of  : res
+O #37	field [5] of  : res
+O #38	field [6] of  : res
+O #39	v>   %err = alloca i32, align 4
+inside initSummary:
+sumNodeFactory:
+V #0	f> ip_route_input_slow
+sumPtsGraph:
+inside compute aa set:
+Inside qualifier inference:
+  %res = alloca %struct.fib_result, align 8
+related qualifier out[16] = 1
+Node 16: 1
+Node 32: 0
+Node 33: 0
+Node 34: 0
+Node 35: 0
+Node 36: 0
+Node 37: 0
+Node 38: 0
+  %err = alloca i32, align 4
+related qualifier out[17] = 1
+Node 17: 1
+Node 39: 0
+  call void @llvm.dbg.declare(metadata %struct.fib_result* %res, metadata !70, metadata !DIExpression()), !dbg !71
+  call void @llvm.dbg.declare(metadata i32* %err, metadata !72, metadata !DIExpression()), !dbg !73
+  %fi = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 5, !dbg !41
+related qualifier out[20] = 1
+Node 20: 1
+  store %struct.fib_info* null, %struct.fib_info** %fi, align 8, !dbg !42
+related qualifier out[37] = 1
+Node 37: 1
+  %call = call i32 @fib_lookup(%struct.fib_result* %res), !dbg !43
+  %call = call i32 @fib_lookup(%struct.fib_result* %res), !dbg !43
+possible function:fib_lookup, from module/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x3370bb8: fib_lookup
+end of process funcs.
+Node 22: 1
+  store i32 %call, i32* %err, align 4, !dbg !44
+related qualifier out[39] = 1
+Node 39: 1
+  %table = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i32 0, i32 6, !dbg !45
+related qualifier out[24] = 1
+Node 24: 1
+  %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8, !dbg !45
+related qualifier out[25] = 0
+Node 25: 0
+  %tobool = icmp ne %struct.fib_table* %0, null, !dbg !47
+related qualifier out[26] = 0
+Node 26: 0
+  br i1 %tobool, label %est.bc-ip_route_input_slow-1, label %est.bc-ip_route_input_slow-2, !dbg !48
+  store i32 1, i32* @a, align 4, !dbg !49
+related qualifier out[6] = 1
+  br label %est.bc-ip_route_input_slow-2, !dbg !51
+  %1 = load i32, i32* @a, align 4, !dbg !52
+related qualifier out[30] = 1
+Node 30: 1
+  ret i32 %1, !dbg !53
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x3370d48, name:ip_route_input_slow
+Summary for function ip_route_input_slow
+noNodes: 1
+0 ->
+# of stackVar = 2, # of uninit: 2
+retun idx0, retSize = 0, getRetOffset()= 0
+args:
+idx:    0
+req:   -1 
+update: 1 
+modified: -1 
+List set for update:
+i = 0: 
+related nodes:
+
+
+Related bitcode:
+=/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc
+copy end.Inside qualifier check:
+check func: fib_lookup: 0x3370bb8
+***********Warning: uninitialized ptr   %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8, !dbg !45
+[trace] In function @ip_route_input_slow Instruction:  %tobool = icmp ne %struct.fib_table* %0, null, !dbg !47
+/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc:
+json obj:{"aliasNum": 2, "alt-blist": [], "argNo": -1, "bc": "/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc", "blacklist": ["est.bc-ip_route_input_slow-1", "est.bc-ip_route_input_slow-2"], "fieldNo": -1, "function": "ip_route_input_slow", "id": "/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc_ip_route_input_slow_  %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8, !dbg !45_-1_-1", "rank": "NORMAL_PTR", "type": "stack", "use": "est.bc-ip_route_input_slow-0", "warning": "  %0 = load %struct.fib_table*, %struct.fib_table** %table, align 8, !dbg !45", "whitelist": ["est.bc-ip_route_input_slow-0", "est.bc-fib_lookup-0"]}
+Till now, Ctx->uninitArg = 6, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 2
+3 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis / 3] [/home/yizhuo/And-UBITect/testset/02c1/tagged/test.bc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

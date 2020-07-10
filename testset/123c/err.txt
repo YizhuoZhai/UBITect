@@ -1,0 +1,129 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function power_supply_put==========
+expanded size = 1
+expanded size = 1
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #7	v> @init = common global %struct.power_supply zeroinitializer, align 8
+V #8	v> %struct.power_supply* %psy
+O #9	v> %struct.power_supply* %psy
+V #10	v>   %1 = getelementptr inbounds %struct.power_supply, %struct.power_supply* %psy, i64 0, i32 0
+V #11	v>   %2 = load i32*, i32** %1, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 8 point to <9, >
+index 10 point to <9, >
+index 11 point to <>
+Inside qualifier inference:
+  %1 = getelementptr inbounds %struct.power_supply, %struct.power_supply* %psy, i64 0, i32 0
+  %2 = load i32*, i32** %1, align 8
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp eq i32 %3, 0
+  br i1 %4, label %6, label %5
+  br label %6
+  ret void
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+idx = 8requirement = 1. update = 0
+idx = 9requirement = 1. update = 0
+Inside QualifierCheck:
+  %1 = getelementptr inbounds %struct.power_supply, %struct.power_supply* %psy, i64 0, i32 0
+  %2 = load i32*, i32** %1, align 8
+  %3 = load i32, i32* %2, align 4
+  %4 = icmp eq i32 %3, 0
+invalid index in icmp
+  br i1 %4, label %6, label %5
+  br label %6
+  ret void
+==========Function f==========
+expanded size = 1
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @init = common global %struct.power_supply zeroinitializer, align 8
+O #7	v> @init = common global %struct.power_supply zeroinitializer, align 8
+V #8	v>   %psy = alloca %struct.power_supply*, align 8
+V #9	v>   %6 = load %struct.power_supply*, %struct.power_supply** %psy, align 8
+O #10	v>   %psy = alloca %struct.power_supply*, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 8 point to <7, 10, >
+index 9 point to <>
+Inside qualifier inference:
+  %psy = alloca %struct.power_supply*, align 8
+  %1 = load i32, i32* @a, align 4
+  %2 = icmp eq i32 %1, 1
+  br i1 %2, label %3, label %4
+  br label %5
+  store %struct.power_supply* @init, %struct.power_supply** %psy, align 8
+  br label %5
+  %6 = load %struct.power_supply*, %struct.power_supply** %psy, align 8
+  call void @power_supply_put(%struct.power_supply* %6)
+  ret i32 0
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 0
+index = 10, qualifier = 0
+Inside QualifierCheck:
+  %psy = alloca %struct.power_supply*, align 8
+  %1 = load i32, i32* @a, align 4
+  %2 = icmp eq i32 %1, 1
+invalid index in icmp
+  br i1 %2, label %3, label %4
+  br label %5
+  store %struct.power_supply* @init, %struct.power_supply** %psy, align 8
+  br label %5
+  %6 = load %struct.power_supply*, %struct.power_supply** %psy, align 8
+  call void @power_supply_put(%struct.power_supply* %6)
+***********Warning: argument check fails @ node 9
+***********Warning: argument check fails @ node 10
+  ret i32 0
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

@@ -1,0 +1,5 @@
+digraph "CFG for 'compat_ptr' function" {
+	label="CFG for 'compat_ptr' function";
+
+	Node0x93b950 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  store i32 %uptr, i32* %1, align 4\l  %2 = load i32, i32* %1, align 4\l  %3 = zext i32 %2 to i64\l  %4 = inttoptr i64 %3 to i8*\l  ret i8* %4\l}"];
+}

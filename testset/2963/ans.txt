@@ -1,0 +1,1185 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function f==========
+Inside BuildPtsGraph:
+Inside createNodeForGlobals:
+Inside collectConstraintsForGlobals:
+init ptsGraph:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+  %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+  %2 = load i8*, i8** %1, align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+  %3 = icmp eq i8* %2, null
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+  br i1 %3, label %5, label %4
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+  br label %5
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+  ret void
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @cmd = global i32 1, align 4
+O #5	v> @cmd = global i32 1, align 4
+V #6	f> f
+V #7	f> caller
+V #8	v> %struct.C* %kp
+O #9	v> %struct.C* %kp
+O #10	field [1] of  : kp
+O #11	field [2] of  : kp
+V #12	v>   %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+V #13	v>   %2 = load i8*, i8** %1, align 8
+V #14	v>   %3 = icmp eq i8* %2, null
+V #15	v>   br i1 %3, label %5, label %4
+V #16	v>   br label %5
+V #17	v>   ret void
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <0, >
+index 11 point to <0, >
+index 12 point to <11, >
+index 13 point to <0, >
+inside compute aa set:
+  %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+  %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  %2 = load i8*, i8** %1, align 8
+  %2 = load i8*, i8** %1, align 8
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<11,13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  %3 = icmp eq i8* %2, null
+  %3 = icmp eq i8* %2, null
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<11,13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<11,13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  br i1 %3, label %5, label %4
+  br i1 %3, label %5, label %4
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<11,13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<11,13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  br label %5
+  br label %5
+============in============
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<11,13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+
+============out============
+9:<9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<11,13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+  ret void
+  ret void
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<11,13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<11,13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+Inside qualifier inference:
+  %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+  %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = -1
+index = 14, qualifier = -1
+index = 15, qualifier = -1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+opIdx = 8, qualifier = 1
+  %2 = load i8*, i8** %1, align 8
+  %2 = load i8*, i8** %1, align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = -1
+index = 15, qualifier = -1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+opIdx = 12, qualifier = 1
+  %3 = icmp eq i8* %2, null
+  %3 = icmp eq i8* %2, null
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = -1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+  br i1 %3, label %5, label %4
+  br i1 %3, label %5, label %4
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = -1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+  br label %5
+  br label %5
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = -1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+  ret void
+  ret void
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = -1
+index = 16, qualifier = -1
+index = 17, qualifier = -1
+1 Function Finished!
+==========Function caller==========
+Inside BuildPtsGraph:
+Inside createNodeForGlobals:
+Inside collectConstraintsForGlobals:
+init ptsGraph:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+  %karg1 = alloca [2 x %struct.C], align 8
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+  %1 = load i32, i32* @cmd, align 4
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+  %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 11 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+  call void @f(%struct.C* %karg1.sub)
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 11 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 11 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+  br label %3
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 11 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 11 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+  ret void
+===========IN===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 11 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+===========OUT===========
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 11 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @cmd = global i32 1, align 4
+O #5	v> @cmd = global i32 1, align 4
+V #6	f> f
+V #7	f> caller
+V #8	v>   %karg1 = alloca [2 x %struct.C], align 8
+V #9	v>   %1 = load i32, i32* @cmd, align 4
+V #10	v>   switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+V #11	v>   %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+V #12	v>   call void @f(%struct.C* %karg1.sub)
+V #13	v>   br label %3
+V #14	v>   ret void
+O #15	v>   %karg1 = alloca [2 x %struct.C], align 8
+O #16	field [1] of  : karg1
+O #17	field [2] of  : karg1
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 8 point to <15, >
+index 11 point to <15, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <0, >
+inside compute aa set:
+  %karg1 = alloca [2 x %struct.C], align 8
+  %karg1 = alloca [2 x %struct.C], align 8
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+  %1 = load i32, i32* @cmd, align 4
+  %1 = load i32, i32* @cmd, align 4
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<5,9,>
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<5,9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<5,9,>
+  %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+  %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+============in============
+9:<5,9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+
+============out============
+9:<5,9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+  call void @f(%struct.C* %karg1.sub)
+  call void @f(%struct.C* %karg1.sub)
+============in============
+9:<5,9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+
+============out============
+9:<5,9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+  br label %3
+  br label %3
+============in============
+9:<5,9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+
+============out============
+9:<5,9,>
+8:<8,>
+7:<7,>
+6:<6,>
+5:<5,>
+4:<4,>
+0:<0,>
+1:<1,>
+2:<2,>
+3:<3,>
+10:<10,>
+11:<11,>
+12:<12,>
+13:<13,>
+14:<14,>
+15:<15,>
+16:<16,>
+17:<17,>
+  ret void
+  ret void
+============in============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<5,9,>
+
+============out============
+17:<17,>
+16:<16,>
+15:<15,>
+14:<14,>
+13:<13,>
+12:<12,>
+11:<11,>
+10:<10,>
+3:<3,>
+2:<2,>
+1:<1,>
+0:<0,>
+4:<4,>
+5:<5,>
+6:<6,>
+7:<7,>
+8:<8,>
+9:<5,9,>
+Inside qualifier inference:
+  %karg1 = alloca [2 x %struct.C], align 8
+  %karg1 = alloca [2 x %struct.C], align 8
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 0
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = -1
+index = 10, qualifier = -1
+index = 11, qualifier = -1
+index = 12, qualifier = -1
+index = 13, qualifier = -1
+index = 14, qualifier = -1
+index = 15, qualifier = 0
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+  %1 = load i32, i32* @cmd, align 4
+  %1 = load i32, i32* @cmd, align 4
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 0
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+index = 11, qualifier = -1
+index = 12, qualifier = -1
+index = 13, qualifier = -1
+index = 14, qualifier = -1
+index = 15, qualifier = 0
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+opIdx = 4, qualifier = 1
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 0
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+index = 11, qualifier = -1
+index = 12, qualifier = -1
+index = 13, qualifier = -1
+index = 14, qualifier = -1
+index = 15, qualifier = 0
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+  %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+  %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 0
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+index = 11, qualifier = 1
+index = 12, qualifier = -1
+index = 13, qualifier = -1
+index = 14, qualifier = -1
+index = 15, qualifier = 0
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+opIdx = 8, qualifier = 1
+  call void @f(%struct.C* %karg1.sub)
+  call void @f(%struct.C* %karg1.sub)
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 0
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+index = 11, qualifier = 1
+index = 12, qualifier = -1
+index = 13, qualifier = -1
+index = 14, qualifier = -1
+index = 15, qualifier = 0
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+***********Warning: argument check fails @ argument 0 : field 1 not initialized
+[trace] In function @caller Instruction:  call void @f(%struct.C* %karg1.sub)
+***********Warning: argument check fails @ argument 0 : field 2 not initialized
+[trace] In function @caller Instruction:  call void @f(%struct.C* %karg1.sub)
+  br label %3
+  br label %3
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 0
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+index = 11, qualifier = 1
+index = 12, qualifier = -1
+index = 13, qualifier = -1
+index = 14, qualifier = -1
+index = 15, qualifier = 0
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+  ret void
+  ret void
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 0
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = -1
+index = 11, qualifier = 1
+index = 12, qualifier = -1
+index = 13, qualifier = -1
+index = 14, qualifier = -1
+index = 15, qualifier = 0
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+2 Function Finished!
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

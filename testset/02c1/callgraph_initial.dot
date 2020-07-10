@@ -1,0 +1,18 @@
+digraph "Call Graph" {
+	label="Call Graph";
+
+	Node0x22efd10 [shape=record,shape=circle,label="{fib_table_lookup}"];
+	Node0x22f08b0 [shape=record,shape=circle,label="{vmw_cmd_end_gb_query}"];
+	Node0x22f08b0 -> Node0x22f07b0[color=black];
+	Node0x22f08b0 -> Node0x22f0830[color=black];
+	Node0x22f0630 [shape=record,shape=circle,label="{ip_route_input_slow}"];
+	Node0x22f0630 -> Node0x22f05b0[color=black];
+	Node0x22f0730 [shape=record,shape=Mrecord,label="{llvm.memcpy.p0i8.p0i8.i64}"];
+	Node0x22f0830 [shape=record,shape=circle,label="{vmw_translate_mob_ptr}"];
+	Node0x22f0830 -> Node0x22f06b0[color=black];
+	Node0x22f05b0 [shape=record,shape=circle,label="{fib_lookup}"];
+	Node0x22f05b0 -> Node0x22efd10[color=black];
+	Node0x22f06b0 [shape=record,shape=circle,label="{doinit}"];
+	Node0x22f06b0 -> Node0x22f0730[color=black];
+	Node0x22f07b0 [shape=record,shape=circle,label="{vmw_query_bo_switch_prepare}"];
+}

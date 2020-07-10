@@ -1,0 +1,153 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+readylist insert function f
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function f==========
+Inside BuildPtsGraph:
+  %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+  %2 = load i8*, i8** %1, align 8
+  %3 = icmp eq i8* %2, null
+  br i1 %3, label %5, label %4
+  br label %5
+  ret void
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @cmd = global i32 1, align 4
+O #5	v> @cmd = global i32 1, align 4
+V #6	v> %struct.C* %kp
+O #7	v> %struct.C* %kp
+O #8	field [1] of  : kp
+O #9	field [2] of  : kp
+V #10	v>   %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+V #11	v>   %2 = load i8*, i8** %1, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 10 point to <9, >
+index 11 point to <>
+Inside qualifier inference:
+  %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+  %2 = load i8*, i8** %1, align 8
+  %3 = icmp eq i8* %2, null
+  br i1 %3, label %5, label %4
+  br label %5
+  ret void
+inside return instruction:   ret void
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = -1
+index = 7, qualifier = -1
+index = 8, qualifier = -1
+index = 9, qualifier = -1
+index = 10, qualifier = -1
+index = 11, qualifier = -1
+idx = 6, requirement = 1. update = 0
+idx = 7, requirement = 0. update = 0
+idx = 8, requirement = 0. update = 0
+idx = 9, requirement = 1. update = 0
+Inside QualifierCheck:
+  %1 = getelementptr inbounds %struct.C, %struct.C* %kp, i64 0, i32 2
+  %2 = load i8*, i8** %1, align 8
+  %3 = icmp eq i8* %2, null
+  br i1 %3, label %5, label %4
+  br label %5
+  ret void
+==========Function caller==========
+Inside BuildPtsGraph:
+  %karg1 = alloca [2 x %struct.C], align 8
+struct type
+  %1 = load i32, i32* @cmd, align 4
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+  %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+  call void @f(%struct.C* %karg1.sub)
+  br label %3
+  ret void
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @cmd = global i32 1, align 4
+O #5	v> @cmd = global i32 1, align 4
+V #6	v>   %karg1 = alloca [2 x %struct.C], align 8
+V #7	v>   %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+O #8	v>   %karg1 = alloca [2 x %struct.C], align 8
+O #9	field [1] of  : karg1
+O #10	field [2] of  : karg1
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <8, >
+index 7 point to <8, >
+Inside qualifier inference:
+  %karg1 = alloca [2 x %struct.C], align 8
+  %1 = load i32, i32* @cmd, align 4
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+  %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+  call void @f(%struct.C* %karg1.sub)
+  br label %3
+  ret void
+inside return instruction:   ret void
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 0
+index = 8, qualifier = 0
+index = 9, qualifier = 0
+index = 10, qualifier = 0
+Inside QualifierCheck:
+  %karg1 = alloca [2 x %struct.C], align 8
+  %1 = load i32, i32* @cmd, align 4
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+  %karg1.sub = getelementptr inbounds [2 x %struct.C], [2 x %struct.C]* %karg1, i64 0, i64 0
+  call void @f(%struct.C* %karg1.sub)
+all the funcitons in ctx:
+caller
+f
+argIdx = 0, req = 1
+argIdx = 1, req = 0
+argIdx = 2, req = 0
+argIdx = 3, req = 1
+***********Warning: argument check fails @ argument 0 : ptr not initialized
+3
+***********Warning: argument check fails @ argument 0 : field 2 not initialized
+5
+end
+  br label %3
+  ret void
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

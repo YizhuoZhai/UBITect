@@ -1,0 +1,24 @@
+Total 1 file(s)
+../../kernel-analyzer/build-and/ubitect: error loading file 'cve.bc'
+[CallGraph] Initializing 0 modules 
+[CallGraph] Updated in 0 modules.
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+0 functions in total.
+[QualifierAnalysis] Initializing 0 modules 
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

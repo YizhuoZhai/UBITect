@@ -1,0 +1,5 @@
+digraph "CFG for 'nfnl_cthelper_parse_tuple' function" {
+	label="CFG for 'nfnl_cthelper_parse_tuple' function";
+
+	Node0x1b80ff0 [shape=record,label="{%0:\l  %1 = alloca %struct.nf_conntrack_tuple*, align 8\l  %2 = alloca %struct.nlattr*, align 8\l  store %struct.nf_conntrack_tuple* %tuple, %struct.nf_conntrack_tuple** %1,\l... align 8\l  store %struct.nlattr* %attr, %struct.nlattr** %2, align 8\l  %3 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %1,\l... align 8\l  %4 = getelementptr inbounds %struct.nf_conntrack_tuple,\l... %struct.nf_conntrack_tuple* %3, i32 0, i32 0\l  %5 = getelementptr inbounds %struct.nf_conntrack_man,\l... %struct.nf_conntrack_man* %4, i32 0, i32 0\l  store i32 4, i32* %5, align 4\l  %6 = load %struct.nf_conntrack_tuple*, %struct.nf_conntrack_tuple** %1,\l... align 8\l  %7 = getelementptr inbounds %struct.nf_conntrack_tuple,\l... %struct.nf_conntrack_tuple* %6, i32 0, i32 1\l  %8 = getelementptr inbounds %struct.anon, %struct.anon* %7, i32 0, i32 0\l  store i32 4, i32* %8, align 4\l  ret i32 0\l}"];
+}

@@ -1,0 +1,114 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+4 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc]
+runOnFunctioncopy_from_user
+==========Function copy_from_user==========
+addr:0x1d180d8
+Module: /home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x1d180d8, name:copy_from_user
+copy end.Inside qualifier check:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 1
+1 Function Finished!
+runOnFunctionget_microcode32
+==========Function get_microcode32==========
+addr:0x1d1b2e8
+Module: /home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+  %call = call i64 @copy_from_user(i8* %1, i8* %4, i64 %conv2), !dbg !49
+possible function:copy_from_user, from module/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc
+process transfer funcs
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x1d1b2e8, name:get_microcode32
+copy end.Inside qualifier check:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 2
+2 Function Finished!
+runOnFunctioncompat_ptr
+==========Function compat_ptr==========
+addr:0x1d1b598
+Module: /home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x1d1b598, name:compat_ptr
+copy end.Inside qualifier check:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 3
+3 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc]
+runOnFunctioncaller
+==========Function caller==========
+addr:0x1d1b3d8
+Module: /home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+  %call = call i8* @compat_ptr(i32 %conv), !dbg !53
+possible function:compat_ptr, from module/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x1d1b598: compat_ptr
+end of process funcs.
+  call void @get_microcode32(%struct.video_code* %vc, %struct.video_code32* %3), !dbg !60
+possible function:get_microcode32, from module/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x1d1b2e8: get_microcode32
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x1d1b3d8, name:caller
+copy end.Inside qualifier check:
+check func: compat_ptr: 0x1d1b598
+check func: get_microcode32: 0x1d1b2e8
+***********Warning: argument check fails @ argument 0 some field inside union not initialized2, actual qualifier is 0, nodeIndex = 28
+[trace] In function @caller Instruction:  call void @get_microcode32(%struct.video_code* %vc, %struct.video_code32* %3), !dbg !60
+/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc:
+json obj:{"aliasNum": 1, "alt-blist": [], "argNo": 0, "bc": "/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc", "blacklist": ["est.bc-caller-2"], "fieldNo": -1, "function": "caller", "id": "/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc_caller_  call void @get_microcode32(%struct.video_code* %vc, %struct.video_code32* %3), !dbg !60_0_-1", "rank": "DATA", "type": "stack", "use": "est.bc-caller-1", "warning": "  call void @get_microcode32(%struct.video_code* %vc, %struct.video_code32* %3), !dbg !60", "whitelist": ["est.bc-caller-0", "est.bc-get_microcode32-0"]}
+Till now, Ctx->uninitArg = 4, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 4
+4 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 3] [/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis / 4] [/home/yizhuo/And-UBITect/testset/2963/tagged/test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

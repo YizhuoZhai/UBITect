@@ -1,0 +1,15 @@
+digraph "CFG for 'kobject_put' function" {
+	label="CFG for 'kobject_put' function";
+
+	Node0x562305c33df0 [shape=record,label="{%1:\l  %2 = alloca %struct.kobject*, align 8\l  store %struct.kobject* %0, %struct.kobject** %2, align 8\l  %3 = load %struct.kobject*, %struct.kobject** %2, align 8\l  %4 = icmp ne %struct.kobject* %3, null\l  br i1 %4, label %5, label %17\l|{<s0>T|<s1>F}}"];
+	Node0x562305c33df0:s0 -> Node0x562305c34570;
+	Node0x562305c33df0:s1 -> Node0x562305c34660;
+	Node0x562305c34570 [shape=record,label="{%5:\l\l  %6 = load %struct.kobject*, %struct.kobject** %2, align 8\l  %7 = getelementptr inbounds %struct.kobject, %struct.kobject* %6, i32 0, i32\l... 3\l  %8 = load i8, i8* %7, align 8\l  %9 = and i8 %8, 1\l  %10 = zext i8 %9 to i32\l  %11 = icmp ne i32 %10, 0\l  br i1 %11, label %13, label %12\l|{<s0>T|<s1>F}}"];
+	Node0x562305c34570:s0 -> Node0x562305c34610;
+	Node0x562305c34570:s1 -> Node0x562305c345c0;
+	Node0x562305c345c0 [shape=record,label="{%12:\l\l  br label %13\l}"];
+	Node0x562305c345c0 -> Node0x562305c34610;
+	Node0x562305c34610 [shape=record,label="{%13:\l\l  %14 = load %struct.kobject*, %struct.kobject** %2, align 8\l  %15 = getelementptr inbounds %struct.kobject, %struct.kobject* %14, i32 0,\l... i32 1\l  %16 = call i32 @kref_put(%struct.kref* %15)\l  br label %17\l}"];
+	Node0x562305c34610 -> Node0x562305c34660;
+	Node0x562305c34660 [shape=record,label="{%17:\l\l  ret void\l}"];
+}

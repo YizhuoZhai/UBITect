@@ -1,0 +1,925 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+
+~~~~~~~~~~~~~~f~~~~~~~~~
+This function calles:
+  %1 = getelementptr inbounds %struct.video_code, %struct.video_code* %kp, i64 0, i32 2
+Address: 0x25560d8
+++++++++ptset in:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ 
+<0x1,0>/
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+==================end==================
+  %2 = load i8*, i8** %1, align 8
+Address: 0x2553938
+++++++++ptset in:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x2553938,0)/ 
+<0x1,0>/
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+==================end==================
+  %3 = icmp eq i8* %2, null
+Address: 0x25518b0
+++++++++ptset in:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x2553938,0)/ 
+<0x1,0>/
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x2553938,0)/ 
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x25518b0,0)/ 
+-----------------------------
+==================end==================
+  br i1 %3, label %5, label %4
+Address: 0x2553758
+++++++++ptset in:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x2553938,0)/ 
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x25518b0,0)/ 
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x2553938,0)/ 
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x25518b0,0)/ 
+-----------------------------
+==================end==================
+  br label %5
+Address: 0x25562d8
+++++++++ptset in:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x2553938,0)/ 
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x25518b0,0)/ 
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x2553938,0)/ 
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x25518b0,0)/ 
+-----------------------------
+==================end==================
+  ret void
+Address: 0x25537a0
+++++++++ptset in:+++++++++
+(0x1,0)/ (0x254f350,-1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,1)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x254f350,2)/ (0x25560d8,0)/ 
+<0x1,0>/
+-----------------------------
+(0x1,0)/ (0x2553938,0)/ 
+-----------------------------
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x25518b0,0)/ 
+-----------------------------
+==================end==================
+Inside info analysis:
+  %1 = getelementptr inbounds %struct.video_code, %struct.video_code* %kp, i64 0, i32 2
+Address: 0x25560d8
+======inSet with Info======
+<0x1, 0> /<0x254f350, -1> /
+qualifier = 3, ptlv = 1
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 0> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum0 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 1> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum1 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+======outSet with Info======
+<0x1, 0> /<0x254f350, -1> /
+qualifier = 3, ptlv = 1
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 0> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum0 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 1> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum1 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /<0x25560d8, 0> /
+qualifier = 7, ptlv = 2
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+  %2 = load i8*, i8** %1, align 8
+Address: 0x2553938
+======inSet with Info======
+<0x1, 0> /<0x254f350, -1> /
+qualifier = 3, ptlv = 1
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 0> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum0 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 1> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum1 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /<0x25560d8, 0> /
+qualifier = 7, ptlv = 2
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+======outSet with Info======
+<0x1, 0> /<0x254f350, -1> /
+qualifier = 3, ptlv = 1
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 0> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum0 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 1> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum1 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /<0x25560d8, 0> /
+qualifier = 7, ptlv = 2
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x2553938, 0> /
+qualifier = 3, ptlv = 1
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+  %3 = icmp eq i8* %2, null
+Address: 0x25518b0
+q1 = 1
+======outSet with Info======
+<0x1, 0> /<0x254f350, -1> /
+qualifier = 3, ptlv = 1
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 0> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum0 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 1> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum1 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /<0x25560d8, 0> /
+qualifier = 7, ptlv = 2
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x2553938, 0> /
+qualifier = 3, ptlv = 1
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x25518b0, 0> /
+qualifier = 1, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+  br i1 %3, label %5, label %4
+Address: 0x2553758
+  br label %5
+Address: 0x25562d8
+  ret void
+Address: 0x25537a0
+======inSet with Info======
+<0x1, 0> /<0x254f350, -1> /
+qualifier = 3, ptlv = 1
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 0> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum0 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 1> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum1 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /<0x25560d8, 0> /
+qualifier = 0, ptlv = 2
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x2553938, 0> /
+qualifier = 3, ptlv = 1
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x25518b0, 0> /
+qualifier = 1, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+======outSet with Info======
+<0x1, 0> /<0x254f350, -1> /
+qualifier = 3, ptlv = 1
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 0> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum0 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 1> /
+qualifier = 0, ptlv = 0
+isStructElement and the fieldNum1 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x254f350, 2> /<0x25560d8, 0> /
+qualifier = 0, ptlv = 2
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x1, 0> /<0x2553938, 0> /
+qualifier = 3, ptlv = 1
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x25518b0, 0> /
+qualifier = 1, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+===============setinfo end================
+Inside Qualifier analysis:
+  %1 = getelementptr inbounds %struct.video_code, %struct.video_code* %kp, i64 0, i32 2
+Address: 0x25560d8
+later used
+<0, 0, 0>
+<0, 1, 0>
+<0, 2, 2>
+---------Info of related var:--------
+qualifier = 7, ptlv = 2
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 2
+----------------end-----------------
+  %2 = load i8*, i8** %1, align 8
+Address: 0x2553938
+ptrvalue:
+qualifier = 7, ptlv = 2
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 2
+later used
+<0, 0, 0>
+<0, 1, 0>
+<0, 2, 6>
+---------Info of related var:--------
+qualifier = 3, ptlv = 1
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+----------------end-----------------
+  %3 = icmp eq i8* %2, null
+Address: 0x25518b0
+q1 = 1
+<0, 0, 0>
+<0, 1, 0>
+<0, 2, 6>
+---------Info of related var:--------
+qualifier = 1, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 0
+----------------end-----------------
+  br i1 %3, label %5, label %4
+Address: 0x2553758
+qualifier = 1, ptlv = 0
+isStructElement and the fieldNum2 parent is 0x254f350
+is Arg and the qualifier requirement = 1
+argNum = 0, fieldNum = 2
+  br label %5
+Address: 0x25562d8
+  ret void
+Address: 0x25537a0
++++++++Arg Req of function f+++++++
+<0, 0, 0>
+<0, 1, 0>
+<0, 2, 7>
++++++++Arg Update of function f+++++++
+<0, 0, 0>
+<0, 1, 0>
+<0, 2, 0>
+
+~~~~~~~~~~~~~~caller~~~~~~~~~
+This function calles:
+f
+  %karg1 = alloca [2 x %struct.video_code], align 8
+Address: 0x2556548
+++++++++ptset in:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ 
+<0x0,0>/
+-----------------------------
+==================end==================
+  %1 = load i32, i32* @cmd, align 4
+Address: 0x25565a8
+++++++++ptset in:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ 
+<0x0,0>/
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ 
+<0x0,0>/
+-----------------------------
+==================end==================
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+Address: 0x25564e8
+++++++++ptset in:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ 
+<0x0,0>/
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ 
+<0x0,0>/
+-----------------------------
+==================end==================
+  %karg1.sub = getelementptr inbounds [2 x %struct.video_code], [2 x %struct.video_code]* %karg1, i64 0, i64 0
+Address: 0x25566a8
+++++++++ptset in:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ 
+<0x0,0>/
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ (0x25566a8,0)/ 
+<0x0,0>/
+-----------------------------
+==================end==================
+  call void @f(%struct.video_code* %karg1.sub)
+Address: 0x2556730
+++++++++ptset in:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ (0x25566a8,0)/ 
+<0x0,0>/
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ (0x25566a8,0)/ 
+<0x0,0>/
+-----------------------------
+(0x2556730,0)/ 
+-----------------------------
+==================end==================
+  br label %3
+Address: 0x2556798
+++++++++ptset in:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ (0x25566a8,0)/ 
+<0x0,0>/
+-----------------------------
+(0x2556730,0)/ 
+-----------------------------
+==================end==================
+++++++++ptset out:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ (0x25566a8,0)/ 
+<0x0,0>/
+-----------------------------
+(0x2556730,0)/ 
+-----------------------------
+==================end==================
+  ret void
+Address: 0x25567e0
+++++++++ptset in:+++++++++
+(0x2,2)/ (0x25512e8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x2,2)/ (0x25565a8,0)/ 
+<0x2,2>/
+-----------------------------
+(0x3,3)/ 
+-----------------------------
+(0x2556548,0)/ (0x25566a8,0)/ 
+<0x0,0>/
+-----------------------------
+(0x2556730,0)/ 
+-----------------------------
+==================end==================
+Inside info analysis:
+  %karg1 = alloca [2 x %struct.video_code], align 8
+Address: 0x2556548
+======inSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+======outSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x2556548, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+  %1 = load i32, i32* @cmd, align 4
+Address: 0x25565a8
+======inSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x2556548, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+======outSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x2, 2> /<0x25565a8, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x3, 3> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x2556548, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+Address: 0x25564e8
+  %karg1.sub = getelementptr inbounds [2 x %struct.video_code], [2 x %struct.video_code]* %karg1, i64 0, i64 0
+Address: 0x25566a8
+======inSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x2, 2> /<0x25565a8, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x2556548, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+======outSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x2, 2> /<0x25565a8, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x2556548, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+<0x2556548, 0> /<0x25566a8, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+  call void @f(%struct.video_code* %karg1.sub)
+Address: 0x2556730
+======outSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x2, 2> /<0x25565a8, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x2556548, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+<0x2556548, 0> /<0x25566a8, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+<0x2556730, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+  br label %3
+Address: 0x2556798
+  ret void
+Address: 0x25567e0
+======inSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x2, 2> /<0x25565a8, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x2556548, 0> /<0x25566a8, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+<0x2556730, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+======outSet with Info======
+<0x2, 2> /<0x25512e8, 0> /
+qualifier = 3, ptlv = 1
+is Global.
+===============setinfo end================
+<0x2, 2> /<0x25565a8, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+<0x2556548, 0> /<0x25566a8, 0> /
+qualifier = 2, ptlv = 1
+===============setinfo end================
+<0x2556730, 0> /
+qualifier = 1, ptlv = 0
+===============setinfo end================
+Inside Qualifier analysis:
+  %karg1 = alloca [2 x %struct.video_code], align 8
+Address: 0x2556548
+---------Info of related var:--------
+qualifier = 2, ptlv = 1
+----------------end-----------------
+  %1 = load i32, i32* @cmd, align 4
+Address: 0x25565a8
+ptrvalue:
+qualifier = 3, ptlv = 1
+is Global.
+---------Info of related var:--------
+qualifier = 1, ptlv = 0
+----------------end-----------------
+  switch i32 %1, label %3 [
+    i32 1, label %2
+  ]
+Address: 0x25564e8
+  %karg1.sub = getelementptr inbounds [2 x %struct.video_code], [2 x %struct.video_code]* %karg1, i64 0, i64 0
+Address: 0x25566a8
+---------Info of related var:--------
+qualifier = 2, ptlv = 1
+----------------end-----------------
+  call void @f(%struct.video_code* %karg1.sub)
+Address: 0x2556730
+argument check fails at <0, 2>
+  br label %3
+Address: 0x2556798
+  ret void
+Address: 0x25567e0
++++++++Arg Req of function caller+++++++
++++++++Arg Update of function caller+++++++
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

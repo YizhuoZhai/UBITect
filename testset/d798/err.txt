@@ -1,0 +1,462 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+readylist insert function doinit
+readylist insert function vmw_query_bo_switch_prepare
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function doinit==========
+Inside BuildPtsGraph:
+  %1 = alloca %struct.vmw_dma_buffer**, align 8
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %1, align 8
+  %2 = load i32, i32* @a, align 4
+  %3 = icmp eq i32 %2, 1
+  br i1 %3, label %4, label %9
+  %5 = bitcast %struct.vmw_dma_buffer*** %1 to i8***
+  %6 = load i8**, i8*** %5, align 8
+  %7 = load i8*, i8** %6, align 8
+  %8 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 16, i32 8, i1 false)
+  br label %10
+  br label %11
+  br label %11
+  %storemerge = phi i32 [ 0, %9 ], [ 1, %10 ]
+  ret i32 %storemerge
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	v> %struct.vmw_dma_buffer** %vmw_bo_p
+O #11	v> %struct.vmw_dma_buffer** %vmw_bo_p
+V #12	v>   %1 = alloca %struct.vmw_dma_buffer**, align 8
+V #13	v>   %5 = bitcast %struct.vmw_dma_buffer*** %1 to i8***
+V #14	v>   %6 = load i8**, i8*** %5, align 8
+V #15	v>   %7 = load i8*, i8** %6, align 8
+V #16	v>   %8 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+O #17	v>   %1 = alloca %struct.vmw_dma_buffer**, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <11, >
+index 11 point to <0, >
+index 12 point to <10, >
+index 13 point to <10, >
+index 14 point to <11, >
+index 15 point to <0, >
+index 16 point to <0, >
+index 17 point to <11, >
+Inside qualifier inference:
+  %1 = alloca %struct.vmw_dma_buffer**, align 8
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %1, align 8
+  %2 = load i32, i32* @a, align 4
+  %3 = icmp eq i32 %2, 1
+invalid index in icmp
+  br i1 %3, label %4, label %9
+  %5 = bitcast %struct.vmw_dma_buffer*** %1 to i8***
+  %6 = load i8**, i8*** %5, align 8
+  %7 = load i8*, i8** %6, align 8
+  %8 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 16, i32 8, i1 false)
+  br label %10
+  br label %11
+  br label %11
+  %storemerge = phi i32 [ 0, %9 ], [ 1, %10 ]
+  ret i32 %storemerge
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 0
+index = 14, qualifier = 0
+index = 15, qualifier = 0
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+idx = 10, requirement = 0. update = 0
+idx = 11, requirement = 0. update = 0
+Inside QualifierCheck:
+  %1 = alloca %struct.vmw_dma_buffer**, align 8
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %1, align 8
+  %2 = load i32, i32* @a, align 4
+  %3 = icmp eq i32 %2, 1
+invalid index in icmp
+  br i1 %3, label %4, label %9
+  %5 = bitcast %struct.vmw_dma_buffer*** %1 to i8***
+  %6 = load i8**, i8*** %5, align 8
+  %7 = load i8*, i8** %6, align 8
+  %8 = load i8*, i8** bitcast (%struct.ttm_buffer_object** @tbobj to i8**), align 8
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* %7, i8* %8, i64 16, i32 8, i1 false)
+  br label %10
+  br label %11
+  br label %11
+  %storemerge = phi i32 [ 0, %9 ], [ 1, %10 ]
+  ret i32 %storemerge
+==========Function vmw_query_bo_switch_prepare==========
+Inside BuildPtsGraph:
+expanded size = 2
+struct process, i = 1
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+  %2 = icmp eq %struct.ttm_buffer_object* %1, %new_query_bo
+  br i1 %2, label %4, label %3
+  br label %5
+  br label %5
+  %storemerge = phi i32 [ 0, %4 ], [ -1, %3 ]
+  ret i32 %storemerge
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	v> %struct.ttm_buffer_object* %new_query_bo
+O #11	v> %struct.ttm_buffer_object* %new_query_bo
+O #12	field [1] of  : new_query_bo
+V #13	v>   %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <11, >
+index 13 point to <0, >
+Inside qualifier inference:
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+  %2 = icmp eq %struct.ttm_buffer_object* %1, %new_query_bo
+  br i1 %2, label %4, label %3
+  br label %5
+  br label %5
+  %storemerge = phi i32 [ 0, %4 ], [ -1, %3 ]
+  ret i32 %storemerge
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+idx = 10, requirement = 1. update = 0
+idx = 11, requirement = 0. update = 0
+idx = 12, requirement = 0. update = 0
+Inside QualifierCheck:
+  %1 = load %struct.ttm_buffer_object*, %struct.ttm_buffer_object** @tbobj, align 8
+  %2 = icmp eq %struct.ttm_buffer_object* %1, %new_query_bo
+  br i1 %2, label %4, label %3
+  br label %5
+  br label %5
+  %storemerge = phi i32 [ 0, %4 ], [ -1, %3 ]
+  ret i32 %storemerge
+==========Function vmw_translate_mob_ptr==========
+Inside BuildPtsGraph:
+  %1 = alloca i32, align 4
+  %2 = alloca %struct.vmw_dma_buffer**, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %ret = alloca i32, align 4
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %2, align 8
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  %3 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  store i32 %3, i32* %ret, align 4
+  %4 = icmp eq i32 %3, 0
+  br i1 %4, label %6, label %5
+  store i32 0, i32* %1, align 4
+  br label %19
+  %7 = load i32, i32* @a, align 4
+  %8 = icmp eq i32 %7, 1
+  br i1 %8, label %9, label %10
+  br label %17
+  br label %11
+  %12 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+  %13 = load i64, i64* %12, align 8
+  %14 = bitcast %struct.vmw_dma_buffer*** %2 to i64**
+  %15 = load i64*, i64** %14, align 8
+  store i64 %13, i64* %15, align 8
+  %16 = load i32, i32* %ret, align 4
+  store i32 %16, i32* %1, align 4
+  br label %19
+  store %struct.vmw_dma_buffer** null, %struct.vmw_dma_buffer*** %2, align 8
+  %18 = load i32, i32* %ret, align 4
+  store i32 %18, i32* %1, align 4
+  br label %19
+  %20 = load i32, i32* %1, align 4
+  ret i32 %20
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	v> %struct.vmw_dma_buffer** %vmw_bo_p
+O #11	v> %struct.vmw_dma_buffer** %vmw_bo_p
+V #12	v>   %1 = alloca i32, align 4
+V #13	v>   %2 = alloca %struct.vmw_dma_buffer**, align 8
+V #14	v>   %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+V #15	v>   %ret = alloca i32, align 4
+V #16	v>   %12 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+V #17	v>   %14 = bitcast %struct.vmw_dma_buffer*** %2 to i64**
+V #18	v>   %15 = load i64*, i64** %14, align 8
+O #19	v>   %1 = alloca i32, align 4
+O #20	v>   %2 = alloca %struct.vmw_dma_buffer**, align 8
+O #21	v>   %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+O #22	v>   %ret = alloca i32, align 4
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <2, 11, >
+index 11 point to <0, >
+index 12 point to <1, 19, >
+index 13 point to <2, 10, >
+index 14 point to <2, >
+index 15 point to <22, >
+index 16 point to <2, >
+index 17 point to <10, >
+index 18 point to <11, >
+index 20 point to <11, >
+index 21 point to <2, >
+Inside qualifier inference:
+  %1 = alloca i32, align 4
+  %2 = alloca %struct.vmw_dma_buffer**, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %ret = alloca i32, align 4
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %2, align 8
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  %3 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  store i32 %3, i32* %ret, align 4
+  %4 = icmp eq i32 %3, 0
+invalid index in icmp
+  br i1 %4, label %6, label %5
+  store i32 0, i32* %1, align 4
+  br label %19
+  %7 = load i32, i32* @a, align 4
+  %8 = icmp eq i32 %7, 1
+invalid index in icmp
+  br i1 %8, label %9, label %10
+  br label %17
+  br label %11
+  %12 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+  %13 = load i64, i64* %12, align 8
+  %14 = bitcast %struct.vmw_dma_buffer*** %2 to i64**
+  %15 = load i64*, i64** %14, align 8
+  store i64 %13, i64* %15, align 8
+  %16 = load i32, i32* %ret, align 4
+  store i32 %16, i32* %1, align 4
+  br label %19
+  store %struct.vmw_dma_buffer** null, %struct.vmw_dma_buffer*** %2, align 8
+  %18 = load i32, i32* %ret, align 4
+  store i32 %18, i32* %1, align 4
+  br label %19
+  %20 = load i32, i32* %1, align 4
+  ret i32 %20
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 1
+index = 13, qualifier = 1
+index = 14, qualifier = 1
+index = 15, qualifier = 1
+index = 16, qualifier = 0
+index = 17, qualifier = 0
+index = 18, qualifier = 0
+index = 19, qualifier = 0
+index = 20, qualifier = 0
+index = 21, qualifier = 0
+index = 22, qualifier = 0
+idx = 10, requirement = 0. update = 0
+idx = 11, requirement = 0. update = 0
+Inside QualifierCheck:
+  %1 = alloca i32, align 4
+  %2 = alloca %struct.vmw_dma_buffer**, align 8
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %ret = alloca i32, align 4
+  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %2, align 8
+  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  %3 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  store i32 %3, i32* %ret, align 4
+  %4 = icmp eq i32 %3, 0
+invalid index in icmp
+  br i1 %4, label %6, label %5
+  store i32 0, i32* %1, align 4
+  br label %19
+  %7 = load i32, i32* @a, align 4
+  %8 = icmp eq i32 %7, 1
+invalid index in icmp
+  br i1 %8, label %9, label %10
+  br label %17
+  br label %11
+  %12 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*
+  %13 = load i64, i64* %12, align 8
+  %14 = bitcast %struct.vmw_dma_buffer*** %2 to i64**
+  %15 = load i64*, i64** %14, align 8
+  store i64 %13, i64* %15, align 8
+  %16 = load i32, i32* %ret, align 4
+  store i32 %16, i32* %1, align 4
+  br label %19
+  store %struct.vmw_dma_buffer** null, %struct.vmw_dma_buffer*** %2, align 8
+  %18 = load i32, i32* %ret, align 4
+  store i32 %18, i32* %1, align 4
+  br label %19
+  %20 = load i32, i32* %1, align 4
+  ret i32 %20
+==========Function vmw_cmd_end_gb_query==========
+Inside BuildPtsGraph:
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %ret = alloca i32, align 4
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  store i32 %1, i32* %ret, align 4
+  %2 = icmp eq i32 %1, 0
+  br i1 %2, label %5, label %3
+  %4 = load i32, i32* %ret, align 4
+  br label %9
+  %6 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  %7 = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer* %6, i64 0, i32 0
+  %8 = call i32 @vmw_query_bo_switch_prepare(%struct.ttm_buffer_object* %7)
+  br label %9
+  %storemerge = phi i32 [ 0, %5 ], [ %4, %3 ]
+  ret i32 %storemerge
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v> @a = global i32 1, align 4
+O #5	v> @a = global i32 1, align 4
+V #6	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+O #7	v> @tbobj = common global %struct.ttm_buffer_object* null, align 8
+V #8	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+O #9	v> @vdbuffer = common global %struct.vmw_dma_buffer* null, align 8
+V #10	v>   %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+V #11	v>   %ret = alloca i32, align 4
+V #12	v>   %6 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %vmw_bo, align 8
+V #13	v>   %7 = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer* %6, i64 0, i32 0
+O #14	v>   %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+O #15	v>   %ret = alloca i32, align 4
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 2 point to <2, >
+index 4 point to <5, >
+index 5 point to <0, >
+index 6 point to <7, >
+index 7 point to <0, >
+index 8 point to <9, >
+index 9 point to <0, >
+index 10 point to <14, >
+index 11 point to <15, >
+index 12 point to <>
+Inside qualifier inference:
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %ret = alloca i32, align 4
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  store i32 %1, i32* %ret, align 4
+  %2 = icmp eq i32 %1, 0
+invalid index in icmp
+  br i1 %2, label %5, label %3
+  %4 = load i32, i32* %ret, align 4
+  br label %9
+  %6 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  %7 = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer* %6, i64 0, i32 0
+  %8 = call i32 @vmw_query_bo_switch_prepare(%struct.ttm_buffer_object* %7)
+  br label %9
+  %storemerge = phi i32 [ 0, %5 ], [ %4, %3 ]
+  ret i32 %storemerge
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 1
+index = 6, qualifier = 1
+index = 7, qualifier = 1
+index = 8, qualifier = 1
+index = 9, qualifier = 1
+index = 10, qualifier = 1
+index = 11, qualifier = 1
+index = 12, qualifier = 0
+index = 13, qualifier = 0
+index = 14, qualifier = 0
+index = 15, qualifier = 0
+Inside QualifierCheck:
+  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8
+  %ret = alloca i32, align 4
+  %1 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** nonnull %vmw_bo)
+  store i32 %1, i32* %ret, align 4
+  %2 = icmp eq i32 %1, 0
+invalid index in icmp
+  br i1 %2, label %5, label %3
+  %4 = load i32, i32* %ret, align 4
+  br label %9
+  %6 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %vmw_bo, align 8
+  %7 = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer* %6, i64 0, i32 0
+  %8 = call i32 @vmw_query_bo_switch_prepare(%struct.ttm_buffer_object* %7)
+***********Warning: argument check fails @ node 13
+  br label %9
+  %storemerge = phi i32 [ 0, %5 ], [ %4, %3 ]
+  ret i32 %storemerge
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

@@ -1,0 +1,10 @@
+digraph "CFG for 'put_device' function" {
+	label="CFG for 'put_device' function";
+
+	Node0x562305c352d0 [shape=record,label="{%1:\l  %2 = alloca %struct.device*, align 8\l  store %struct.device* %0, %struct.device** %2, align 8\l  %3 = load %struct.device*, %struct.device** %2, align 8\l  %4 = icmp ne %struct.device* %3, null\l  br i1 %4, label %5, label %8\l|{<s0>T|<s1>F}}"];
+	Node0x562305c352d0:s0 -> Node0x562305c35700;
+	Node0x562305c352d0:s1 -> Node0x562305c35750;
+	Node0x562305c35700 [shape=record,label="{%5:\l\l  %6 = load %struct.device*, %struct.device** %2, align 8\l  %7 = getelementptr inbounds %struct.device, %struct.device* %6, i32 0, i32 1\l  call void @kobject_put(%struct.kobject* %7)\l  br label %8\l}"];
+	Node0x562305c35700 -> Node0x562305c35750;
+	Node0x562305c35750 [shape=record,label="{%8:\l\l  ret void\l}"];
+}

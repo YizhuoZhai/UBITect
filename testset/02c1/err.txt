@@ -1,0 +1,68 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+[CallGraph] Done!
+
+readylist insert function ip_route_input_slow
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [test.bc]
+==========Function ip_route_input_slow==========
+Inside BuildPtsGraph:
+  %res = alloca %struct.fib_result, align 8
+struct type
+expanded size = 1
+  %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i64 0, i32 0
+  %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+  %3 = icmp eq %struct.fib_table* %2, null
+  br i1 %3, label %5, label %4
+  br label %5
+  ret void
+NodeFactory:
+V #0	nullptr>
+O #1	nullptr>
+V #2	nullptr>
+O #3	nullptr>
+V #4	v>   %res = alloca %struct.fib_result, align 8
+V #5	v>   %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i64 0, i32 0
+V #6	v>   %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+O #7	v>   %res = alloca %struct.fib_result, align 8
+The ptsGraph at the final node:
+index 0 point to <0, >
+index 4 point to <7, >
+index 5 point to <7, >
+index 6 point to <>
+Inside qualifier inference:
+  %res = alloca %struct.fib_result, align 8
+  %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i64 0, i32 0
+  %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+  %3 = icmp eq %struct.fib_table* %2, null
+  br i1 %3, label %5, label %4
+  br label %5
+  ret void
+Qualifier array at the final node:
+index = 0, qualifier = 1
+index = 1, qualifier = 1
+index = 2, qualifier = 1
+index = 3, qualifier = 1
+index = 4, qualifier = 1
+index = 5, qualifier = 0
+index = 6, qualifier = 0
+index = 7, qualifier = 0
+Inside QualifierCheck:
+  %res = alloca %struct.fib_result, align 8
+  %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i64 0, i32 0
+  %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+***********Warning: potentail uninitialized ptr  %1 = getelementptr inbounds %struct.fib_result, %struct.fib_result* %res, i64 0, i32 0
+  %3 = icmp eq %struct.fib_table* %2, null
+***********Warning: uninitialized ptr stored  %2 = load %struct.fib_table*, %struct.fib_table** %1, align 8
+  br i1 %3, label %5, label %4
+  br label %5
+  ret void
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+[QualifierAnalysis] Done!
+

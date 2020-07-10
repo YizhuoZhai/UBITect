@@ -1,0 +1,21 @@
+digraph "CFG for 'vmw_translate_mob_ptr' function" {
+	label="CFG for 'vmw_translate_mob_ptr' function";
+
+	Node0xb4ea60 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  %2 = alloca %struct.vmw_dma_buffer**, align 8\l  %vmw_bo = alloca %struct.vmw_dma_buffer*, align 8\l  %ret = alloca i32, align 4\l  store %struct.vmw_dma_buffer** %vmw_bo_p, %struct.vmw_dma_buffer*** %2,\l... align 8\l  store %struct.vmw_dma_buffer* null, %struct.vmw_dma_buffer** %vmw_bo, align 8\l  %3 = call i32 @doinit(%struct.vmw_dma_buffer** nonnull %vmw_bo)\l  store i32 %3, i32* %ret, align 4\l  %4 = icmp eq i32 %3, 0\l  br i1 %4, label %6, label %5\l|{<s0>T|<s1>F}}"];
+	Node0xb4ea60:s0 -> Node0xb4eb00;
+	Node0xb4ea60:s1 -> Node0xb4eab0;
+	Node0xb4eab0 [shape=record,label="{%5:\l\l  store i32 0, i32* %1, align 4\l  br label %19\l}"];
+	Node0xb4eab0 -> Node0xb4ec90;
+	Node0xb4eb00 [shape=record,label="{%6:\l\l  %7 = load i32, i32* @a, align 4\l  %8 = icmp eq i32 %7, 1\l  br i1 %8, label %9, label %10\l|{<s0>T|<s1>F}}"];
+	Node0xb4eb00:s0 -> Node0xb4eb50;
+	Node0xb4eb00:s1 -> Node0xb4eba0;
+	Node0xb4eb50 [shape=record,label="{%9:\l\l  br label %17\l}"];
+	Node0xb4eb50 -> Node0xb4ec40;
+	Node0xb4eba0 [shape=record,label="{%10:\l\l  br label %11\l}"];
+	Node0xb4eba0 -> Node0xb4ebf0;
+	Node0xb4ebf0 [shape=record,label="{%11:\l\l  %12 = bitcast %struct.vmw_dma_buffer** %vmw_bo to i64*\l  %13 = load i64, i64* %12, align 8\l  %14 = bitcast %struct.vmw_dma_buffer*** %2 to i64**\l  %15 = load i64*, i64** %14, align 8\l  store i64 %13, i64* %15, align 8\l  %16 = load i32, i32* %ret, align 4\l  store i32 %16, i32* %1, align 4\l  br label %19\l}"];
+	Node0xb4ebf0 -> Node0xb4ec90;
+	Node0xb4ec40 [shape=record,label="{%17:\l\l  store %struct.vmw_dma_buffer** null, %struct.vmw_dma_buffer*** %2, align 8\l  %18 = load i32, i32* %ret, align 4\l  store i32 %18, i32* %1, align 4\l  br label %19\l}"];
+	Node0xb4ec40 -> Node0xb4ec90;
+	Node0xb4ec90 [shape=record,label="{%19:\l\l  %20 = load i32, i32* %1, align 4\l  ret i32 %20\l}"];
+}

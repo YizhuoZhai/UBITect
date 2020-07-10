@@ -1,0 +1,931 @@
+bc : son/built-in.bc
+function : handle_vmwrite
+json : {"aliasNum": 2, "alt-blist": [], "argNo": 1, "bc": "/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc", "blacklist": ["data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-1", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-3", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-5", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-7", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-9", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-10", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-11", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-12", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-13", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-14", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-15", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-16", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-get_vmx_mem_address-6", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-get_vmx_mem_address-7"], "fieldNo": -1, "function": "handle_vmwrite", "rank": "NORMAL_PTR", "type": "stack", "use": "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-8", "warning": "  %call17 = call i32 @kvm_read_guest_virt(%struct.x86_emulate_ctxt* %emulate_ctxt, i64 %20, i8* %21, i32 %cond, %struct.x86_exception* %e) #7, !dbg !9080", "whitelist": ["data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-0", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-get_vmx_mem_address-0"]}
+KLEE: output directory is "/data/home/yizhuo/And-UBITect/testset/kvm/son/klee-out-0"
+KLEE: Using Z3 solver backend
+WARNING: this target does not support the llvm.returnaddress intrinsic.
+WARNING: this target does not support the llvm.returnaddress intrinsic.
+WARNING: this target does not support the llvm.returnaddress intrinsic.
+WARNING: this target does not support the llvm.frameaddress intrinsic.
+WARNING: this target does not support the llvm.returnaddress intrinsic.
+WARNING: this target does not support the llvm.returnaddress intrinsic.
+KLEE: WARNING ONCE: function "crash_vmclear_local_loaded_vmcss" has inline asm
+KLEE: WARNING ONCE: function "vmcs_clear" has inline asm
+KLEE: WARNING ONCE: function "cpumask_test_cpu" has inline asm
+KLEE: WARNING ONCE: function "cpumask_check" has inline asm
+KLEE: WARNING ONCE: function "hardware_enable" has inline asm
+KLEE: WARNING ONCE: function "vmx_check_processor_compat" has inline asm
+KLEE: WARNING ONCE: function "hardware_setup" has inline asm
+KLEE: WARNING ONCE: function "vmx_create_vcpu" has inline asm
+KLEE: WARNING ONCE: function "vmx_vcpu_reset" has inline asm
+KLEE: WARNING ONCE: function "vmx_save_host_state" has inline asm
+KLEE: WARNING ONCE: function "vmx_vcpu_load" has inline asm
+KLEE: WARNING ONCE: function "update_exception_bitmap" has inline asm
+KLEE: WARNING ONCE: function "vmx_get_msr" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_msr" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_segment" has inline asm
+KLEE: WARNING ONCE: function "vmx_decache_cr0_guest_bits" has inline asm
+KLEE: WARNING ONCE: function "vmx_decache_cr3" has inline asm
+KLEE: WARNING ONCE: function "vmx_decache_cr4_guest_bits" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_cr0" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_cr3" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_cr4" has inline asm
+KLEE: WARNING ONCE: function "vmx_get_idt" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_idt" has inline asm
+KLEE: WARNING ONCE: function "vmx_get_gdt" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_gdt" has inline asm
+KLEE: WARNING ONCE: function "vmx_sync_dirty_debug_regs" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_dr7" has inline asm
+KLEE: WARNING ONCE: function "vmx_cache_reg" has inline asm
+KLEE: WARNING ONCE: function "vmx_get_rflags" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_rflags" has inline asm
+KLEE: WARNING ONCE: function "vmx_vcpu_run" has inline asm
+KLEE: WARNING ONCE: function "vmx_handle_exit" has inline asm
+KLEE: WARNING ONCE: function "skip_emulated_instruction" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_interrupt_shadow" has inline asm
+KLEE: WARNING ONCE: function "vmx_get_interrupt_shadow" has inline asm
+KLEE: WARNING ONCE: function "vmx_inject_irq" has inline asm
+KLEE: WARNING ONCE: function "vmx_inject_nmi" has inline asm
+KLEE: WARNING ONCE: function "vmx_queue_exception" has inline asm
+KLEE: WARNING ONCE: function "vmx_cancel_injection" has inline asm
+KLEE: WARNING ONCE: function "vmx_interrupt_allowed" has inline asm
+KLEE: WARNING ONCE: function "vmx_nmi_allowed" has inline asm
+KLEE: WARNING ONCE: function "vmx_get_nmi_mask" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_nmi_mask" has inline asm
+KLEE: WARNING ONCE: function "enable_nmi_window" has inline asm
+KLEE: WARNING ONCE: function "enable_irq_window" has inline asm
+KLEE: WARNING ONCE: function "update_cr8_intercept" has inline asm
+KLEE: WARNING ONCE: function "vmx_refresh_apicv_exec_ctrl" has inline asm
+KLEE: WARNING ONCE: function "vmx_hwapic_isr_update" has inline asm
+KLEE: WARNING ONCE: function "vmx_load_eoi_exitmap" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_virtual_x2apic_mode" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_apic_access_page_addr" has inline asm
+KLEE: WARNING ONCE: function "vmx_sync_pir_to_irr" has inline asm
+KLEE: WARNING ONCE: function "vmx_write_tsc_offset" has inline asm
+KLEE: WARNING ONCE: function "vmx_get_exit_info" has inline asm
+KLEE: WARNING ONCE: function "vmx_handle_external_intr" has inline asm
+KLEE: WARNING ONCE: function "vmx_write_pml_buffer" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_hv_timer" has inline asm
+KLEE: WARNING ONCE: function "vmx_cancel_hv_timer" has inline asm
+KLEE: WARNING ONCE: function "vmwrite_error" has inline asm
+KLEE: WARNING ONCE: function "u64_shl_div_u64" has inline asm
+KLEE: WARNING ONCE: function "pi_clear_on" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_pi_irte_update" has inline asm
+KLEE: WARNING ONCE: function "rcu_read_lock_sched_notrace" has inline asm
+KLEE: WARNING ONCE: function "rcu_read_unlock_sched_notrace" has inline asm
+KLEE: WARNING ONCE: function "pi_post_block" has inline asm
+KLEE: WARNING ONCE: function "arch_local_save_flags" has inline asm
+KLEE: WARNING ONCE: function "arch_local_irq_disable" has inline asm
+KLEE: WARNING ONCE: function "__pi_post_block" has inline asm
+KLEE: WARNING ONCE: function "arch_local_irq_enable" has inline asm
+KLEE: WARNING ONCE: function "x2apic_enabled" has inline asm
+KLEE: WARNING ONCE: function "paravirt_read_msr_safe" has inline asm
+KLEE: WARNING ONCE: function "pi_pre_block" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_ple_window" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_vmexit" has inline asm
+KLEE: WARNING ONCE: function "vmx_complete_nested_posted_interrupt" has inline asm
+KLEE: WARNING ONCE: function "pi_test_and_clear_on" has inline asm
+KLEE: WARNING ONCE: function "prepare_vmcs12" has inline asm
+KLEE: WARNING ONCE: function "vmx_switch_vmcs" has inline asm
+KLEE: WARNING ONCE: function "vm_entry_controls_reset_shadow" has inline asm
+KLEE: WARNING ONCE: function "vm_exit_controls_reset_shadow" has inline asm
+KLEE: WARNING ONCE: function "decache_tsc_multiplier" has inline asm
+KLEE: WARNING ONCE: function "kvm_make_request" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_nested_vmexit_inject" has inline asm
+KLEE: WARNING ONCE: function "load_vmcs12_host_state" has inline asm
+KLEE: WARNING ONCE: function "kvm_register_write" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_load_cr3" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_msr_bitmap" has inline asm
+KLEE: WARNING ONCE: function "kvm_read_cr3" has inline asm
+KLEE: WARNING ONCE: function "sync_vmcs12" has inline asm
+KLEE: WARNING ONCE: function "vmcs12_guest_cr0" has inline asm
+KLEE: WARNING ONCE: function "vmcs12_guest_cr4" has inline asm
+KLEE: WARNING ONCE: function "kvm_register_read" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_write_tsc_offset" has inline asm
+KLEE: WARNING ONCE: function "pi_test_and_set_pir" has inline asm
+KLEE: WARNING ONCE: function "pi_test_and_set_on" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_rvi" has inline asm
+KLEE: WARNING ONCE: function "__vmx_complete_interrupts" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_inj_virq" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_exit" has inline asm
+KLEE: WARNING ONCE: function "vmx_flush_pml_buffer" has inline asm
+KLEE: WARNING ONCE: function "handle_invalid_guest_state" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_exit_reflected" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_reflect_vmexit" has inline asm
+KLEE: WARNING ONCE: function "dump_vmcs" has inline asm
+KLEE: WARNING ONCE: function "handle_exception" has inline asm
+KLEE: WARNING ONCE: function "handle_interrupt_window" has inline asm
+KLEE: WARNING ONCE: function "handle_nmi_window" has inline asm
+KLEE: WARNING ONCE: function "handle_task_switch" has inline asm
+KLEE: WARNING ONCE: function "handle_invlpg" has inline asm
+KLEE: WARNING ONCE: function "handle_vmptrst" has inline asm
+KLEE: WARNING ONCE: function "handle_vmread" has inline asm
+KLEE: WARNING ONCE: function "handle_vmwrite" has inline asm
+KLEE: WARNING ONCE: function "handle_cr" has inline asm
+KLEE: WARNING ONCE: function "handle_dr" has inline asm
+KLEE: WARNING ONCE: function "handle_io" has inline asm
+KLEE: WARNING ONCE: function "handle_apic_access" has inline asm
+KLEE: WARNING ONCE: function "handle_apic_eoi_induced" has inline asm
+KLEE: WARNING ONCE: function "handle_ept_violation" has inline asm
+KLEE: WARNING ONCE: function "handle_ept_misconfig" has inline asm
+KLEE: WARNING ONCE: function "handle_invept" has inline asm
+KLEE: WARNING ONCE: function "handle_invvpid" has inline asm
+KLEE: WARNING ONCE: function "handle_apic_write" has inline asm
+KLEE: WARNING ONCE: function "handle_vmfunc" has inline asm
+KLEE: WARNING ONCE: function "handle_pml_full" has inline asm
+KLEE: WARNING ONCE: function "handle_xsaves" has inline asm
+KLEE: WARNING ONCE: function "handle_xrstors" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_pml_full" has inline asm
+KLEE: WARNING ONCE: function "__invvpid" has inline asm
+KLEE: WARNING ONCE: function "__invept" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_fast_mmio" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_page_fault" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_msr" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_cr" has inline asm
+KLEE: WARNING ONCE: function "handle_set_cr0" has inline asm
+KLEE: WARNING ONCE: function "handle_set_cr4" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_get_vmptr" has inline asm
+KLEE: WARNING ONCE: function "alloc_vmcs" has inline asm
+KLEE: WARNING ONCE: function "__alloc_pages_node" has inline asm
+KLEE: WARNING ONCE: function "node_state" has inline asm
+KLEE: WARNING ONCE: function "free_vpid" has inline asm
+KLEE: WARNING ONCE: function "vmx_disable_shadow_vmcs" has inline asm
+KLEE: WARNING ONCE: function "nested_free_all_saved_vmcss" has inline asm
+KLEE: WARNING ONCE: function "free_loaded_vmcs" has inline asm
+KLEE: WARNING ONCE: function "__loaded_vmcs_clear" has inline asm
+KLEE: WARNING ONCE: function "cpumask_set_cpu" has inline asm
+KLEE: WARNING ONCE: function "cpumask_clear_cpu" has inline asm
+KLEE: WARNING ONCE: function "vmcs12_write_any" has inline asm
+KLEE: WARNING ONCE: function "copy_shadow_to_vmcs12" has inline asm
+KLEE: WARNING ONCE: function "enter_vmx_non_root_mode" has inline asm
+KLEE: WARNING ONCE: function "prepare_vmcs02" has inline asm
+KLEE: WARNING ONCE: function "nested_get_vmcs12_pages" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_disable_intercept_for_msr" has inline asm
+KLEE: WARNING ONCE: function "vmx_set_constant_host_state" has inline asm
+KLEE: WARNING ONCE: function "vm_entry_controls_init" has inline asm
+KLEE: WARNING ONCE: function "set_cr4_guest_host_mask" has inline asm
+KLEE: WARNING ONCE: function "nested_ept_init_mmu_context" has inline asm
+KLEE: WARNING ONCE: function "vmx_inject_page_fault_nested" has inline asm
+KLEE: WARNING ONCE: function "read_cr0" has inline asm
+KLEE: WARNING ONCE: function "__read_cr3" has inline asm
+KLEE: WARNING ONCE: function "cr4_read_shadow" has inline asm
+KLEE: WARNING ONCE: function "store_idt" has inline asm
+KLEE: WARNING ONCE: function "paravirt_read_msr" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_check_msr_switch" has inline asm
+KLEE: WARNING ONCE: function "vmcs12_read_any" has inline asm
+KLEE: WARNING ONCE: function "vmcs_load" has inline asm
+KLEE: WARNING ONCE: function "set_current_vmptr" has inline asm
+KLEE: WARNING ONCE: function "rmode_exception" has inline asm
+KLEE: WARNING ONCE: function "vmx_dump_sel" has inline asm
+KLEE: WARNING ONCE: function "vmx_dump_dtsel" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_nested_vmexit" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_exit_handled_cr" has inline asm
+KLEE: WARNING ONCE: function "nested_vmx_exit_handled_io" has inline asm
+KLEE: WARNING ONCE: function "kvm_test_request" has inline asm
+KLEE: WARNING ONCE: function "test_ti_thread_flag" has inline asm
+KLEE: WARNING ONCE: function "copy_vmcs12_to_shadow" has inline asm
+KLEE: WARNING ONCE: function "__get_current_cr3_fast" has inline asm
+KLEE: WARNING ONCE: function "__write_pkru" has inline asm
+KLEE: WARNING ONCE: function "vmx_arm_hv_timer" has inline asm
+KLEE: WARNING ONCE: function "__read_pkru" has inline asm
+KLEE: WARNING ONCE: function "vmx_complete_atomic_exit" has inline asm
+KLEE: WARNING ONCE: function "vmx_recover_nmi_blocking" has inline asm
+KLEE: WARNING ONCE: function "paravirt_write_msr" has inline asm
+KLEE: WARNING ONCE: function "clear_atomic_switch_msr" has inline asm
+KLEE: WARNING ONCE: function "add_atomic_switch_msr" has inline asm
+KLEE: WARNING ONCE: function "add_atomic_switch_msr_special" has inline asm
+KLEE: WARNING ONCE: function "vm_exit_controls_init" has inline asm
+KLEE: WARNING ONCE: function "build_cr3" has inline asm
+KLEE: WARNING ONCE: function "ept_save_pdptrs" has inline asm
+KLEE: WARNING ONCE: function "paravirt_get_debugreg" has inline asm
+KLEE: WARNING ONCE: function "vmx_load_host_state" has inline asm
+KLEE: WARNING ONCE: function "update_transition_efer" has inline asm
+KLEE: WARNING ONCE: function "__vmx_load_host_state" has inline asm
+KLEE: WARNING ONCE: function "kvm_load_ldt" has inline asm
+KLEE: WARNING ONCE: function "load_gs_index" has inline asm
+KLEE: WARNING ONCE: function "__loadsegment_fs" has inline asm
+KLEE: WARNING ONCE: function "invalidate_tss_limit" has inline asm
+KLEE: WARNING ONCE: function "force_reload_TR" has inline asm
+KLEE: WARNING ONCE: function "get_current_gdt_rw" has inline asm
+KLEE: WARNING ONCE: function "write_gdt_entry" has inline asm
+KLEE: WARNING ONCE: function "load_TR_desc" has inline asm
+KLEE: WARNING ONCE: function "ept_load_pdptrs" has inline asm
+KLEE: WARNING ONCE: function "enter_pmode" has inline asm
+KLEE: WARNING ONCE: function "enter_rmode" has inline asm
+KLEE: WARNING ONCE: function "enter_lmode" has inline asm
+KLEE: WARNING ONCE: function "ept_update_paging_mode_cr0" has inline asm
+KLEE: WARNING ONCE: function "fix_rmode_seg" has inline asm
+KLEE: WARNING ONCE: function "vmx_read_guest_seg_ar" has inline asm
+KLEE: WARNING ONCE: function "vmx_read_guest_seg_selector" has inline asm
+KLEE: WARNING ONCE: function "vmx_read_guest_seg_base" has inline asm
+KLEE: WARNING ONCE: function "vmx_read_guest_seg_limit" has inline asm
+KLEE: WARNING ONCE: function "vmx_restore_control_msr" has inline asm
+KLEE: WARNING ONCE: function "vmx_restore_fixed0_msr" has inline asm
+KLEE: WARNING ONCE: function "guest_read_tsc" has inline asm
+KLEE: WARNING ONCE: function "pi_set_sn" has inline asm
+KLEE: WARNING ONCE: function "get_current_gdt_ro" has inline asm
+KLEE: WARNING ONCE: function "vmx_vcpu_pi_load" has inline asm
+KLEE: WARNING ONCE: function "read_pkru" has inline asm
+KLEE: WARNING ONCE: function "pi_clear_sn" has inline asm
+KLEE: WARNING ONCE: function "kvm_read_ldt" has inline asm
+KLEE: WARNING ONCE: function "seg_setup" has inline asm
+KLEE: WARNING ONCE: function "vmx_free_vcpu_nested" has inline asm
+KLEE: WARNING ONCE: function "allocate_vpid" has inline asm
+KLEE: WARNING ONCE: function "vmx_vcpu_setup" has inline asm
+KLEE: WARNING ONCE: function "alloc_identity_pagetable" has inline asm
+KLEE: WARNING ONCE: function "put_page_testzero" has inline asm
+KLEE: WARNING ONCE: function "page_ref_dec_and_test" has inline asm
+KLEE: WARNING ONCE: function "paravirt_write_msr_safe" has inline asm
+KLEE: WARNING ONCE: function "vmcs_set_secondary_exec_control" has inline asm
+KLEE: WARNING ONCE: function "setup_vmcs_config" has inline asm
+KLEE: WARNING ONCE: function "init_vmcs_shadow_fields" has inline asm
+KLEE: WARNING ONCE: function "wakeup_handler" has inline asm
+KLEE: WARNING ONCE: function "alloc_kvm_area" has inline asm
+KLEE: WARNING ONCE: function "free_kvm_area" has inline asm
+KLEE: WARNING ONCE: function "__vmx_disable_intercept_for_msr" has inline asm
+KLEE: WARNING ONCE: function "kvm_mwait_in_guest" has inline asm
+KLEE: WARNING ONCE: function "__get_order" has inline asm
+KLEE: WARNING ONCE: function "__cpuid" has inline asm
+KLEE: WARNING ONCE: function "vmclear_local_loaded_vmcss" has inline asm
+KLEE: WARNING ONCE: function "kvm_cpu_vmxoff" has inline asm
+KLEE: WARNING ONCE: function "cr4_clear_bits" has inline asm
+KLEE: WARNING ONCE: function "__write_cr4" has inline asm
+KLEE: WARNING ONCE: function "kvm_cpu_vmxon" has inline asm
+KLEE: WARNING ONCE: function "cr4_set_bits" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_unregister_noncoherent_dma" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_register_noncoherent_dma" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_end_assignment" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_start_assignment" has inline asm
+KLEE: WARNING ONCE: function "kvm_make_request.81" has inline asm
+KLEE: WARNING ONCE: function "kvm_register_read.86" has inline asm
+KLEE: WARNING ONCE: function "__x86_set_memory_region" has inline asm
+KLEE: WARNING ONCE: function "id_to_memslot" has inline asm
+KLEE: WARNING ONCE: function "kvm_register_write.101" has inline asm
+KLEE: WARNING ONCE: function "put_page_testzero.113" has inline asm
+KLEE: WARNING ONCE: function "page_ref_dec_and_test.115" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_hypercall" has inline asm
+KLEE: WARNING ONCE: function "do_realtime" has inline asm
+KLEE: WARNING ONCE: function "read_tsc" has inline asm
+KLEE: WARNING ONCE: function "__read_seqcount_begin" has inline asm
+KLEE: WARNING ONCE: function "arch_local_irq_restore" has inline asm
+KLEE: WARNING ONCE: function "arch_local_save_flags.127" has inline asm
+KLEE: WARNING ONCE: function "arch_local_irq_disable.128" has inline asm
+KLEE: WARNING ONCE: function "cpumask_test_cpu.129" has inline asm
+KLEE: WARNING ONCE: function "rcu_read_lock_sched_notrace.130" has inline asm
+KLEE: WARNING ONCE: function "rcu_read_unlock_sched_notrace.131" has inline asm
+KLEE: WARNING ONCE: function "cpumask_check.132" has inline asm
+KLEE: WARNING ONCE: function "kvm_multiple_exception" has inline asm
+KLEE: WARNING ONCE: function "kvm_after_handle_nmi" has inline asm
+KLEE: WARNING ONCE: function "kvm_before_handle_nmi" has inline asm
+KLEE: WARNING ONCE: function "complete_fast_pio_in" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_pio" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_emulate_insn" has inline asm
+KLEE: WARNING ONCE: function "complete_emulated_pio" has inline asm
+KLEE: WARNING ONCE: function "complete_emulated_mmio" has inline asm
+KLEE: WARNING ONCE: function "exception_type" has inline asm
+KLEE: WARNING ONCE: function "kvm_emulate_wbinvd_noskip" has inline asm
+KLEE: WARNING ONCE: function "cpumask_set_cpu.162" has inline asm
+KLEE: WARNING ONCE: function "wbinvd" has inline asm
+KLEE: WARNING ONCE: function "kvm_get_msr_common" has inline asm
+KLEE: WARNING ONCE: function "kvm_set_msr_common" has inline asm
+KLEE: WARNING ONCE: function "kvm_compute_tsc_offset" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_track_tsc" has inline asm
+KLEE: WARNING ONCE: function "pvclock_scale_delta" has inline asm
+KLEE: WARNING ONCE: function "kvm_set_cr3" has inline asm
+KLEE: WARNING ONCE: function "kvm_read_cr3.215" has inline asm
+KLEE: WARNING ONCE: function "pdptrs_changed" has inline asm
+KLEE: WARNING ONCE: function "load_pdptrs" has inline asm
+KLEE: WARNING ONCE: function "kvm_inject_nmi" has inline asm
+KLEE: WARNING ONCE: function "kvm_spurious_fault" has inline asm
+KLEE: WARNING ONCE: function "kvm_set_shared_msr" has inline asm
+KLEE: WARNING ONCE: function "paravirt_write_msr.247" has inline asm
+KLEE: WARNING ONCE: function "paravirt_write_msr_safe.248" has inline asm
+KLEE: WARNING ONCE: function "kvm_define_shared_msr" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_timer_state" has inline asm
+KLEE: WARNING ONCE: function "perf_fetch_caller_regs" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_avic_unaccelerated_access" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_avic_incomplete_ipi" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_stimer_cleanup" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_stimer_expiration" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_stimer_callback" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_stimer_start_one_shot" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_stimer_start_periodic" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_stimer_set_count" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_stimer_set_config" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_synic_set_msr" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_synic_send_eoi" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_synic_set_irq" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_notify_acked_sint" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_pi_irte_update" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_enter_smm" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_wait_lapic_expire" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_pvclock_update" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_ple_window" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_pml_full" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_track_tsc" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_update_master_clock" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_write_tsc_offset" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_vcpu_match_mmio" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_emulate_insn" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_skinit" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_invlpga" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_nested_intr_vmexit" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_nested_vmexit_inject" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_nested_vmexit" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_nested_intercepts" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_nested_vmrun" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_pv_eoi" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_eoi" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_apic_accept_irq" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_apic_ipi" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_pic_set_irq" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_cr" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_msr" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_page_fault" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_inj_exception" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_inj_virq" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_exit" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_apic" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_cpuid" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_fast_mmio" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_pio" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hv_hypercall" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_hypercall" has inline asm
+KLEE: WARNING ONCE: function "perf_trace_kvm_entry" has inline asm
+KLEE: WARNING ONCE: function "get_kvmclock_ns" has inline asm
+KLEE: WARNING ONCE: function "div_frac" has inline asm
+KLEE: WARNING ONCE: function "kvm_mwait_in_guest.253" has inline asm
+KLEE: WARNING ONCE: function "__cpuid.255" has inline asm
+KLEE: WARNING ONCE: function "copy_overflow" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_vcpu_load" has inline asm
+KLEE: WARNING ONCE: function "adjust_tsc_offset_host" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_vcpu_put" has inline asm
+KLEE: WARNING ONCE: function "pagefault_disable" has inline asm
+KLEE: WARNING ONCE: function "pagefault_enable" has inline asm
+KLEE: WARNING ONCE: function "copy_fpregs_to_fpstate" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_fpu" has inline asm
+KLEE: WARNING ONCE: function "copy_xregs_to_kernel" has inline asm
+KLEE: WARNING ONCE: function "copy_fxregs_to_kernel" has inline asm
+KLEE: WARNING ONCE: function "kvm_vcpu_ioctl_x86_set_vcpu_events" has inline asm
+KLEE: WARNING ONCE: function "kvm_vcpu_ioctl_x86_get_xsave" has inline asm
+KLEE: WARNING ONCE: function "kvm_vcpu_ioctl_x86_set_xsave" has inline asm
+KLEE: WARNING ONCE: function "kvm_vcpu_ioctl_x86_get_xcrs" has inline asm
+KLEE: WARNING ONCE: function "kvm_vcpu_ioctl_x86_set_xcrs" has inline asm
+KLEE: WARNING ONCE: function "set_tsc_khz" has inline asm
+KLEE: WARNING ONCE: function "load_xsave" has inline asm
+KLEE: WARNING ONCE: function "fill_xsave" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_enter_smm" has inline asm
+KLEE: WARNING ONCE: function "atomic_xchg" has inline asm
+KLEE: WARNING ONCE: function "kvm_vm_ioctl_get_dirty_log" has inline asm
+KLEE: WARNING ONCE: function "kvm_clear_request" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_update_master_clock" has inline asm
+KLEE: WARNING ONCE: function "translate_nested_gpa" has inline asm
+KLEE: WARNING ONCE: function "kvm_is_in_guest" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_init" has inline asm
+KLEE: WARNING ONCE: function "kvm_timer_init" has inline asm
+KLEE: WARNING ONCE: function "xgetbv" has inline asm
+KLEE: WARNING ONCE: function "kvm_is_user_mode" has inline asm
+KLEE: WARNING ONCE: function "kvm_get_guest_ip" has inline asm
+KLEE: WARNING ONCE: function "kvmclock_cpu_down_prep" has inline asm
+KLEE: WARNING ONCE: function "tsc_khz_changed" has inline asm
+KLEE: WARNING ONCE: function "kvmclock_cpufreq_notifier" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_exit" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_vcpu_ioctl_run" has inline asm
+KLEE: WARNING ONCE: function "vcpu_run" has inline asm
+KLEE: WARNING ONCE: function "vcpu_enter_guest" has inline asm
+KLEE: WARNING ONCE: function "test_ti_thread_flag.266" has inline asm
+KLEE: WARNING ONCE: function "kvm_test_request.267" has inline asm
+KLEE: WARNING ONCE: function "kvm_guest_time_update" has inline asm
+KLEE: WARNING ONCE: function "record_steal_time" has inline asm
+KLEE: WARNING ONCE: function "arch_local_irq_enable.269" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_entry" has inline asm
+KLEE: WARNING ONCE: function "guest_enter_irqoff" has inline asm
+KLEE: WARNING ONCE: function "set_debugreg" has inline asm
+KLEE: WARNING ONCE: function "hw_breakpoint_active" has inline asm
+KLEE: WARNING ONCE: function "guest_exit_irqoff" has inline asm
+KLEE: WARNING ONCE: function "xsetbv" has inline asm
+KLEE: WARNING ONCE: function "copy_kernel_to_xregs" has inline asm
+KLEE: WARNING ONCE: function "copy_kernel_to_fxregs" has inline asm
+KLEE: WARNING ONCE: function "copy_kernel_to_fregs" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_inj_exception" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_pvclock_update" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_vcpu_ioctl_get_sregs" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_vcpu_ioctl_set_mpstate" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_vcpu_ioctl_set_sregs" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_vcpu_destroy" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_hardware_enable" has inline asm
+KLEE: WARNING ONCE: function "shared_msr_update" has inline asm
+KLEE: WARNING ONCE: function "paravirt_read_msr_safe.275" has inline asm
+KLEE: WARNING ONCE: function "drop_user_return_notifiers" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_vcpu_init" has inline asm
+KLEE: WARNING ONCE: function "static_key_slow_inc" has inline asm
+KLEE: WARNING ONCE: function "fx_init" has inline asm
+KLEE: WARNING ONCE: function "kvm_fetch_guest_virt" has inline asm
+KLEE: WARNING ONCE: function "emulator_cmpxchg_emulated" has inline asm
+KLEE: WARNING ONCE: function "emulator_get_cr" has inline asm
+KLEE: WARNING ONCE: function "emulator_set_cr" has inline asm
+KLEE: WARNING ONCE: function "emulator_get_fpu" has inline asm
+KLEE: WARNING ONCE: function "emulator_put_fpu" has inline asm
+KLEE: WARNING ONCE: function "kmap_atomic" has inline asm
+KLEE: WARNING ONCE: function "__kunmap_atomic" has inline asm
+KLEE: WARNING ONCE: function "emulator_read_write_onepage" has inline asm
+KLEE: WARNING ONCE: function "permission_fault" has inline asm
+KLEE: WARNING ONCE: function "trace_vcpu_match_mmio" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_mmio" has inline asm
+KLEE: WARNING ONCE: function "static_key_slow_dec" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_init_vm" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_destroy_vm" has inline asm
+KLEE: WARNING ONCE: function "kvm_unload_vcpu_mmu" has inline asm
+KLEE: WARNING ONCE: function "kvm_vcpu_exiting_guest_mode" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_async_pf_not_present" has inline asm
+KLEE: WARNING ONCE: function "trace_kvm_async_pf_ready" has inline asm
+KLEE: WARNING ONCE: function "kvm_arch_irq_bypass_del_producer" has inline asm
+KLEE: WARNING: undefined reference to function: ___might_sleep
+KLEE: WARNING: undefined reference to function: ___ratelimit
+KLEE: WARNING: undefined reference to function: __alloc_pages_nodemask
+KLEE: WARNING: undefined reference to function: __alloc_percpu
+KLEE: WARNING: undefined reference to function: __bitmap_or
+KLEE: WARNING: undefined reference to function: __check_object_size
+KLEE: WARNING: undefined reference to variable: __cpu_online_mask
+KLEE: WARNING: undefined reference to variable: __cpu_possible_mask
+KLEE: WARNING: undefined reference to function: __cpu_to_node
+KLEE: WARNING: undefined reference to function: __cpuhp_remove_state
+KLEE: WARNING: undefined reference to function: __cpuhp_setup_state
+KLEE: WARNING: undefined reference to function: __dynamic_pr_debug
+KLEE: WARNING: undefined reference to function: __free_pages
+KLEE: WARNING: undefined reference to function: __get_free_pages
+KLEE: WARNING: undefined reference to function: __hrtimer_get_remaining
+KLEE: WARNING: undefined reference to function: __init_work
+KLEE: WARNING: undefined reference to function: __kernel_fpu_begin
+KLEE: WARNING: undefined reference to function: __kernel_fpu_end
+KLEE: WARNING: undefined reference to function: __kmalloc
+KLEE: WARNING: undefined reference to function: __kvm_apic_update_irr
+KLEE: WARNING: undefined reference to function: __kvm_migrate_timers
+KLEE: WARNING: undefined reference to function: __kvm_set_memory_region
+KLEE: WARNING: undefined reference to function: __list_add_valid
+KLEE: WARNING: undefined reference to function: __list_del_entry_valid
+KLEE: WARNING: undefined reference to function: __might_sleep
+KLEE: WARNING: undefined reference to function: __msecs_to_jiffies
+KLEE: WARNING: undefined reference to function: __mutex_init
+KLEE: WARNING: undefined reference to function: __page_ref_mod_and_test
+KLEE: WARNING: undefined reference to variable: __per_cpu_offset
+KLEE: WARNING: undefined reference to function: __phys_addr
+KLEE: WARNING: undefined reference to variable: __preempt_count
+KLEE: WARNING: undefined reference to function: __put_page
+KLEE: WARNING: undefined reference to function: __raw_spin_lock_init
+KLEE: WARNING: undefined reference to function: __srcu_read_lock
+KLEE: WARNING: undefined reference to function: __srcu_read_unlock
+KLEE: WARNING: undefined reference to variable: __tracepoint_kvm_async_pf_not_present
+KLEE: WARNING: undefined reference to variable: __tracepoint_kvm_async_pf_ready
+KLEE: WARNING: undefined reference to variable: __tracepoint_kvm_fpu
+KLEE: WARNING: undefined reference to variable: __tracepoint_kvm_mmio
+KLEE: WARNING: undefined reference to variable: __tracepoint_page_ref_mod_and_test
+KLEE: WARNING: undefined reference to variable: __tss_limit_invalid
+KLEE: WARNING: undefined reference to function: _cond_resched
+KLEE: WARNING: undefined reference to function: _copy_from_user
+KLEE: WARNING: undefined reference to function: _copy_to_user
+KLEE: WARNING: undefined reference to function: _raw_spin_lock
+KLEE: WARNING: undefined reference to function: _raw_spin_lock_irqsave
+KLEE: WARNING: undefined reference to function: _raw_spin_unlock
+KLEE: WARNING: undefined reference to function: _raw_spin_unlock_irqrestore
+KLEE: WARNING: undefined reference to function: alloc_pages_current
+KLEE: WARNING: undefined reference to variable: alternatives_patched
+KLEE: WARNING: undefined reference to variable: apic
+KLEE: WARNING: undefined reference to variable: apic_hw_disabled
+KLEE: WARNING: undefined reference to variable: apic_sw_disabled
+KLEE: WARNING: undefined reference to variable: boot_cpu_data
+KLEE: WARNING: undefined reference to function: cancel_delayed_work_sync
+KLEE: WARNING: undefined reference to function: check_tsc_unstable
+KLEE: WARNING: undefined reference to variable: cpu_bit_bitmap
+KLEE: WARNING: undefined reference to variable: cpu_dr7
+KLEE: WARNING: undefined reference to variable: cpu_number
+KLEE: WARNING: undefined reference to variable: cpu_tlbstate
+KLEE: WARNING: undefined reference to variable: cpu_tss
+KLEE: WARNING: undefined reference to function: cpufreq_get_policy
+KLEE: WARNING: undefined reference to function: cpufreq_quick_get
+KLEE: WARNING: undefined reference to function: cpufreq_register_notifier
+KLEE: WARNING: undefined reference to function: cpufreq_unregister_notifier
+KLEE: WARNING: undefined reference to function: cpuid_query_maxphyaddr
+KLEE: WARNING: undefined reference to function: cpumask_next
+KLEE: WARNING: undefined reference to variable: crash_vmclear_loaded_vmcss
+KLEE: WARNING: undefined reference to variable: current_task
+KLEE: WARNING: undefined reference to function: debug_lockdep_rcu_enabled
+KLEE: WARNING: undefined reference to variable: debug_locks
+KLEE: WARNING: undefined reference to function: debug_locks_off
+KLEE: WARNING: undefined reference to variable: debug_locks_silent
+KLEE: WARNING: undefined reference to function: delayed_work_timer_fn
+KLEE: WARNING: undefined reference to variable: device_private_key
+KLEE: WARNING: undefined reference to function: do_machine_check
+KLEE: WARNING: undefined reference to function: dump_page
+KLEE: WARNING: undefined reference to function: dump_stack
+KLEE: WARNING: undefined reference to function: emulate_int_real
+KLEE: WARNING: undefined reference to function: emulator_can_use_gpa
+KLEE: WARNING: undefined reference to function: emulator_invalidate_register_cache
+KLEE: WARNING: undefined reference to function: emulator_task_switch
+KLEE: WARNING: undefined reference to function: emulator_writeback_register_cache
+KLEE: WARNING: undefined reference to function: event_triggers_call
+KLEE: WARNING: undefined reference to function: find_first_bit
+KLEE: WARNING: undefined reference to function: find_first_zero_bit
+KLEE: WARNING: undefined reference to function: find_last_bit
+KLEE: WARNING: undefined reference to function: fpstate_init
+KLEE: WARNING: undefined reference to function: fpu__initialize
+KLEE: WARNING: undefined reference to function: free_cpumask_var
+KLEE: WARNING: undefined reference to function: free_pages
+KLEE: WARNING: undefined reference to function: free_percpu
+KLEE: WARNING: undefined reference to variable: gdt_page
+KLEE: WARNING: undefined reference to function: get_xsave_addr
+KLEE: WARNING: undefined reference to function: getboottime64
+KLEE: WARNING: undefined reference to function: gfn_to_page
+KLEE: WARNING: undefined reference to function: gfn_to_pfn
+KLEE: WARNING: undefined reference to function: hrtimer_cancel
+KLEE: WARNING: undefined reference to function: hrtimer_init
+KLEE: WARNING: undefined reference to function: hrtimer_start_range_ns
+KLEE: WARNING: undefined reference to function: hw_breakpoint_restore
+KLEE: WARNING: undefined reference to function: init_decode_cache
+KLEE: WARNING: undefined reference to function: init_timer_key
+KLEE: WARNING: undefined reference to variable: intel_pmu_ops
+KLEE: WARNING: undefined reference to function: intel_pt_handle_vmx
+KLEE: WARNING: undefined reference to function: irq_remapping_cap
+KLEE: WARNING: undefined reference to function: irq_set_vcpu_affinity
+KLEE: WARNING: undefined reference to function: kfree
+KLEE: WARNING: undefined reference to function: kmem_cache_alloc
+KLEE: WARNING: undefined reference to function: kmem_cache_free
+KLEE: WARNING: undefined reference to function: ktime_get_with_offset
+KLEE: WARNING: undefined reference to function: kvfree
+KLEE: WARNING: undefined reference to function: kvm_apic_accept_events
+KLEE: WARNING: undefined reference to function: kvm_apic_accept_pic_intr
+KLEE: WARNING: undefined reference to function: kvm_apic_get_state
+KLEE: WARNING: undefined reference to function: kvm_apic_set_eoi_accelerated
+KLEE: WARNING: undefined reference to function: kvm_apic_set_state
+KLEE: WARNING: undefined reference to function: kvm_apic_update_irr
+KLEE: WARNING: undefined reference to function: kvm_apic_update_ppr
+KLEE: WARNING: undefined reference to function: kvm_apic_write_nodecode
+KLEE: WARNING: undefined reference to function: kvm_async_pf_wakeup_all
+KLEE: WARNING: undefined reference to function: kvm_can_do_async_pf
+KLEE: WARNING: undefined reference to function: kvm_check_async_pf_completion
+KLEE: WARNING: undefined reference to function: kvm_clear_async_pf_completion_queue
+KLEE: WARNING: undefined reference to function: kvm_clear_guest_page
+KLEE: WARNING: undefined reference to function: kvm_cpu_get_interrupt
+KLEE: WARNING: undefined reference to function: kvm_cpu_has_injectable_intr
+KLEE: WARNING: undefined reference to function: kvm_cpu_has_interrupt
+KLEE: WARNING: undefined reference to function: kvm_cpu_has_pending_timer
+KLEE: WARNING: undefined reference to function: kvm_cpuid
+KLEE: WARNING: undefined reference to function: kvm_create_lapic
+KLEE: WARNING: undefined reference to function: kvm_create_pit
+KLEE: WARNING: undefined reference to function: kvm_dev_ioctl_get_cpuid
+KLEE: WARNING: undefined reference to function: kvm_disable_largepages
+KLEE: WARNING: undefined reference to function: kvm_disable_tdp
+KLEE: WARNING: undefined reference to function: kvm_emulate_cpuid
+KLEE: WARNING: undefined reference to function: kvm_enable_tdp
+KLEE: WARNING: undefined reference to function: kvm_exit
+KLEE: WARNING: undefined reference to function: kvm_find_cpuid_entry
+KLEE: WARNING: undefined reference to function: kvm_flush_remote_tlbs
+KLEE: WARNING: undefined reference to function: kvm_free_lapic
+KLEE: WARNING: undefined reference to function: kvm_free_pit
+KLEE: WARNING: undefined reference to function: kvm_get_dirty_log_protect
+KLEE: WARNING: undefined reference to function: kvm_get_ioapic
+KLEE: WARNING: undefined reference to function: kvm_get_lapic_tscdeadline_msr
+KLEE: WARNING: undefined reference to function: kvm_gfn_to_hva_cache_init
+KLEE: WARNING: undefined reference to function: kvm_handle_page_fault
+KLEE: WARNING: undefined reference to function: kvm_hv_activate_synic
+KLEE: WARNING: undefined reference to function: kvm_hv_get_msr_common
+KLEE: WARNING: undefined reference to function: kvm_hv_hypercall
+KLEE: WARNING: undefined reference to function: kvm_hv_hypercall_enabled
+KLEE: WARNING: undefined reference to function: kvm_hv_process_stimers
+KLEE: WARNING: undefined reference to function: kvm_hv_set_msr_common
+KLEE: WARNING: undefined reference to function: kvm_hv_setup_tsc_page
+KLEE: WARNING: undefined reference to function: kvm_hv_vcpu_init
+KLEE: WARNING: undefined reference to function: kvm_hv_vcpu_postcreate
+KLEE: WARNING: undefined reference to function: kvm_hv_vcpu_uninit
+KLEE: WARNING: undefined reference to function: kvm_init
+KLEE: WARNING: undefined reference to function: kvm_init_shadow_ept_mmu
+KLEE: WARNING: undefined reference to function: kvm_inject_pending_timer_irqs
+KLEE: WARNING: undefined reference to function: kvm_intr_is_single_vcpu
+KLEE: WARNING: undefined reference to function: kvm_io_bus_read
+KLEE: WARNING: undefined reference to function: kvm_io_bus_write
+KLEE: WARNING: undefined reference to function: kvm_ioapic_destroy
+KLEE: WARNING: undefined reference to function: kvm_ioapic_init
+KLEE: WARNING: undefined reference to function: kvm_ioapic_scan_entry
+KLEE: WARNING: undefined reference to function: kvm_irq_delivery_to_apic
+KLEE: WARNING: undefined reference to function: kvm_lapic_enable_pv_eoi
+KLEE: WARNING: undefined reference to function: kvm_lapic_exit
+KLEE: WARNING: undefined reference to function: kvm_lapic_expired_hv_timer
+KLEE: WARNING: undefined reference to function: kvm_lapic_find_highest_irr
+KLEE: WARNING: undefined reference to function: kvm_lapic_get_cr8
+KLEE: WARNING: undefined reference to function: kvm_lapic_hv_timer_in_use
+KLEE: WARNING: undefined reference to function: kvm_lapic_init
+KLEE: WARNING: undefined reference to function: kvm_lapic_restart_hv_timer
+KLEE: WARNING: undefined reference to function: kvm_lapic_set_base
+KLEE: WARNING: undefined reference to function: kvm_lapic_set_eoi
+KLEE: WARNING: undefined reference to function: kvm_lapic_set_tpr
+KLEE: WARNING: undefined reference to function: kvm_lapic_set_vapic_addr
+KLEE: WARNING: undefined reference to function: kvm_lapic_switch_to_hv_timer
+KLEE: WARNING: undefined reference to function: kvm_lapic_switch_to_sw_timer
+KLEE: WARNING: undefined reference to function: kvm_lapic_sync_from_vapic
+KLEE: WARNING: undefined reference to function: kvm_lapic_sync_to_vapic
+KLEE: WARNING: undefined reference to function: kvm_largepages_enabled
+KLEE: WARNING: undefined reference to variable: kvm_lock
+KLEE: WARNING: undefined reference to function: kvm_make_all_cpus_request
+KLEE: WARNING: undefined reference to function: kvm_mmu_calculate_mmu_pages
+KLEE: WARNING: undefined reference to function: kvm_mmu_change_mmu_pages
+KLEE: WARNING: undefined reference to function: kvm_mmu_clear_dirty_pt_masked
+KLEE: WARNING: undefined reference to function: kvm_mmu_create
+KLEE: WARNING: undefined reference to function: kvm_mmu_destroy
+KLEE: WARNING: undefined reference to function: kvm_mmu_init_vm
+KLEE: WARNING: undefined reference to function: kvm_mmu_invalidate_mmio_sptes
+KLEE: WARNING: undefined reference to function: kvm_mmu_invalidate_zap_all_pages
+KLEE: WARNING: undefined reference to function: kvm_mmu_invlpg
+KLEE: WARNING: undefined reference to function: kvm_mmu_load
+KLEE: WARNING: undefined reference to function: kvm_mmu_module_exit
+KLEE: WARNING: undefined reference to function: kvm_mmu_module_init
+KLEE: WARNING: undefined reference to function: kvm_mmu_new_cr3
+KLEE: WARNING: undefined reference to function: kvm_mmu_page_fault
+KLEE: WARNING: undefined reference to function: kvm_mmu_reset_context
+KLEE: WARNING: undefined reference to function: kvm_mmu_set_mask_ptes
+KLEE: WARNING: undefined reference to function: kvm_mmu_set_mmio_spte_mask
+KLEE: WARNING: undefined reference to function: kvm_mmu_setup
+KLEE: WARNING: undefined reference to function: kvm_mmu_slot_largepage_remove_write_access
+KLEE: WARNING: undefined reference to function: kvm_mmu_slot_leaf_clear_dirty
+KLEE: WARNING: undefined reference to function: kvm_mmu_slot_remove_write_access
+KLEE: WARNING: undefined reference to function: kvm_mmu_slot_set_dirty
+KLEE: WARNING: undefined reference to function: kvm_mmu_sync_roots
+KLEE: WARNING: undefined reference to function: kvm_mmu_uninit_vm
+KLEE: WARNING: undefined reference to function: kvm_mmu_unload
+KLEE: WARNING: undefined reference to function: kvm_mmu_unprotect_page
+KLEE: WARNING: undefined reference to function: kvm_mmu_zap_collapsible_sptes
+KLEE: WARNING: undefined reference to function: kvm_mpx_supported
+KLEE: WARNING: undefined reference to function: kvm_mtrr_get_guest_memory_type
+KLEE: WARNING: undefined reference to function: kvm_mtrr_get_msr
+KLEE: WARNING: undefined reference to function: kvm_mtrr_set_msr
+KLEE: WARNING: undefined reference to function: kvm_mtrr_valid
+KLEE: WARNING: undefined reference to function: kvm_page_track_cleanup
+KLEE: WARNING: undefined reference to function: kvm_page_track_create_memslot
+KLEE: WARNING: undefined reference to function: kvm_page_track_flush_slot
+KLEE: WARNING: undefined reference to function: kvm_page_track_free_memslot
+KLEE: WARNING: undefined reference to function: kvm_page_track_init
+KLEE: WARNING: undefined reference to function: kvm_page_track_write
+KLEE: WARNING: undefined reference to function: kvm_pic_destroy
+KLEE: WARNING: undefined reference to function: kvm_pic_init
+KLEE: WARNING: undefined reference to function: kvm_pic_update_irq
+KLEE: WARNING: undefined reference to function: kvm_pit_load_count
+KLEE: WARNING: undefined reference to function: kvm_pit_set_reinject
+KLEE: WARNING: undefined reference to function: kvm_pmu_deliver_pmi
+KLEE: WARNING: undefined reference to function: kvm_pmu_destroy
+KLEE: WARNING: undefined reference to function: kvm_pmu_get_msr
+KLEE: WARNING: undefined reference to function: kvm_pmu_handle_event
+KLEE: WARNING: undefined reference to function: kvm_pmu_init
+KLEE: WARNING: undefined reference to function: kvm_pmu_is_valid_msr
+KLEE: WARNING: undefined reference to function: kvm_pmu_is_valid_msr_idx
+KLEE: WARNING: undefined reference to function: kvm_pmu_rdpmc
+KLEE: WARNING: undefined reference to function: kvm_pmu_reset
+KLEE: WARNING: undefined reference to function: kvm_pmu_set_msr
+KLEE: WARNING: undefined reference to function: kvm_read_and_reset_pf_reason
+KLEE: WARNING: undefined reference to function: kvm_read_guest
+KLEE: WARNING: undefined reference to function: kvm_read_guest_cached
+KLEE: WARNING: undefined reference to function: kvm_release_page_clean
+KLEE: WARNING: undefined reference to function: kvm_release_page_dirty
+KLEE: WARNING: undefined reference to function: kvm_release_pfn_clean
+KLEE: WARNING: undefined reference to function: kvm_scan_ioapic_routes
+KLEE: WARNING: undefined reference to function: kvm_set_ioapic
+KLEE: WARNING: undefined reference to function: kvm_set_irq
+KLEE: WARNING: undefined reference to function: kvm_set_lapic_tscdeadline_msr
+KLEE: WARNING: undefined reference to function: kvm_set_msi_irq
+KLEE: WARNING: undefined reference to function: kvm_set_posted_intr_wakeup_handler
+KLEE: WARNING: undefined reference to function: kvm_setup_default_irq_routing
+KLEE: WARNING: undefined reference to function: kvm_setup_empty_irq_routing
+KLEE: WARNING: undefined reference to function: kvm_supported_xcr0
+KLEE: WARNING: undefined reference to function: kvm_update_cpuid
+KLEE: WARNING: undefined reference to function: kvm_vcpu_block
+KLEE: WARNING: undefined reference to variable: kvm_vcpu_cache
+KLEE: WARNING: undefined reference to function: kvm_vcpu_gfn_to_page
+KLEE: WARNING: undefined reference to function: kvm_vcpu_init
+KLEE: WARNING: undefined reference to function: kvm_vcpu_ioctl_get_cpuid2
+KLEE: WARNING: undefined reference to function: kvm_vcpu_ioctl_set_cpuid
+KLEE: WARNING: undefined reference to function: kvm_vcpu_ioctl_set_cpuid2
+KLEE: WARNING: undefined reference to function: kvm_vcpu_kick
+KLEE: WARNING: undefined reference to function: kvm_vcpu_mark_page_dirty
+KLEE: WARNING: undefined reference to function: kvm_vcpu_mtrr_init
+KLEE: WARNING: undefined reference to function: kvm_vcpu_on_spin
+KLEE: WARNING: undefined reference to function: kvm_vcpu_read_guest
+KLEE: WARNING: undefined reference to function: kvm_vcpu_read_guest_page
+KLEE: WARNING: undefined reference to function: kvm_vcpu_uninit
+KLEE: WARNING: undefined reference to function: kvm_vcpu_write_guest
+KLEE: WARNING: undefined reference to function: kvm_vcpu_write_guest_page
+KLEE: WARNING: undefined reference to function: kvm_write_guest
+KLEE: WARNING: undefined reference to function: kvm_write_guest_cached
+KLEE: WARNING: undefined reference to function: kvm_write_guest_offset_cached
+KLEE: WARNING: undefined reference to function: kvm_write_guest_page
+KLEE: WARNING: undefined reference to function: kvm_x2apic_msr_read
+KLEE: WARNING: undefined reference to function: kvm_x2apic_msr_write
+KLEE: WARNING: undefined reference to function: kvm_zap_gfn_range
+KLEE: WARNING: undefined reference to function: kvmalloc_node
+KLEE: WARNING: undefined reference to function: load_fixmap_gdt
+KLEE: WARNING: undefined reference to function: lock_acquire
+KLEE: WARNING: undefined reference to function: lock_is_held_type
+KLEE: WARNING: undefined reference to function: lock_release
+KLEE: WARNING: undefined reference to function: lockdep_init_map
+KLEE: WARNING: undefined reference to function: lockdep_rcu_suspicious
+KLEE: WARNING: undefined reference to function: mark_tsc_unstable
+KLEE: WARNING: undefined reference to function: memdup_user
+KLEE: WARNING: undefined reference to function: mutex_lock_nested
+KLEE: WARNING: undefined reference to function: mutex_unlock
+KLEE: WARNING: undefined reference to variable: mxcsr_feature_mask
+KLEE: WARNING: undefined reference to variable: node_states
+KLEE: WARNING: undefined reference to variable: nr_cpu_ids
+KLEE: WARNING: undefined reference to function: ns_to_timespec
+KLEE: WARNING: undefined reference to variable: oops_in_progress
+KLEE: WARNING: undefined reference to variable: page_offset_base
+KLEE: WARNING: undefined reference to variable: param_ops_bool
+KLEE: WARNING: undefined reference to variable: param_ops_int
+KLEE: WARNING: undefined reference to variable: param_ops_uint
+KLEE: WARNING: undefined reference to function: perf_guest_get_msrs
+KLEE: WARNING: undefined reference to function: perf_register_guest_info_callbacks
+KLEE: WARNING: undefined reference to function: perf_trace_buf_alloc
+KLEE: WARNING: undefined reference to function: perf_trace_run_bpf_submit
+KLEE: WARNING: undefined reference to function: perf_unregister_guest_info_callbacks
+KLEE: WARNING: undefined reference to function: printk
+KLEE: WARNING: undefined reference to variable: prof_on
+KLEE: WARNING: undefined reference to function: profile_hits
+KLEE: WARNING: undefined reference to function: put_zone_device_private_or_public_page
+KLEE: WARNING: undefined reference to variable: pv_cpu_ops
+KLEE: WARNING: undefined reference to variable: pv_irq_ops
+KLEE: WARNING: undefined reference to variable: pv_mmu_ops
+KLEE: WARNING: undefined reference to function: pvclock_gtod_register_notifier
+KLEE: WARNING: undefined reference to function: pvclock_gtod_unregister_notifier
+KLEE: WARNING: undefined reference to function: queue_delayed_work_on
+KLEE: WARNING: undefined reference to function: queue_work_on
+KLEE: WARNING: undefined reference to function: rcu_note_context_switch
+KLEE: WARNING: undefined reference to function: rcu_read_lock_held
+KLEE: WARNING: undefined reference to function: rcu_read_lock_sched_held
+KLEE: WARNING: undefined reference to function: schedule
+KLEE: WARNING: undefined reference to function: set_normalized_timespec
+KLEE: WARNING: undefined reference to function: sigprocmask
+KLEE: WARNING: undefined reference to variable: sme_me_mask
+KLEE: WARNING: undefined reference to function: smp_call_function_many
+KLEE: WARNING: undefined reference to function: smp_call_function_single
+KLEE: WARNING: undefined reference to variable: smp_ops
+KLEE: WARNING: undefined reference to variable: static_key_initialized
+KLEE: WARNING: undefined reference to function: synchronize_sched
+KLEE: WARNING: undefined reference to variable: system_long_wq
+KLEE: WARNING: undefined reference to variable: system_wq
+KLEE: WARNING: undefined reference to variable: tboot
+KLEE: WARNING: undefined reference to variable: this_cpu_off
+KLEE: WARNING: undefined reference to function: trace_define_field
+KLEE: WARNING: undefined reference to function: trace_event_buffer_commit
+KLEE: WARNING: undefined reference to function: trace_event_buffer_reserve
+KLEE: WARNING: undefined reference to function: trace_event_ignore_this_pid
+KLEE: WARNING: undefined reference to function: trace_event_raw_init
+KLEE: WARNING: undefined reference to function: trace_event_reg
+KLEE: WARNING: undefined reference to function: trace_handle_return
+KLEE: WARNING: undefined reference to function: trace_hardirqs_off
+KLEE: WARNING: undefined reference to function: trace_hardirqs_on
+KLEE: WARNING: undefined reference to function: trace_print_hex_seq
+KLEE: WARNING: undefined reference to function: trace_print_symbols_seq
+KLEE: WARNING: undefined reference to function: trace_raw_output_prep
+KLEE: WARNING: undefined reference to function: trace_seq_printf
+KLEE: WARNING: undefined reference to variable: tsc_khz
+KLEE: WARNING: undefined reference to function: user_return_notifier_register
+KLEE: WARNING: undefined reference to function: user_return_notifier_unregister
+KLEE: WARNING: undefined reference to function: vcpu_load
+KLEE: WARNING: undefined reference to function: vcpu_put
+KLEE: WARNING: undefined reference to variable: vm_list
+KLEE: WARNING: undefined reference to function: vm_mmap
+KLEE: WARNING: undefined reference to function: vm_munmap
+KLEE: WARNING: undefined reference to variable: vmemmap_base
+KLEE: WARNING: undefined reference to variable: vmx_return
+KLEE: WARNING: undefined reference to function: wait_lapic_expire
+KLEE: WARNING: undefined reference to variable: x86_cpu_to_apicid
+KLEE: WARNING: undefined reference to function: x86_decode_insn
+KLEE: WARNING: undefined reference to function: x86_emulate_insn
+KLEE: WARNING: undefined reference to function: x86_page_table_writing_insn
+KLEE: WARNING: undefined reference to function: zalloc_cpumask_var
+KLEE: WARNING: unable to load symbol(crash_vmclear_loaded_vmcss) while initializing globals.
+KLEE: WARNING: unable to load symbol(cpu_number) while initializing globals.
+KLEE: WARNING: unable to load symbol(__per_cpu_offset) while initializing globals.
+KLEE: WARNING: unable to load symbol(nr_cpu_ids) while initializing globals.
+KLEE: WARNING: unable to load symbol(intel_pmu_ops) while initializing globals.
+KLEE: WARNING: unable to load symbol(__cpu_online_mask) while initializing globals.
+KLEE: WARNING: unable to load symbol(__preempt_count) while initializing globals.
+KLEE: WARNING: unable to load symbol(pv_irq_ops) while initializing globals.
+KLEE: WARNING: unable to load symbol(x86_cpu_to_apicid) while initializing globals.
+KLEE: WARNING: unable to load symbol(boot_cpu_data) while initializing globals.
+KLEE: WARNING: unable to load symbol(pv_cpu_ops) while initializing globals.
+KLEE: WARNING: unable to load symbol(vmemmap_base) while initializing globals.
+KLEE: WARNING: unable to load symbol(page_offset_base) while initializing globals.
+KLEE: WARNING: unable to load symbol(apic) while initializing globals.
+KLEE: WARNING: unable to load symbol(cpu_bit_bitmap) while initializing globals.
+KLEE: WARNING: unable to load symbol(current_task) while initializing globals.
+KLEE: WARNING: unable to load symbol(node_states) while initializing globals.
+KLEE: WARNING: unable to load symbol(vmx_return) while initializing globals.
+KLEE: WARNING: unable to load symbol(cpu_tlbstate) while initializing globals.
+KLEE: WARNING: unable to load symbol(pv_mmu_ops) while initializing globals.
+KLEE: WARNING: unable to load symbol(sme_me_mask) while initializing globals.
+KLEE: WARNING: unable to load symbol(oops_in_progress) while initializing globals.
+KLEE: WARNING: unable to load symbol(debug_locks_silent) while initializing globals.
+KLEE: WARNING: unable to load symbol(__tss_limit_invalid) while initializing globals.
+KLEE: WARNING: unable to load symbol(this_cpu_off) while initializing globals.
+KLEE: WARNING: unable to load symbol(gdt_page) while initializing globals.
+KLEE: WARNING: unable to load symbol(cpu_tss) while initializing globals.
+KLEE: WARNING: unable to load symbol(kvm_vcpu_cache) while initializing globals.
+KLEE: WARNING: unable to load symbol(device_private_key) while initializing globals.
+KLEE: WARNING: unable to load symbol(__tracepoint_page_ref_mod_and_test) while initializing globals.
+KLEE: WARNING: unable to load symbol(__cpu_possible_mask) while initializing globals.
+KLEE: WARNING: unable to load symbol(tboot) while initializing globals.
+KLEE: WARNING: unable to load symbol(param_ops_int) while initializing globals.
+KLEE: WARNING: unable to load symbol(param_ops_bool) while initializing globals.
+KLEE: WARNING: unable to load symbol(param_ops_uint) while initializing globals.
+KLEE: WARNING: unable to load symbol(__tracepoint_kvm_fpu) while initializing globals.
+KLEE: WARNING: unable to load symbol(alternatives_patched) while initializing globals.
+KLEE: WARNING: unable to load symbol(tsc_khz) while initializing globals.
+KLEE: WARNING: unable to load symbol(mxcsr_feature_mask) while initializing globals.
+KLEE: WARNING: unable to load symbol(debug_locks) while initializing globals.
+KLEE: WARNING: unable to load symbol(system_long_wq) while initializing globals.
+KLEE: WARNING: unable to load symbol(kvm_lock) while initializing globals.
+KLEE: WARNING: unable to load symbol(vm_list) while initializing globals.
+KLEE: WARNING: unable to load symbol(prof_on) while initializing globals.
+KLEE: WARNING: unable to load symbol(cpu_dr7) while initializing globals.
+KLEE: WARNING: unable to load symbol(smp_ops) while initializing globals.
+KLEE: WARNING: unable to load symbol(apic_sw_disabled) while initializing globals.
+KLEE: WARNING: unable to load symbol(apic_hw_disabled) while initializing globals.
+KLEE: WARNING: unable to load symbol(system_wq) while initializing globals.
+KLEE: WARNING: unable to load symbol(static_key_initialized) while initializing globals.
+KLEE: WARNING: unable to load symbol(__tracepoint_kvm_mmio) while initializing globals.
+KLEE: WARNING: unable to load symbol(__tracepoint_kvm_async_pf_not_present) while initializing globals.
+KLEE: WARNING: unable to load symbol(__tracepoint_kvm_async_pf_ready) while initializing globals.
+KLEE: symbolic: (location information missing) inline assembly is unsupported
+KLEE: symbolic: (location information missing) inline assembly is unsupported
+Load address = 191040064
+KLEE: symbolic: memory error: out of bound pointer
+klee: /usr/include/z3++.h:1569: z3::expr z3::ite(const z3::expr&, const z3::expr&, const z3::expr&): Assertion `c.is_bool()' failed.
+#0 0x0000000002d4f6bb llvm::sys::PrintStackTrace(llvm::raw_ostream&) /home/yizhuo/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:490:0
+#1 0x0000000002d4f74e PrintStackTraceSignalHandler(void*) /home/yizhuo/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:554:0
+#2 0x0000000002d4d45c llvm::sys::RunSignalHandlers() /home/yizhuo/llvm-7.0.0.src/lib/Support/Signals.cpp:67:0
+#3 0x0000000002d4f0b5 SignalHandler(int) /home/yizhuo/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:353:0
+#4 0x00007fd9d7ed5390 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x11390)
+#5 0x00007fd9d722b428 gsignal /build/glibc-LK5gWL/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c:54:0
+#6 0x00007fd9d722d02a abort /build/glibc-LK5gWL/glibc-2.23/stdlib/abort.c:91:0
+#7 0x00007fd9d7223bd7 __assert_fail_base /build/glibc-LK5gWL/glibc-2.23/assert/assert.c:92:0
+#8 0x00007fd9d7223c82 (/lib/x86_64-linux-gnu/libc.so.6+0x2dc82)
+#9 0x0000000002c524f7 (/data/home/yizhuo/klee/2018_klee_confirm_path/build/bin/klee+0x2c524f7)
+#10 0x0000000002c4f5b9 z3::expr::operator=(z3::expr const&) /usr/include/z3++.h:660:0
+#11 0x0000000002c4f5b9 klee::KQuery2Z3::eachExprToZ3(klee::ref<klee::Expr>&) /home/yizhuo/klee/2018_klee_confirm_path/lib/Encode/KQuery2Z3.cpp:225:0
+#12 0x0000000002c51b4d klee::KQuery2Z3::getZ3Expr(klee::ref<klee::Expr>&) /home/yizhuo/klee/2018_klee_confirm_path/lib/Encode/KQuery2Z3.cpp:624:0
+#13 0x0000000002c3d9bc klee::Encode::addBrConstraint(klee::ref<klee::Expr>, bool, llvm::StringRef, llvm::StringRef) /home/yizhuo/klee/2018_klee_confirm_path/lib/Encode/Encode.cpp:212:0
+#14 0x00000000010bf87b _ZN4klee3refINS_4ExprEED4Ev /home/yizhuo/klee/2018_klee_confirm_path/include/klee/util/Ref.h:36:0
+#15 0x00000000010bf87b klee::Executor::executeInstruction(klee::ExecutionState&, klee::KInstruction*) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/Executor.cpp:1642:0
+#16 0x00000000010c4325 klee::Executor::run(klee::ExecutionState&) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/Executor.cpp:2961:0
+#17 0x00000000010c488c klee::Executor::runFunctionAsMain(llvm::Function*, int, char**, char**) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/Executor.cpp:4007:0
+#18 0x000000000109aff3 main /home/yizhuo/klee/2018_klee_confirm_path/tools/klee/main.cpp:1405:0
+#19 0x00007fd9d7216830 __libc_start_main /build/glibc-LK5gWL/glibc-2.23/csu/../csu/libc-start.c:325:0
+#20 0x00000000010a6479 _start (/data/home/yizhuo/klee/2018_klee_confirm_path/build/bin/klee+0x10a6479)
+timeout: the monitored command dumped core
+bc : son/built-in.bc
+function : handle_vmwrite
+json : 
+{"aliasNum": 1, "alt-blist": [], "argNo": 1, "bc": "/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc", "blacklist": ["data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-1", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-3", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-5", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-7", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-10", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-11", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-12", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-13", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-14", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-15", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-16"], "fieldNo": 2, "function": "handle_vmwrite", "rank": "NORMAL_PTR", "type": "stack", "use": "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-9", "warning": "  call void @kvm_inject_page_fault(%struct.kvm_vcpu* %24, %struct.x86_exception* %e) #7, !dbg !9084", "whitelist": ["data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-0", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-x86.llbc-kvm_inject_page_fault-0"]}
+KLEE: output directory is "/data/home/yizhuo/And-UBITect/testset/kvm/son/klee-out-1"
+unable to make jit: No available targets are compatible with this triple.
+#0 0x0000000002d7fd1b llvm::sys::PrintStackTrace(llvm::raw_ostream&) /home/yizhuo/And-UBITect/llvm-7.0.0/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:490:0
+#1 0x0000000002d7fdae PrintStackTraceSignalHandler(void*) /home/yizhuo/And-UBITect/llvm-7.0.0/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:554:0
+#2 0x0000000002d7dabc llvm::sys::RunSignalHandlers() /home/yizhuo/And-UBITect/llvm-7.0.0/llvm-7.0.0.src/lib/Support/Signals.cpp:67:0
+#3 0x0000000002d7f715 SignalHandler(int) /home/yizhuo/And-UBITect/llvm-7.0.0/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:353:0
+#4 0x00007f653ec3a390 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x11390)
+#5 0x00007f653df90428 gsignal /build/glibc-LK5gWL/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c:54:0
+#6 0x00007f653df9202a abort /build/glibc-LK5gWL/glibc-2.23/stdlib/abort.c:91:0
+#7 0x00000000011311a4 klee::ExternalDispatcherImpl::ExternalDispatcherImpl(llvm::LLVMContext&) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/ExternalDispatcher.cpp:168:0
+#8 0x00000000011311d2 klee::ExternalDispatcher::ExternalDispatcher(llvm::LLVMContext&) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/ExternalDispatcher.cpp:366:0
+#9 0x0000000001100060 std::_Rb_tree<klee::ExecutionState*, klee::ExecutionState*, std::_Identity<klee::ExecutionState*>, std::less<klee::ExecutionState*>, std::allocator<klee::ExecutionState*> >::_Rb_tree_impl<std::less<klee::ExecutionState*>, true>::_M_initialize() /usr/include/c++/5/bits/stl_tree.h:618:0
+#10 0x0000000001100060 _ZNSt8_Rb_treeIPN4klee14ExecutionStateES2_St9_IdentityIS2_ESt4lessIS2_ESaIS2_EE13_Rb_tree_implIS6_Lb1EEC4Ev /usr/include/c++/5/bits/stl_tree.h:589:0
+#11 0x0000000001100060 _ZNSt8_Rb_treeIPN4klee14ExecutionStateES2_St9_IdentityIS2_ESt4lessIS2_ESaIS2_EEC4Ev /usr/include/c++/5/bits/stl_tree.h:807:0
+#12 0x0000000001100060 _ZNSt3setIPN4klee14ExecutionStateESt4lessIS2_ESaIS2_EEC4Ev /usr/include/c++/5/bits/stl_set.h:147:0
+#13 0x0000000001100060 klee::Executor::Executor(llvm::LLVMContext&, klee::Interpreter::InterpreterOptions const&, klee::InterpreterHandler*) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/Executor.cpp:347:0
+#14 0x0000000001101691 klee::Interpreter::create(llvm::LLVMContext&, klee::Interpreter::InterpreterOptions const&, klee::InterpreterHandler*) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/Executor.cpp:4282:0
+#15 0x00000000010eae2c main /home/yizhuo/klee/2018_klee_confirm_path/tools/klee/main.cpp:1283:0
+#16 0x00007f653df7b830 __libc_start_main /build/glibc-LK5gWL/glibc-2.23/csu/../csu/libc-start.c:325:0
+#17 0x00000000010f85f9 _start (/data/home/yizhuo/klee/2018_klee_confirm_path/build/bin/klee+0x10f85f9)
+timeout: the monitored command dumped core
+bc : son/built-in.bc
+function : handle_vmwrite
+json : 
+{"aliasNum": 1, "alt-blist": [], "argNo": 1, "bc": "/data/home/yizhuo/experiment/lll-414/arch/x86/kvm/vmx.bc", "blacklist": ["data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-1", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-3", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-5", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-7", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-10", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-11", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-12", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-13", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-14", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-15", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-16"], "fieldNo": 2, "function": "handle_vmwrite", "rank": "NORMAL_PTR", "type": "stack", "use": "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-9", "warning": "  call void @kvm_inject_page_fault(%struct.kvm_vcpu* %24, %struct.x86_exception* %e) #7, !dbg !9084", "whitelist": ["data-home-yizhuo-experiment-lll-414-arch-x86-kvm-vmx.llbc-handle_vmwrite-0", "data-home-yizhuo-experiment-lll-414-arch-x86-kvm-x86.llbc-kvm_inject_page_fault-0"]}
+KLEE: output directory is "/data/home/yizhuo/And-UBITect/testset/kvm/son/klee-out-2"
+unable to make jit: No available targets are compatible with this triple.
+#0 0x0000000002d80b6b llvm::sys::PrintStackTrace(llvm::raw_ostream&) /home/yizhuo/And-UBITect/llvm-7.0.0/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:490:0
+#1 0x0000000002d80bfe PrintStackTraceSignalHandler(void*) /home/yizhuo/And-UBITect/llvm-7.0.0/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:554:0
+#2 0x0000000002d7e90c llvm::sys::RunSignalHandlers() /home/yizhuo/And-UBITect/llvm-7.0.0/llvm-7.0.0.src/lib/Support/Signals.cpp:67:0
+#3 0x0000000002d80565 SignalHandler(int) /home/yizhuo/And-UBITect/llvm-7.0.0/llvm-7.0.0.src/lib/Support/Unix/Signals.inc:353:0
+#4 0x00007fd1c1d18390 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x11390)
+#5 0x00007fd1c106e428 gsignal /build/glibc-LK5gWL/glibc-2.23/signal/../sysdeps/unix/sysv/linux/raise.c:54:0
+#6 0x00007fd1c107002a abort /build/glibc-LK5gWL/glibc-2.23/stdlib/abort.c:91:0
+#7 0x0000000001131744 klee::ExternalDispatcherImpl::ExternalDispatcherImpl(llvm::LLVMContext&) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/ExternalDispatcher.cpp:168:0
+#8 0x0000000001131772 klee::ExternalDispatcher::ExternalDispatcher(llvm::LLVMContext&) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/ExternalDispatcher.cpp:366:0
+#9 0x00000000011001b0 std::_Rb_tree<klee::ExecutionState*, klee::ExecutionState*, std::_Identity<klee::ExecutionState*>, std::less<klee::ExecutionState*>, std::allocator<klee::ExecutionState*> >::_Rb_tree_impl<std::less<klee::ExecutionState*>, true>::_M_initialize() /usr/include/c++/5/bits/stl_tree.h:618:0
+#10 0x00000000011001b0 _ZNSt8_Rb_treeIPN4klee14ExecutionStateES2_St9_IdentityIS2_ESt4lessIS2_ESaIS2_EE13_Rb_tree_implIS6_Lb1EEC4Ev /usr/include/c++/5/bits/stl_tree.h:589:0
+#11 0x00000000011001b0 _ZNSt8_Rb_treeIPN4klee14ExecutionStateES2_St9_IdentityIS2_ESt4lessIS2_ESaIS2_EEC4Ev /usr/include/c++/5/bits/stl_tree.h:807:0
+#12 0x00000000011001b0 _ZNSt3setIPN4klee14ExecutionStateESt4lessIS2_ESaIS2_EEC4Ev /usr/include/c++/5/bits/stl_set.h:147:0
+#13 0x00000000011001b0 klee::Executor::Executor(llvm::LLVMContext&, klee::Interpreter::InterpreterOptions const&, klee::InterpreterHandler*) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/Executor.cpp:347:0
+#14 0x00000000011018d1 klee::Interpreter::create(llvm::LLVMContext&, klee::Interpreter::InterpreterOptions const&, klee::InterpreterHandler*) /home/yizhuo/klee/2018_klee_confirm_path/lib/Core/Executor.cpp:4282:0
+#15 0x00000000010eaf7c main /home/yizhuo/klee/2018_klee_confirm_path/tools/klee/main.cpp:1283:0
+#16 0x00007fd1c1059830 __libc_start_main /build/glibc-LK5gWL/glibc-2.23/csu/../csu/libc-start.c:325:0
+#17 0x00000000010f8749 _start (/data/home/yizhuo/klee/2018_klee_confirm_path/build/bin/klee+0x10f8749)
+timeout: the monitored command dumped core

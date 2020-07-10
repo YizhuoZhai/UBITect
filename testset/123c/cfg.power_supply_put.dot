@@ -1,0 +1,5 @@
+digraph "CFG for 'power_supply_put' function" {
+	label="CFG for 'power_supply_put' function";
+
+	Node0x562305c357a0 [shape=record,label="{%1:\l  %2 = alloca %struct.power_supply*, align 8\l  store %struct.power_supply* %0, %struct.power_supply** %2, align 8\l  %3 = load %struct.power_supply*, %struct.power_supply** %2, align 8\l  %4 = getelementptr inbounds %struct.power_supply, %struct.power_supply* %3,\l... i32 0, i32 1\l  call void @put_device(%struct.device* %4)\l  ret void\l}"];
+}

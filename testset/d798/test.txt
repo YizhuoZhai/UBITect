@@ -1,0 +1,99 @@
+argc = 3
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/data/home/yizhuo/And-UBITect/testset/d798/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/And-UBITect/testset/d798/test.bc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+4 functions in total.
+partition size : 3, sccSize = 4, rec size = 0, biggest = 1
+size of indiFuncs : 0
+inside calcallee fordoinit
+==========Function 0: doinit==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  call void @llvm.memcpy.p0i8.p0i8.i64(i8* align 8 %11, i8* align 8 %12, i64 16, i1 false)
+possible function:llvm.memcpy.p0i8.p0i8.i64, from module/data/home/yizhuo/And-UBITect/testset/d798/test.bc
+process memcpy funcs
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check copy func:
+1 Functions Finished.
+inside calcallee forvmw_translate_mob_ptr
+==========Function 1: vmw_translate_mob_ptr==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %6 = call i32 @doinit(%struct.vmw_dma_buffer** %4)
+possible function:doinit, from module/data/home/yizhuo/And-UBITect/testset/d798/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x290b0a8: doinit
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: doinit: 0x290b0a8
+Callee : 0x290b0a8, name : doinit2 Functions Finished.
+inside calcallee forvmw_query_bo_switch_prepare
+==========Function 2: vmw_query_bo_switch_prepare==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+3 Functions Finished.
+inside calcallee forvmw_cmd_end_gb_query
+==========Function 3: vmw_cmd_end_gb_query==========
+Module: 
+inside initSummary:
+Inside computeAASet :
+Inside qualifier inference:
+  %4 = call i32 @vmw_translate_mob_ptr(%struct.vmw_dma_buffer** %2)
+possible function:vmw_translate_mob_ptr, from module/data/home/yizhuo/And-UBITect/testset/d798/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x290e658: vmw_translate_mob_ptr
+end of process funcs.
+  %12 = call i32 @vmw_query_bo_switch_prepare(%struct.ttm_buffer_object* %11)
+possible function:vmw_query_bo_switch_prepare, from module/data/home/yizhuo/And-UBITect/testset/d798/test.bc
+process  funcs
+inside processFuncs:
+Callee: 0x290e588: vmw_query_bo_switch_prepare
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+Inside qualifier check:
+check func: vmw_translate_mob_ptr: 0x290e658
+Callee : 0x290e658, name : vmw_translate_mob_ptr***********Warning: potentail uninitialized ptr  %10 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %2, align 8
+[trace] In function @vmw_cmd_end_gb_query Instruction:  %11 = getelementptr inbounds %struct.vmw_dma_buffer, %struct.vmw_dma_buffer* %10, i32 0, i32 0
+Inside printRelatedBB:
+  %10 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %2, align 8
+/data/home/yizhuo/And-UBITect/testset/d798/test.bc:
+json obj:{"aliasNum": 2, "alt-blist": [], "argNo": -1, "bc": "", "blacklist": ["", "", ""], "colNo": "-1", "fieldNo": -1, "function": "vmw_cmd_end_gb_query", "id": "_vmw_cmd_end_gb_query_%2$obj", "lineNo": "-1", "rank": "NORMAL_PTR", "type": "stack", "use": "", "warning": "  %10 = load %struct.vmw_dma_buffer*, %struct.vmw_dma_buffer** %2, align 8", "whitelist": ["", ""]}
+check func: vmw_query_bo_switch_prepare: 0x290e588
+Callee : 0x290e588, name : vmw_query_bo_switch_prepare***********Warning: argument check fails @ argument 0 : ptr not initialized, Node 24, actual qualifier = 0
+[trace] In function @vmw_cmd_end_gb_query Instruction:  %12 = call i32 @vmw_query_bo_switch_prepare(%struct.ttm_buffer_object* %11)
+Inside printRelatedBB:
+  %12 = call i32 @vmw_query_bo_switch_prepare(%struct.ttm_buffer_object* %11)
+/data/home/yizhuo/And-UBITect/testset/d798/test.bc:
+json obj:{"aliasNum": 2, "alt-blist": [], "argNo": 0, "bc": "", "blacklist": ["", ""], "colNo": "-1", "fieldNo": -1, "function": "vmw_cmd_end_gb_query", "id": "_vmw_cmd_end_gb_query_%2$obj$0", "lineNo": "-1", "rank": "NORMAL_PTR", "type": "stack", "use": "", "warning": "  %12 = call i32 @vmw_query_bo_switch_prepare(%struct.ttm_buffer_object* %11)", "whitelist": [""]}
+4 Functions Finished.
+# of remained function = 0
+ # of modified funcs = 0

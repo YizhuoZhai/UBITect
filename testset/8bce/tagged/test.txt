@@ -1,0 +1,79 @@
+Total 1 file(s)
+[CallGraph] Initializing 1 modules .
+[CallGraph / 1] [/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph / 2] [/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc]
+
+[CallGraph] Updated in 0 modules.
+[CallGraph] Postprocessing ...
+Finalizing ...
+[CallGraph] Done!
+
+2 functions in total.
+[QualifierAnalysis] Initializing 1 modules .
+[QualifierAnalysis / 1] [/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc]
+runOnFunctionacpi_get_object_info
+==========Function acpi_get_object_info==========
+addr:0x3611b38
+Module: /data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+  %call = call noalias i8* @malloc(i64 8) #3, !dbg !41
+possible function:malloc, from module/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x3611b38, name:acpi_get_object_info
+copy end.Inside qualifier check:
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 1
+1 Function Finished!
+runOnFunctionxgene_ahci_probe
+==========Function xgene_ahci_probe==========
+addr:0x3611d38
+Module: /data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc
+inside initSummary:
+inside compute aa set:
+Inside qualifier inference:
+  %call = call i32 @acpi_get_object_info(i8** %0, %struct.acpi_device_info** %info), !dbg !36
+possible function:acpi_get_object_info, from module/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc
+process  funcs
+inside processFuncs:
+Callee: 0x3611b38: acpi_get_object_info
+end of process funcs.
+begin to summarize funcs.
+inside summarize Funcs:
+inference end.
+copy Summaries for function 0x3611d38, name:xgene_ahci_probe
+copy end.Inside qualifier check:
+check func: acpi_get_object_info: 0x3611b38
+***********Warning: potentail uninitialized ptr  %2 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align 8, !dbg !44
+[trace] In function @xgene_ahci_probe Instruction:  %valid = getelementptr inbounds %struct.acpi_device_info, %struct.acpi_device_info* %2, i32 0, i32 0, !dbg !46
+/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc:
+json obj:{"aliasNum": 2, "alt-blist": [], "argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc", "blacklist": ["est.bc-xgene_ahci_probe-3", "est.bc-xgene_ahci_probe-4", "est.bc-acpi_get_object_info-3"], "fieldNo": -1, "function": "xgene_ahci_probe", "id": "/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc_xgene_ahci_probe_  %2 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align 8, !dbg !44_-1_-1", "rank": "NORMAL_PTR", "type": "stack", "use": "est.bc-xgene_ahci_probe-2", "warning": "  %2 = load %struct.acpi_device_info*, %struct.acpi_device_info** %info, align 8, !dbg !44", "whitelist": ["est.bc-xgene_ahci_probe-0", "est.bc-acpi_get_object_info-0"]}
+***********Warning: uninitialized ptr   %and = and i32 %3, 32, !dbg !47
+[trace] In function @xgene_ahci_probe Instruction:  %tobool1 = icmp ne i32 %and, 0, !dbg !47
+/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc:
+json obj:{"aliasNum": 1, "alt-blist": [], "argNo": -1, "bc": "/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc", "blacklist": ["est.bc-xgene_ahci_probe-3", "est.bc-xgene_ahci_probe-4"], "fieldNo": -1, "function": "xgene_ahci_probe", "id": "/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc_xgene_ahci_probe_  %and = and i32 %3, 32, !dbg !47_-1_-1", "rank": "DATA", "type": "stack", "use": "est.bc-xgene_ahci_probe-2", "warning": "  %and = and i32 %3, 32, !dbg !47", "whitelist": ["est.bc-xgene_ahci_probe-0"]}
+Till now, Ctx->uninitArg = 0, Ctx->uninitOutArg = 0, Ctx->ignoreOutArg = 2
+2 Function Finished!
+	 [CHANGED]
+[QualifierAnalysis] Updated in 1 modules.
+[QualifierAnalysis / 2] [/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+0 functions not visit.
+calculate summary for 0 recursive functions: 
+0 rec functions are done.
+calculate summary for 0 scc which size is larger than 1:
+0 scc functions in total.
+0 scc functions are done.
+[QualifierAnalysis / 3] [/data/home/yizhuo/And-UBITect/testset/8bce/tagged/test.llbc]
+
+[QualifierAnalysis] Updated in 0 modules.
+[QualifierAnalysis] Postprocessing ...
+Finalizing ...
+[QualifierAnalysis] Done!
+
+# of remained function = 0

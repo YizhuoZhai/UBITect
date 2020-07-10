@@ -1,0 +1,10 @@
+digraph "CFG for 'caller' function" {
+	label="CFG for 'caller' function";
+
+	Node0x93afa0 [shape=record,label="{%0:\l  %1 = alloca i64, align 8\l  %karg = alloca %union.anon, align 8\l  %up = alloca i8*, align 8\l  store i64 %arg, i64* %1, align 8\l  %2 = load i64, i64* %1, align 8\l  %3 = trunc i64 %2 to i32\l  %4 = call i8* @compat_ptr(i32 %3)\l  store i8* %4, i8** %up, align 8\l  %5 = load i32, i32* @cmd, align 4\l  switch i32 %5, label %10 [\l    i32 1, label %6\l  ]\l|{<s0>def|<s1>1}}"];
+	Node0x93afa0:s0 -> Node0x93b040;
+	Node0x93afa0:s1 -> Node0x93aff0;
+	Node0x93aff0 [shape=record,label="{%6:\l\l  %7 = bitcast %union.anon* %karg to %struct.video_code*\l  %8 = load i8*, i8** %up, align 8\l  %9 = bitcast i8* %8 to %struct.video_code32*\l  call void @get_microcode32(%struct.video_code* %7, %struct.video_code32* %9)\l  br label %10\l}"];
+	Node0x93aff0 -> Node0x93b040;
+	Node0x93b040 [shape=record,label="{%10:\l\l  ret void\l}"];
+}
