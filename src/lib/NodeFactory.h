@@ -244,7 +244,7 @@ public:
     std::set<std::string> getFuncList(NodeIndex i){
         return nodes.at(i).getFuncList();
     }
-    void addToFuncList(std::string fname) {
+    void addToFuncList(NodeIndex i, std::string fname) {
         nodes.at(i).addToFuncList(fname);
     }
 

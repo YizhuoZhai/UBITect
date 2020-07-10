@@ -7,7 +7,7 @@
 using namespace llvm;
 typedef unsigned NodeIndex;
 typedef std::set<std::string> BBList;
-typedef std::set<std::string> FunList;
+typedef std::set<std::string> FuncList;
 class SumAndersNode {
 public:
     enum AndersNodeType {
@@ -219,7 +219,7 @@ class ArgInfo{
     void addToWhiteList(std::string bbName) {whiteList.insert(bbName);}
 
     void addToFuncList(std::string fName) {FList.insert(fName);}
-    FList getFuncList() {return FList;}
+    FuncList getFuncList() {return FList;}
     void addToRelatedArg(NodeIndex idx) {relatedArg.insert(idx);}
     std::set<NodeIndex> getRelatedArgs(){return relatedArg;}
     void setMayNull(bool _mayNull) {mayNull = _mayNull;}

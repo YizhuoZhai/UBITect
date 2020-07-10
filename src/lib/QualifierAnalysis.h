@@ -138,7 +138,7 @@ private:
     void addTerminationBB(llvm::BasicBlock* bb);
     bool isTerminationBB(llvm::BasicBlock *bb) {return terminationBB.count(bb);}
     void calculateFList();
-    bool isFListEmpty() (return (funcList.size() == 0);)
+    bool isFListEmpty() {return (funcList.size() == 0);}
     //Used by qualifier inference
     void computeQualifier(llvm::Instruction *, std::vector<int> &, std::vector<int>&);
     void setGlobalQualies(std::vector<int> &);
