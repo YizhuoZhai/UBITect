@@ -120,6 +120,7 @@ struct GlobalContext {
 
     // Indirect call instructions.
     std::vector<llvm::CallInst *> IndirectCallInsts;
+    std::string jsonfile = "";
 
     // Modules.
     ModuleList Modules;

@@ -1092,12 +1092,7 @@ void FuncAnalysis::updateObjectNode(NodeIndex oldObj, NodeIndex newObj, PtsGraph
 void QualifierAnalysis::printWarnForRec(std::vector<llvm::Function*>& scc) {
 #ifdef WRITEJSON
     std::ofstream jfile;
-    if (Ctx->incAnalysis){
-        jfile.open(Ctx->jsonInc, std::ios::app);
-    }
-    else {
-        jfile.open(Ctx->jsonfile, std::ios::app);
-    }
+    jfile.open(Ctx->jsonfile, std::ios::app);
 #endif
     for (llvm::Function *F : scc) {
         auto warnSet = Ctx->fToWarns[F];
