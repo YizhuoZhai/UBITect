@@ -437,8 +437,8 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
     OP<<"Inside printRelatedBB:\n";
     const llvm::Instruction *I = dyn_cast<const llvm::Instruction>(Val);
     if (!I) {
-	OP<<"Warning but no inst.\n";
-	return;
+	    OP<<"Warning but no inst.\n";
+	    return;
     } 
     std::set<const BasicBlock *> blacklist;
     std::set<const BasicBlock *> whitelist;
@@ -476,11 +476,11 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
     {
         if ((I->getParent() != entryBB) && (witem == I->getParent()))
             continue;
-	whiteArr.push_back(json11::Json(witem->getName().str()));
+	    whiteArr.push_back(json11::Json(witem->getName().str()));
     }
     for (auto bitem : newBlacklist)
     {
-	blackArr.push_back(json11::Json(bitem->getName().str()));
+	    blackArr.push_back(json11::Json(bitem->getName().str()));
     }
     for (auto bitem : useBlacklist)
     {
@@ -489,11 +489,11 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
 
     //get the list of the node
     for (auto aa : nAAMap[I][nodeIndex]) {
-	for (auto item: nodeFactory.getWL(aa)) {
-		whiteArr.push_back(json11::Json(item));
-	}
-	for (auto item: nodeFactory.getBL(aa)) {
-                blackArr.push_back(json11::Json(item));
+	    for (auto item: nodeFactory.getWL(aa)) {
+		    whiteArr.push_back(json11::Json(item));
+	    }
+	    for (auto item: nodeFactory.getBL(aa)) {
+	        blackArr.push_back(json11::Json(item));
         }
     } 
     //get the list for the argument
@@ -524,11 +524,11 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
     int lineNo = -1;
     std::string mName = moduleName.substr(0, moduleName.size()-2)+"c";
     if (location) {
-	lineNo = location.getLine();
-	OP << " ["
-        << "[" << "Code" << "] "
-        << mName
-        << ": +" << lineNo << "]" <<'\n';
+	    lineNo = location.getLine();
+	    OP << " ["
+            << "[" << "Code" << "] "
+            << mName
+            << ": +" << lineNo << "]" <<'\n';
     }
     else {
 	
