@@ -195,7 +195,7 @@ public:
         VisitIns.clear();
         warningSet.clear();
         funcList.clear();
-        funcList.insert(F->getName.str());
+        funcList.insert(F->getName().str());
     }
     bool run();
     int getUninitArg(){return uninitArg.size();}
