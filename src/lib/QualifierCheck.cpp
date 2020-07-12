@@ -434,6 +434,7 @@ void FuncAnalysis::QualifierCheck()
 void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val, 
 		std::set<const Instruction*> &v, std::string rank, int argNo, int field, llvm::Function *Callee)
 {
+    OP<<"Inside printRelatedBB:\n";
     const llvm::Instruction *I = dyn_cast<const llvm::Instruction>(Val);
     if (!I) {
 	OP<<"Warning but no inst.\n";
@@ -532,6 +533,7 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
     else {
 	
     }
+    OP<<"argNo = "<<argNo<<"\n";
 	 if (argNo >=0) {
 	     if (isFListEmpty()) {
              calculateFList();
@@ -610,11 +612,12 @@ void FuncAnalysis::calculateFList() {
     std::unordered_map<llvm::Function*, bool> visit;
     q.push(F);
     llvm::Function *cur = F;
-    
+
     while (!q.empty()) {
         cur = q.front();
         q.pop();
         visit[F] = true;
+        OP<<"insert "<<cur->getName().str()<<"\n";
         funcList.insert(cur->getName().str());
         for (auto callee : Ctx->CallMaps[cur]) {
             if (!visit[callee]){
