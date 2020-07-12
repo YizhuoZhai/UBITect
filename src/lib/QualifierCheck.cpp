@@ -534,14 +534,13 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
 	
     }
     OP<<"argNo = "<<argNo<<"\n";
-	 if (argNo >=0) {
-	     if (isFListEmpty()) {
-             calculateFList();
-	     }
-         for (auto item: funcList) {
-             funcArr.push_back(json11::Json(item));
-         }
-	 }
+    if (getFListSize() == 1) {
+        calculateFList();
+    }
+
+    for (auto item: funcList) {
+        funcArr.push_back(json11::Json(item));
+    }
     json11::Json jsonObj = json11::Json::object{
         {"bc", moduleName },
 	    {"type", "stack"},
