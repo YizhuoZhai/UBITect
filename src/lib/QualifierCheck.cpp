@@ -611,13 +611,14 @@ void FuncAnalysis::calculateFList() {
     std::unordered_map<llvm::Function*, bool> visit;
     q.push(F);
     llvm::Function *cur = F;
-
+    std::string curName = "";
     while (!q.empty()) {
         cur = q.front();
         q.pop();
         visit[F] = true;
         OP<<"insert "<<cur->getName().str()<<"\n";
-        funcList.insert(cur->getName().str());
+        curName = cur->getName().str()+"##"+cur->getParent()->getName().str();
+        funcList.insert(curName);
         for (auto callee : Ctx->CallMaps[cur]) {
             if (!visit[callee]){
                 q.push(callee);
