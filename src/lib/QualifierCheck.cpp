@@ -549,11 +549,11 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
         {"use", I->getParent()->getName().str()},
         {"function", I->getParent()->getParent()->getName().str()},
         {"warning", insStr},
-	{"rank", rank},
-	{"argNo", argNo},
-	{"fieldNo", field},
-	{"aliasNum", numAlias },
-	{"lineNo", lineNo}
+	    {"rank", rank},
+	    {"argNo", argNo},
+	    {"fieldNo", field},
+	    {"aliasNum", numAlias },
+	    {"lineNo", lineNo}
     };
     std::string json_str = jsonObj.dump();
     // Write json to the result
@@ -563,7 +563,7 @@ void FuncAnalysis::printRelatedBB(NodeIndex nodeIndex, const llvm::Value *Val,
     //print the related bc files:
     for(auto item : Ctx->FSummaries[F].relatedBC)
     {
-	jfile<<item<<":";
+	    jfile<<item<<":";
     }
     jfile<<"\n";
     jfile<<json_str<<"\n";
@@ -605,10 +605,12 @@ void FuncAnalysis::calculateBLForUse(const llvm::Instruction *I, std::set<const 
     	}	
 }
 void FuncAnalysis::calculateFList() {
+    OP<<"inside calculateFList:\n";
     std::queue<llvm::Function*> q;
     std::unordered_map<llvm::Function*, bool> visit;
     q.push(F);
     llvm::Function *cur = F;
+    
     while (!q.empty()) {
         cur = q.front();
         q.pop();
@@ -619,6 +621,10 @@ void FuncAnalysis::calculateFList() {
                 q.push(callee);
             }
         }
+    }
+    OP<<"funcList : \n";
+    for (auto item : funcList) {
+        OP<<item<<"\n";
     }
 }
 void FuncAnalysis::calculateRelatedBB(NodeIndex nodeIndex, const llvm::Instruction *I, std::set<NodeIndex> &visit, 
@@ -772,22 +778,20 @@ void FuncAnalysis::calculateRelatedBB(NodeIndex nodeIndex, const llvm::Instructi
     #endif
 }
 enum WarnType FuncAnalysis::getWType(llvm::Type *wType) {
-Type *Ty = wType;
-                                if (PointerType * PT = dyn_cast<PointerType>(Ty)) {
-                                do {
-                                        Type *ptdTy = PT->getElementType();
-                                        if (ptdTy->isFunctionTy()) {
-                                                return FUNCTION_PTR;
-                                        }
-                                        Ty = ptdTy;
-                                }while ((PT = dyn_cast<PointerType>(Ty)));
-                                return NORMAL_PTR;
-                                }
-                                else {
-                                        return DATA;
-                                }
-
-
+    Type *Ty = wType;
+    if (PointerType * PT = dyn_cast<PointerType>(Ty)) {
+        do {
+            Type *ptdTy = PT->getElementType();
+            if (ptdTy->isFunctionTy()) {
+                return FUNCTION_PTR;
+            }
+            Ty = ptdTy;
+        }while ((PT = dyn_cast<PointerType>(Ty)));
+        return NORMAL_PTR;
+    }
+    else {
+        return DATA;
+    }
 }
 enum WarnType FuncAnalysis::getFieldTy(llvm::Type *wType, int field) {
 	return NORMAL_PTR;
