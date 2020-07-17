@@ -137,7 +137,7 @@ struct GlobalContext {
     std::set<std::string> StrFuncs;
     std::set<std::string> OtherFuncs;
     std::set<std::string> visitedFuncs;
-    std::map<llvm::Function, std::set<std::string>> FuncToFunclist;
+    std::unordered_map<llvm::Function*, std::set<std::string>> FuncToFunclist;
 
     // StructAnalyzer
     StructAnalyzer structAnalyzer;
