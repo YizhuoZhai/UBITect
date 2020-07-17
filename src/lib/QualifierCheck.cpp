@@ -607,31 +607,12 @@ void FuncAnalysis::calculateBLForUse(const llvm::Instruction *I, std::set<const 
 }
 void FuncAnalysis::calculateFList() {
     OP<<"inside calculateFList:\n";
-    std::queue<llvm::Function*> q;
-    std::unordered_map<llvm::Function*, bool> visit;
-    q.push(F);
     llvm::Function *cur = F;
-    visit[F] = true;
-    std::string curName = "";
-    int i = 0;
-    while (!q.empty()) {
-        cur = q.front();
-        q.pop();
-        OP<<"i = "<<i<<", insert "<<cur->getName().str()<<"\n";
-        i++;
-        curName = cur->getName().str()+"##"+cur->getParent()->getName().str();
-        funcList.insert(curName);
-        for (auto callee : Ctx->CallMaps[cur]) {
-            if (!visit[callee]){
-                q.push(callee);
-                visit[callee] = true;
-            }
-        }
+    for (auto callee : Ctx->CallMaps[cur]) {
+        if (Ctx->FuncToFunclist.find(callee) != Ctx->FuncToFunclist.end())
+            funcList.insert(Ctx->FuncToFunclist[callee].begin(), Ctx->FuncToFunclist[callee].end());
     }
-    OP<<"funcList : \n";
-    for (auto item : funcList) {
-        OP<<item<<"\n";
-    }
+    Ctx->FuncToFunclist[F].insert(funcList.begin(), funcList.end());
 }
 void FuncAnalysis::calculateRelatedBB(NodeIndex nodeIndex, const llvm::Instruction *I, std::set<NodeIndex> &visit, 
                                         std::set<const BasicBlock *> &blacklist, std::set<const BasicBlock *> &whitelist)
