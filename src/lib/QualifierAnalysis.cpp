@@ -488,7 +488,6 @@ PtsGraph FuncAnalysis::processInstruction(Instruction *I, PtsGraph &in) {
                     }
                 }
             }
-
             break;
         }
         case Instruction::GetElementPtr: {

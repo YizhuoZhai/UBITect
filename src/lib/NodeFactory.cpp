@@ -106,13 +106,15 @@ NodeIndex AndersNodeFactory::getValueNodeFor(const Value* val) {
 NodeIndex AndersNodeFactory::getValueNodeForConstant(const llvm::Constant* c) {
     if (const ConstantInt *CI = dyn_cast<ConstantInt>(c))
         return getConstantIntNode();
+    if (const ConstantFP *CF = dyn_cast<ConstantInt>(c))
+        return getConstantIntNode();
     //assert(isa<PointerType>(c->getType()) && "Not a constant pointer!");
 
     if (isa<ConstantPointerNull>(c) || isa<UndefValue>(c))
         return getNullPtrNode();
     else if (const GlobalValue* gv = dyn_cast<GlobalValue>(c))
     {
-	return getValueNodeFor(gv);
+	    return getValueNodeFor(gv);
     }
     else if (const ConstantExpr* ce = dyn_cast<ConstantExpr>(c)) {
         switch (ce->getOpcode()){
