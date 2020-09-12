@@ -375,7 +375,7 @@ void FuncAnalysis::handleGEPConstant(const ConstantExpr *ce, PtsGraph &in) {
 }
 
 PtsGraph FuncAnalysis::processInstruction(Instruction *I, PtsGraph &in) {
-
+    OP<<"processIns: "<<*I<<"\n";
     // handle constant GEPExpr oprands here
     for (auto const &opr : I->operands()) {
         const Value *v = opr.get();
