@@ -21,6 +21,7 @@
 //The file used for putting json obj
 void FuncAnalysis::QualifierCheck()
 {
+    OP<<"Inside QualifierCheck:\n";
     unsigned numNodes = nodeFactory.getNumNodes();
     Instruction *entry = &(F->front().front());
     NodeIndex entryIndex = nodeFactory.getValueNodeFor(entry);

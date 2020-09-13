@@ -170,10 +170,12 @@ NodeIndex AndersNodeFactory::getValueNodeForConstant(const llvm::Constant* c) {
         // FIXME return NULL now
         return getNullPtrNode();
     }
+    //todo: add the constant structure
 
     errs() << "Unknown constant pointer: " << *c << "\n";
-    llvm_unreachable("Unknown constant pointer!");
-    return InvalidIndex;
+    return getConstantIntNode();
+    //llvm_unreachable("Unknown constant pointer!");
+    //return InvalidIndex;
 }
 
 NodeIndex AndersNodeFactory::getObjectNodeFor(const Value* val) {
