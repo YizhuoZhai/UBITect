@@ -276,7 +276,7 @@ bool FuncAnalysis::run() {
 #ifdef CAL_STACKVAR
     calStackVar();
 #endif
-    OP<<"print summary:\n";
+    OP<<"===print summary for "<<F->getName().str()<<"===\n";
     fSummary.summary();
     fSummary.copySummary(Ctx->FSummaries[F], fSummary, F);
     std::string FScopeName = getScopeName(F);
