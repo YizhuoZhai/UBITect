@@ -24,6 +24,7 @@
 
 #define CAL_STACKVAR
 #define RUN_ON_FUNC
+#define PRINT_SUMMARY
 using namespace llvm;
 
 std::string testDir = getCurrentWorkingDir() + "/Summary/";
@@ -275,6 +276,8 @@ bool FuncAnalysis::run() {
 #ifdef CAL_STACKVAR
     calStackVar();
 #endif
+    OP<<"print summary:\n";
+    fSummary.summary();
     fSummary.copySummary(Ctx->FSummaries[F], fSummary, F);
     std::string FScopeName = getScopeName(F);
     QualifierCheck();
