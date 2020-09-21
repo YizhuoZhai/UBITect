@@ -103,7 +103,12 @@ StructInfo& StructAnalyzer::addStructInfo(const StructType* st, const Module* M,
 
             if (const StructType* structType = dyn_cast<StructType>(subType)) {
                 StructInfo& subInfo = computeStructInfo(structType, M, layout);
-                assert(subInfo.isFinalized());
+                if (!subInfo.isFinalized()) {
+                    OP<<"structType: "<<*structType<<"\n";
+                    continue;
+                }
+                //To fix
+                //assert(subInfo.isFinalized());
                 //llvm::errs()<<"add container from Nested Struct "<<structType->getName().str()<<"\n";
                 for (uint64_t i = 0; i < arraySize; ++i)
                     addContainer(st, subInfo, currentOffset + i * layout->getTypeAllocSize(subType), M);
@@ -145,7 +150,12 @@ StructInfo& StructAnalyzer::addStructInfo(const StructType* st, const Module* M,
                 assert(!structType->isOpaque() && "Nested opaque struct");
 
                 StructInfo& subInfo = computeStructInfo(structType, M, layout);
-                assert(subInfo.isFinalized());
+                if (!subInfo.isFinalized()) {
+                    OP<<"structType: "<<*structType<<"\n";
+                    continue;
+                }
+                //To fix
+                //assert(subInfo.isFinalized());
                 
                 //llvm::errs()<<"add container from Nested Struct "<<structType->getName().str()<<"\n";
                 for (uint64_t i = 0; i < arraySize; ++i)
