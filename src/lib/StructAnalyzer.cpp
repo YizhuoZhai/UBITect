@@ -104,7 +104,7 @@ StructInfo& StructAnalyzer::addStructInfo(const StructType* st, const Module* M,
             if (const StructType* structType = dyn_cast<StructType>(subType)) {
                 StructInfo& subInfo = computeStructInfo(structType, M, layout);
                 if (!subInfo.isFinalized()) {
-                    OP<<"structType: "<<*structType<<"\n";
+                    errs()<<"structType: "<<*structType<<"\n";
                     continue;
                 }
                 //To fix
@@ -151,7 +151,7 @@ StructInfo& StructAnalyzer::addStructInfo(const StructType* st, const Module* M,
 
                 StructInfo& subInfo = computeStructInfo(structType, M, layout);
                 if (!subInfo.isFinalized()) {
-                    OP<<"structType: "<<*structType<<"\n";
+                    errs()<<"structType: "<<*structType<<"\n";
                     continue;
                 }
                 //To fix
